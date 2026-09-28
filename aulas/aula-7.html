@@ -1,0 +1,134 @@
+<section class="view" id="v-aula-7" data-aula="7" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 2 · Aula 2 de 5</p>
+  <h1>Crítica só leitura: <em>achado com evidência</em></h1>
+  <figure class="cena"><img src="assets/img/aula-7.webp" width="1280" height="720" alt="Uma analista de operações lê um documento impresso e escreve anotações na margem com caneta vermelha, apontando trechos específicos."></figure>
+  <p class="promise">Você consegue pedir a outra IA uma crítica do seu plano em que cada achado traz falha, evidência, impacto e a menor correção.</p>
+  <p class="why">"Parece bom" e "poderia considerar mais casos" não ajudam ninguém. Uma crítica só serve quando aponta o trecho, diz o que acontece se ninguém corrigir e propõe o conserto mais simples.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O revisor só lê. Ele não altera o plano nem outro arquivo.</li>
+      <li>Cada achado tem quatro campos: falha, evidência, impacto e menor correção.</li>
+      <li>O revisor recebe o briefing e o plano de verdade, nunca um resumo.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O revisor só lê</h2>
+  <p>Na crítica, você quer achados, não um plano novo escrito por cima do seu. Por isso o pedido diz: leia, aponte, não altere arquivos.</p>
+  <p>O revisor pode ser outro <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> ou uma conversa nova do mesmo assistente. É a <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span> da aula 2 aplicada ao plano.</p>
+  <p data-ex="desenvolvedor">Rafael mandou o plan-v1.md do formulário ao Codex, com o pedido de crítica só leitura. Recebeu três achados e nenhum arquivo mudado.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Revisor</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Rafael</span>Leia briefing.md e plan-v1.md. Aponte falhas do plano. Para cada uma: falha, trecho do plano, impacto e a menor correção. Não altere arquivos.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Achado 1. Falha: o plano não diz o que acontece se o envio falhar. Trecho: "enviar para o e-mail da recepção". Impacto: o paciente vê "enviado" e a mensagem se perde. Menor correção: mostrar um aviso de erro e registrar a falha.</p>
+      </div>
+      <p class="tela-nota bom">Um achado que Rafael consegue conferir e corrigir sem perguntar nada.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Os quatro campos de um achado</h2>
+  <p>Falha é o que está errado ou faltando. Evidência é o trecho que mostra isso. Impacto é o que acontece se ninguém corrigir. A menor correção é o conserto mais simples que resolve.</p>
+  <p>Peça também uma gravidade: alta, média ou baixa. Assim você sabe por onde começar.</p>
+  <p data-ex="analista">Carla pediu a crítica do plano das planilhas no chat de IA, numa conversa nova. Pediu os achados em ordem de gravidade.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>review.md · achado 1 do plano de Carla</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Falha: nada trata planilha com colunas em outra ordem</div>
+        <div class="item doc"><span class="pin">2</span> Evidência: "juntar pela ordem das colunas"</div>
+        <div class="item doc"><span class="pin">3</span> Impacto: totais de uma cidade somados na coluna errada</div>
+        <div class="item doc"><span class="pin">4</span> Menor correção: juntar pelo nome da coluna</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O que está errado.</span></li>
+      <li><span class="pin">2</span><span>Onde está, com as palavras do plano.</span></li>
+      <li><span class="pin">3</span><span>Por que importa.</span></li>
+      <li><span class="pin">4</span><span>O conserto mais simples.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Achado vago não é achado</h2>
+  <p>Sem os quatro campos, a crítica vira conselho genérico. Você não sabe se concorda, porque não sabe do que se trata.</p>
+  <p data-ex="desenvolvedor">A primeira crítica que Rafael recebeu, sem o molde, dizia "considere validar melhor os campos". Com o molde, virou um achado sobre o telefone.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Vago</span><p>"Considere validar melhor os campos do formulário."</p></div>
+      <div class="depois"><span class="rot">Achado</span><p><b>Falha:</b> o plano não trata telefone com letras. <b>Evidência:</b> "campo telefone, texto livre". <b>Impacto:</b> fere o critério 2 do briefing. <b>Menor correção:</b> aceitar só números.</p></div>
+    </div>
+    <figcaption>O achado cita o critério do briefing que seria quebrado.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O revisor devolveu achados que parecem errados? Ótimo: você não precisa aceitar todos. Na aula 9, você aprende a responder cada um com "aceito", "rejeitado com evidência" ou "em aberto".</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>O revisor recebe o briefing e o plano</h2>
+  <p>Sem o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>, o revisor julga o plano pelo gosto dele. Com o briefing, julga pelo que você pediu. Mande os dois arquivos, de verdade.</p>
+  <p data-ex="analista">Carla colou no chat o briefing, depois o plano, e só então o pedido de crítica. No assistente de código, basta citar os dois arquivos pelo nome.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Só o plano</span><p>O revisor sugere trocar a planilha por um banco de dados. Fora do escopo.</p></div>
+      <div class="depois"><span class="rot">Briefing e plano</span><p>O revisor aponta que o plano esqueceu o critério "cada cidade aparece uma vez".</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Peça a crítica do seu plan-v1.md</h3>
+  <p class="pgoal">Pronto quando você tiver um <code>review.md</code> com pelo menos dois achados nos quatro campos. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">O pedido é só leitura: nenhum arquivo muda. Use outro assistente ou uma conversa nova do mesmo. Não fez a aula 6? Peça a crítica de qualquer plano que você tenha em texto.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia briefing.md e plan-v1.md. Critique o plano, só lendo.
+Para cada falha, escreva:
+- Falha:
+- Evidência (o trecho exato do plano):
+- Impacto (o que acontece se ninguém corrigir):
+- Menor correção:
+- Gravidade (alta, média ou baixa):
+Ordene por gravidade. Não altere nenhum arquivo.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o revisor: outro assistente ou uma conversa nova. No chat, cole o briefing e o plano antes do pedido.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Envie o molde. Copie a resposta e salve como <code>review.md</code> na pasta do piloto, do mesmo jeito que criou o briefing.md na aula 5.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira: cada achado tem a evidência com palavras que estão mesmo no plano?</span></label></li>
+  </ol>
+  <p class="pdone">Você já recebe crítica que dá para conferir, não conselho genérico.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Crítica que serve</h3>
+    <ol>
+      <li><span><b>Só leitura</b>o revisor aponta; não reescreve nem altera arquivos.</span></li>
+      <li><span><b>Quatro campos</b>falha, evidência, impacto e menor correção.</span></li>
+      <li><span><b>Base comum</b>briefing e plano vão juntos para o revisor.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já pede crítica com evidência, e não opinião.</p>
+    <p class="na-action">Guarde o molde da prática num arquivo <code>pedido-critica.md</code> na pasta do piloto. Vai usar de novo no módulo 3.</p>
+    <p class="na-hook">Na próxima aula: chamar o outro modelo sem copiar e colar, com um comando só.</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-6">← aula anterior</a><a class="next" href="#aula-8">próxima aula →</a></nav>
+<p class="aula-pe">Aula 7 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-7">
+[
+  {"front":"A crítica disse \"considere validar melhor os campos\". O que você pede de volta?","back":"Os quatro campos: qual falha, em que trecho do plano, com que impacto e qual a menor correção."},
+  {"front":"O revisor sugeriu trocar a planilha por um banco de dados. O que provavelmente faltou mandar?","back":"O briefing. Sem ele, o revisor julga pelo gosto dele e sai do escopo."},
+  {"front":"Como conferir se a evidência de um achado é real?","back":"Procurando no plano as palavras citadas. Se o trecho não existe, o achado não tem evidência."}
+]
+</script>
+</section>

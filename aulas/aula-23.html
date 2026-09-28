@@ -1,0 +1,155 @@
+<section class="view" id="v-aula-23" data-aula="23" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 3 de 5</p>
+  <h1>O que importa mora <em>no projeto</em>, não na ferramenta</h1>
+  <figure class="cena"><img src="assets/img/aula-23.webp" width="1280" height="720" alt="Uma analista de operações e uma colega organizam pastas de papel de cores diferentes num arquivo, com o notebook aberto na mesa."></figure>
+  <p class="promise">Você consegue montar, na pasta do piloto, os arquivos mínimos e a ordem de leitura que qualquer assistente segue.</p>
+  <p class="why">Instruções, decisões e tarefas guardadas só na memória de uma ferramenta ficam presas a ela. Na troca de assistente, você perde tudo. Guardadas em arquivos de texto no projeto, qualquer assistente lê.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O que é seu vive em arquivos de texto na pasta do projeto.</li>
+      <li>O <b>AGENTS.md</b> diz as regras e a ordem de leitura.</li>
+      <li>Os nomes das pastas são combinados; quem manda ler é o AGENTS.md.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Memória da ferramenta × arquivos do projeto</h2>
+  <p>Cada assistente guarda coisas do seu jeito: memória própria, histórico de conversas, arquivo de instruções. Isso funciona enquanto você usa só aquele assistente.</p>
+  <p>Quando o conhecimento vive em arquivos de texto dentro da pasta do projeto, o assistente vira só quem executa. Trocar de <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> deixa de custar o seu trabalho.</p>
+  <p data-ex="desenvolvedor">Rafael tinha as regras do site da clínica só na memória do Claude Code. Quando testou o Codex, teve de explicar tudo de novo, e esqueceu duas regras.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Preso à ferramenta</span><p>Regras na memória de um assistente. Decisões espalhadas em conversas antigas.</p><p><b>Na troca:</b> explicar tudo de novo.</p></div>
+      <div class="depois"><span class="rot">No projeto</span><p>Regras, tarefa e handoff em arquivos de texto na pasta do piloto.</p><p><b>Na troca:</b> o outro assistente lê os arquivos.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Os arquivos mínimos</h2>
+  <p>Você não precisa de muita coisa. Cinco arquivos cobrem o piloto: regras, objetivo, tarefa, contexto e passagem de plantão.</p>
+  <p data-ex="analista">Carla montou a pasta do relatório assim em quinze minutos. Metade dos arquivos ela já tinha: o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span>.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Pasta do piloto de Carla</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> AGENTS.md</div>
+        <div class="item doc"><span class="pin">2</span> briefing.md</div>
+        <div class="item pasta"><span class="pin">3</span> tasks</div>
+        <div class="item doc dentro">current.md</div>
+        <div class="item pasta"><span class="pin">4</span> context</div>
+        <div class="item doc dentro">overview.md</div>
+        <div class="item pasta"><span class="pin">5</span> handoffs</div>
+        <div class="item doc dentro">latest.md</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Regras estáveis e ordem de leitura.</span></li>
+      <li><span class="pin">2</span><span>Objetivo, dentro e fora, critérios e limites (aula 5).</span></li>
+      <li><span class="pin">3</span><span>A tarefa de agora e o que falta.</span></li>
+      <li><span class="pin">4</span><span>Fatos conferidos do projeto, com a fonte.</span></li>
+      <li><span class="pin">5</span><span>A passagem de plantão (aula 21).</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Quem manda ler é o AGENTS.md</h2>
+  <p>Os nomes das pastas são só um combinado. Nenhum assistente abre "tasks" sozinho. Quem manda ler é o <span class="gterm" data-gl="agents-md" data-def="Arquivo de texto na raiz do projeto com as regras e a ordem de leitura. O Codex lê sozinho ao começar; outros assistentes leem quando alguém manda.">AGENTS.md</span>, com a ordem de leitura logo no topo.</p>
+  <p>O Codex lê o AGENTS.md sozinho ao começar. O Claude Code lê o CLAUDE.md. Para ele seguir as mesmas regras, ponha no CLAUDE.md a linha <code>@AGENTS.md</code>.</p>
+  <p data-ex="desenvolvedor">Rafael escreveu as regras uma vez só, no AGENTS.md. O CLAUDE.md dele tem uma linha, e os dois assistentes seguem as mesmas regras.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>AGENTS.md · site da clínica</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Ordem de leitura: briefing.md, tasks/current.md, handoffs/latest.md</div>
+        <div class="item doc"><span class="pin">2</span> Regra: não alterar a página inicial nem as cores</div>
+        <div class="item doc"><span class="pin">3</span> Regra: nada vai ao ar sem a aprovação do Rafael</div>
+        <div class="item doc"><span class="pin">4</span> CLAUDE.md, ao lado, com uma linha: @AGENTS.md</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O que ler, e em que ordem.</span></li>
+      <li><span class="pin">2</span><span>O "Fora" que vale para todas as tarefas.</span></li>
+      <li><span class="pin">3</span><span>A decisão final é humana.</span></li>
+      <li><span class="pin">4</span><span>Assim o Claude Code lê o mesmo arquivo.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Seu assistente não é nenhum dos dois? Tudo bem. No primeiro pedido, escreva "leia o AGENTS.md antes de tudo". Num chat comum, cole o texto dele.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Cada arquivo tem um dono</h2>
+  <p>Arquivo sem dono vira bagunça: a IA muda uma regra que era sua, ou você esquece de atualizar a tarefa. Combine quem mexe em quê.</p>
+  <p data-ex="analista">Carla deixou claro no AGENTS.md: regras e decisões, só ela muda; o handoff, a IA escreve e ela confere.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Você decide</span><p>AGENTS.md, briefing.md e as decisões. A IA pode sugerir mudança; quem aprova é você.</p></div>
+      <div class="neutro"><span class="rot">A IA escreve, você confere</span><p>handoffs/latest.md no fim da sessão, e o andamento em tasks/current.md.</p></div>
+    </div>
+    <figcaption>Os dois cartões convivem: um guarda o que é estável, o outro registra o dia a dia.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Monte o núcleo do seu piloto</h3>
+  <p class="pgoal">Pronto quando a pasta do piloto tiver AGENTS.md com a ordem de leitura, tasks/current.md e handoffs/latest.md. Cerca de 12 minutos, no computador.</p>
+  <p class="psafe">São arquivos de texto seus; nada é apagado. Pasta nova no Windows: botão direito › Novo › Pasta. Arquivo novo: como o briefing.md da aula 5. Não tem o handoff da aula 21? Crie o arquivo com a frase "primeira sessão".</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># AGENTS.md — &lt;nome do piloto&gt;
+
+Ordem de leitura: 1) briefing.md 2) tasks/current.md 3) handoffs/latest.md
+Leia antes de agir. Nada é enviado ou publicado sem a minha aprovação.
+
+## Regras
+- &lt;o que vale para todas as tarefas&gt;
+
+## Donos
+- AGENTS.md, briefing.md e decisões: só eu mudo.
+- handoffs/latest.md: a IA escreve no fim da sessão, eu confiro.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta do piloto, crie o AGENTS.md com o molde e preencha uma regra sua.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Crie a pasta <code>tasks</code> com o arquivo <code>current.md</code>: uma linha com a tarefa de agora.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Se usa o Claude Code, crie o CLAUDE.md com a linha <code>@AGENTS.md</code>.</span></label></li>
+  </ol>
+  <p class="pdone">Você já tem o conhecimento do piloto num lugar que qualquer assistente lê.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>O cérebro no projeto</h3>
+    <ol>
+      <li><span><b>Arquivos de texto</b>o que é seu fica na pasta, não na ferramenta.</span></li>
+      <li><span><b>AGENTS.md</b>regras e ordem de leitura; o CLAUDE.md aponta para ele.</span></li>
+      <li><span><b>Donos</b>você decide as regras; a IA escreve o handoff.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já montou o núcleo que torna o piloto independente de um assistente só.</p>
+    <p class="na-action">Leia o AGENTS.md que você escreveu como se fosse outra pessoa. Tire uma regra que só você entende.</p>
+    <p class="na-hook">Na próxima aula: com tudo nos arquivos, passar o piloto de um assistente para outro sem recomeçar.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · Migrar ou ficar agnóstico<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O núcleo completo</h3><p>O kit agente-claude-codex usa sete lugares, cada um com dono: AGENTS.md (regras e ordem de leitura), context/overview.md (fatos verificados, com fonte e data), context/current-state.md (o que funciona e o que está pendente), context/sources.md (de onde vem cada informação), context/decisions/ (uma decisão aceita por arquivo), tasks/current.md (objetivo, dono, critério de pronto, próxima ação) e handoffs/latest.md (a continuação para a próxima sessão).</p><h3>Separar fato, preferência, hipótese e decisão</h3><p>Misturar fato com hipótese, ou decisão com preferência, é o que faz o assistente repetir erro antigo e contradizer o que já foi resolvido. Uma informação só passa de memória solta para contexto aprovado com a sua aprovação.</p><h3>Migrar tudo de um assistente para outro</h3><p>Levar instruções, skills e memória de um assistente para outro é o tema do curso Claude → Codex: auditar, adaptar, provar em sessão nova e fazer handoff.</p>
+    <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/claude-codex/">Área Claude → Codex — Eventos INEMA</a> · <a href="https://inematds.github.io/curso-claude-codex/">Curso Claude → Codex</a> · <a href="https://inematds.github.io/agente-claude-codex/guia/">Guia do kit agente-claude-codex</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-22">← aula anterior</a><a class="next" href="#aula-24">próxima aula →</a></nav>
+<p class="aula-pe">Aula 23 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-23">
+[
+  {"front":"Você quer testar outro assistente no piloto. O que precisa existir na pasta para não explicar tudo de novo?","back":"AGENTS.md com regras e ordem de leitura, o briefing, a tarefa atual e o handoff, em arquivos de texto."},
+  {"front":"Você criou a pasta tasks, mas o assistente nunca lê o que está nela. Por quê?","back":"Nomes de pasta são só combinado. Falta a ordem de leitura no AGENTS.md mandando ler tasks/current.md."},
+  {"front":"Usa o Claude Code e escreveu as regras no AGENTS.md. Como fazer o Claude Code seguir essas regras?","back":"Pondo no CLAUDE.md a linha @AGENTS.md. Assim as regras ficam num arquivo só."},
+  {"front":"A IA sugeriu mudar uma regra do AGENTS.md. Quem aprova?","back":"Você. Regras e decisões são suas; a IA pode propor, não mudar sozinha."}
+]
+</script>
+</section>

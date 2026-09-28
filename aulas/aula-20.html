@@ -1,0 +1,148 @@
+<section class="view" id="v-aula-20" data-aula="20" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 5 de 5</p>
+  <h1>Quem decide o que entra <em>é você</em></h1>
+  <figure class="cena"><img src="assets/img/aula-20.webp" width="1280" height="720" alt="Uma analista de operações assina uma folha de aceite, ao lado das folhas conferidas e marcadas com vistos."></figure>
+  <p class="promise">Você consegue fechar o aceite do seu piloto: para cada critério, a evidência que você viu e a decisão de entrar, entrar com pendência ou voltar.</p>
+  <p class="why">Chegou a hora de entregar. Testes passaram, a outra IA aprovou, você usou de verdade. Falta a decisão, escrita, com o que a sustenta. É isso que você mostra se alguém perguntar "quem conferiu?".</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Aceite é uma decisão com evidência, critério por critério.</li>
+      <li>Evidência é o que você viu, não o que a IA disse.</li>
+      <li>Três saídas: entra, entra com pendência registrada, ou volta.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>O aceite cabe numa ficha</h2>
+  <p>Cada <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> do <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> vira uma linha: o critério, a evidência e o resultado. No fim, a decisão e o seu nome.</p>
+  <p data-ex="desenvolvedor">Rafael montou o aceite do formulário da clínica num arquivo aceite.md, ao lado do briefing.md.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>aceite.md · formulário da clínica</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Mensagem chega na recepção → captura da caixa com "Paciente Teste" · ok</div>
+        <div class="item doc"><span class="pin">2</span> Telefone recusa letras → saída do teste: falhou antes, passou depois · ok</div>
+        <div class="item doc"><span class="pin">3</span> Não rola para os lados → aberto no celular · ok</div>
+        <div class="item doc"><span class="pin">4</span> Decisão: entra · Rafael · 28/09</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Evidência de conferência manual.</span></li>
+      <li><span class="pin">2</span><span>Evidência de teste automático.</span></li>
+      <li><span class="pin">3</span><span>O caminho do usuário, da aula 17.</span></li>
+      <li><span class="pin">4</span><span>A decisão, com nome e data.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Evidência é o que você viu</h2>
+  <p>"A IA disse que passou" não é evidência. Evidência é a captura de tela da caixa de entrada, a saída do teste, a soma feita, o link aberto no celular. Para capturar a tela: Windows+Shift+S no Windows, Cmd+Shift+4 no Mac. Algo que outra pessoa pode olhar e concordar.</p>
+  <p data-ex="analista">No aceite do relatório, Carla trocou "revisado pela IA" pela célula de conferência dizendo "confere" e pela lista de cidades lida por ela.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Declaração</span><p>"O Codex revisou e disse que está tudo certo."</p></div>
+      <div class="depois"><span class="rot">Evidência</span><p>"Célula de conferência: 'confere'. Lista de cidades lida por mim: nenhuma repetida."</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Três saídas, não duas</h2>
+  <p>Nem tudo é "perfeito" ou "refazer". Muitas vezes o certo é entrar com uma pendência pequena, escrita, com dono e prazo. O que não pode é a pendência ficar só na sua cabeça.</p>
+  <p data-ex="analista">Um critério de Carla falhou por detalhe: "Sao Paulo" sem til numa planilha. Ela aceitou com pendência: corrigir a planilha de origem até sexta.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Decisão do aceite</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Entra: todos os critérios com evidência</div>
+        <div class="item doc"><span class="pin">2</span> Entra com pendência: falha pequena, escrita, com dono e prazo</div>
+        <div class="item doc"><span class="pin">3</span> Volta: critério importante sem evidência ou falhando</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Entrega normal.</span></li>
+      <li><span class="pin">2</span><span>Entrega, e a pendência entra no FALHAS.md ou no <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span>.</span></li>
+      <li><span class="pin">3</span><span>Menor correção e nova conferência, como na aula 18.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Na dúvida entre "entra com pendência" e "volta"? Pergunte: se o cliente vir essa falha amanhã, ele consegue usar mesmo assim? Se sim, pendência. Se não, volta.</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Ninguém assina por você</h2>
+  <p>A <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span> e os testes ajudam a decidir. A decisão continua humana. Nem a aprovação de dois <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelos</span> assina no seu lugar.</p>
+  <p data-ex="desenvolvedor">Rafael manda à clínica o link e uma frase: "conferido por mim, critério por critério; o aceite está no projeto".</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">O que ajuda a decidir</span><p>Testes, caminho do usuário, revisão de outra IA.</p></div>
+      <div class="neutro"><span class="rot">Quem decide</span><p>Você, com nome e data no aceite.</p></div>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">Um critério não tem evidência, mas as duas IAs dizem que ele passa. Qual decisão cabe?</p>
+    <button class="opt" data-k="a" data-fb="Duas declarações ainda não são evidência.">Entra, as duas concordaram</button>
+    <button class="opt" data-k="b" data-fb="Pendência é para falha pequena conhecida, não para critério não conferido.">Entra com pendência</button>
+    <button class="opt" data-k="c" data-fb="Isso. Sem evidência, confira antes; só depois decida.">Volta para conferir esse critério</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">O aceite do seu piloto</h3>
+  <p class="pgoal">Pronto quando a pasta do piloto tiver um aceite.md com a evidência de cada critério e a sua decisão assinada. Cerca de 12 minutos, no computador.</p>
+  <p class="psafe">É um arquivo seu; nada é enviado. O piloto ainda não está pronto? Faça o aceite do que existe: a decisão honesta pode ser "volta", e isso também é um resultado.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Aceite: &lt;nome do piloto&gt;
+
+| critério | evidência (o que eu vi) | resultado |
+|---|---|---|
+| &lt;critério 1&gt; | &lt;captura, saída do teste, soma, link&gt; | &lt;ok ou falhou&gt; |
+| &lt;critério 2&gt; | &lt;...&gt; | &lt;...&gt; |
+| &lt;critério 3&gt; | &lt;...&gt; | &lt;...&gt; |
+
+Decisão: &lt;entra, entra com pendência, ou volta&gt;
+Pendência (se houver): &lt;o quê, quem, até quando&gt;
+Assinado: &lt;seu nome&gt; · &lt;data&gt;</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Crie o aceite.md na pasta do piloto, do mesmo jeito que o briefing.md da aula 5.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Copie os critérios do briefing.md para a tabela.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Para cada um, escreva a evidência que você viu. Sem evidência, o resultado fica "não conferido".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Escreva a decisão e assine com nome e data.</span></label></li>
+  </ol>
+  <p class="pdone">Você fechou o módulo 4 com o aceite do seu piloto, assinado e com evidência.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Aceite</h3>
+    <ol>
+      <li><span><b>Por critério</b>cada linha com a evidência e o resultado.</span></li>
+      <li><span><b>Evidência</b>o que você viu e outra pessoa pode olhar.</span></li>
+      <li><span><b>Decisão</b>entra, entra com pendência, ou volta; com nome e data.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já fecha uma entrega com decisão escrita e evidência de cada critério.</p>
+    <p class="na-action">Mostre o aceite.md a alguém da sua equipe e pergunte se ele concordaria com a decisão só lendo o arquivo.</p>
+    <p class="na-hook">No módulo 5: amanhã, outra conversa ou outro assistente continua o piloto. Como passar o bastão sem explicar tudo de novo?</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-19">← aula anterior</a><a class="next" href="#trilha">voltar à trilha →</a></nav>
+<p class="aula-pe">Aula 20 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-20">
+[
+  {"front":"No seu aceite está escrito \"revisado pela IA: ok\". Isso serve como evidência?","back":"Não. Troque pelo que você viu: a saída do teste, a captura, a soma, o link aberto."},
+  {"front":"Um detalhe pequeno falhou, e o cliente consegue usar mesmo assim. Qual decisão?","back":"Entra com pendência: a falha escrita, com quem corrige e até quando."},
+  {"front":"Por que assinar o aceite com nome e data?","back":"Para ficar claro quem decidiu e quando, e responder \"quem conferiu?\" sem depender de memória."}
+]
+</script>
+</section>

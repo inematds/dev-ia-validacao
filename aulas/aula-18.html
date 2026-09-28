@@ -1,0 +1,135 @@
+<section class="view" id="v-aula-18" data-aula="18" data-tempo="12min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 3 de 5</p>
+  <h1>A menor correção, e <em>uma linha</em> para não repetir</h1>
+  <figure class="cena"><img src="assets/img/aula-18.webp" width="1280" height="720" alt="Um desenvolvedor escreve uma única linha num caderno pautado, ao lado do notebook e de uma xícara de café, registrando uma falha que acabou de corrigir."></figure>
+  <p class="promise">Você consegue pedir a menor correção para uma falha do seu piloto e registrá-la numa linha do arquivo FALHAS.md.</p>
+  <p class="why">Quando algo quebra, a vontade é pedir "refaça direito". A IA refaz muito mais do que o necessário, e você tem de conferir tudo de novo. E sem registro, o mesmo erro volta no mês seguinte.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Peça a <b>menor correção</b> que resolve, e diga o que não pode mudar.</li>
+      <li>Registre a falha numa linha: data, o que quebrou, a correção, prompt ou infra.</li>
+      <li>Depois de umas dez linhas, o padrão dos seus erros aparece sozinho.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Corrija o que quebrou, não o sistema inteiro</h2>
+  <p>A menor correção é a mudança mais curta que faz o critério voltar a passar. Quanto menor, menos coisa para conferir de novo e menos chance de quebrar outra parte.</p>
+  <p data-ex="desenvolvedor">O botão enviar sumia sob o teclado do celular. Rafael quase pediu "refaça o formulário". Pediu só para o botão ficar visível com o teclado aberto.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Refazer tudo</span><p><b>Pedido:</b> "O formulário está ruim no celular, refaça."</p><p><b>Resultado:</b> página nova, e os três critérios para conferir de novo.</p></div>
+      <div class="depois"><span class="rot">Menor correção</span><p><b>Pedido:</b> "Deixe o botão enviar visível com o teclado aberto. Não mude mais nada."</p><p><b>Resultado:</b> uma mudança, um ponto para conferir.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O pedido de correção tem três partes</h2>
+  <p>O que falhou, com a evidência. O que corrigir, e só isso. O que a IA deve contar no fim: o que mudou e o que ficou igual.</p>
+  <p data-ex="analista">A fórmula de Carla somava a data errada. Ela pediu a correção só da fórmula, com a planilha de exemplo que mostrava o erro.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Carla</span>Falhou: o prazo de transporte conta da data do pedido. Evidência: pedido 3 da planilha anexa.
+Corrija só a fórmula do prazo, para contar da data de saída. Não mude colunas nem o formato.
+No fim, diga o que mudou e o que ficou igual.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Mudei a fórmula do prazo para contar da data de saída. Ficaram iguais as colunas e o formato. Para conferir: calcule à mão o pedido 3 e compare.</p>
+      </div>
+      <p class="tela-nota bom">Falha com evidência, correção delimitada, relato do que mudou.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Uma linha no FALHAS.md</h2>
+  <p>Corrigiu? Antes de seguir, escreva uma linha num arquivo chamado FALHAS.md, na pasta do piloto. Quatro campos: data, o que quebrou, a menor correção, e se foi prompt ou infra. Sem história longa.</p>
+  <p data-ex="desenvolvedor">Rafael cria o FALHAS.md do mesmo jeito que criou o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>.md na aula 5. A linha mais recente fica em cima.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>FALHAS.md · pasta do piloto</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> | data | o que quebrou | menor correção | prompt ou infra |</div>
+        <div class="item doc"><span class="pin">2</span> | 28/09 | botão enviar sob o teclado no celular | botão visível com teclado aberto | prompt |</div>
+        <div class="item doc"><span class="pin">3</span> | 25/09 | envio não chegava na recepção | trocar o endereço de envio | infra |</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O cabeçalho, escrito uma vez.</span></li>
+      <li><span class="pin">2</span><span>A falha de hoje, no topo.</span></li>
+      <li><span class="pin">3</span><span>As antigas descem.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Prompt ou infra: de onde veio o erro</h2>
+  <p>Prompt é quando o pedido induziu o erro, ou a IA entendeu errado. Infra é quando o problema está fora do pedido: máquina, rede, serviço fora do ar, conta, endereço. Quando for os dois, marque os dois.</p>
+  <p data-ex="analista">Depois de dez linhas, Carla viu que seis eram "prompt" e todas falavam de coluna. Passou a colar o nome das colunas em todo pedido.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Prompt</span><p>"O pedido não dizia de qual data contar o prazo."</p></div>
+      <div class="neutro"><span class="rot">Infra</span><p>"O endereço de envio da clínica estava errado no provedor de e-mail."</p></div>
+    </div>
+    <figcaption>A etiqueta mostra onde está o conserto: no jeito de pedir ou fora dele.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe se foi prompt ou infra? Marque "?" e siga. Com o tempo, as linhas parecidas mostram a resposta.</p></div>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">A IA não conseguiu terminar porque o serviço dela ficou fora do ar. Que etiqueta vai na linha?</p>
+    <button class="opt" data-k="a" data-fb="Isso. O problema estava fora do pedido.">Infra</button>
+    <button class="opt" data-k="b" data-fb="O pedido não teve culpa aqui; o serviço caiu.">Prompt</button>
+    <button class="opt" data-k="c" data-fb="Falha que atrasou o trabalho merece a linha.">Nenhuma: não precisa registrar</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Sua primeira linha no FALHAS.md</h3>
+  <p class="pgoal">Pronto quando a pasta do piloto tiver um FALHAS.md com o cabeçalho e uma linha preenchida. Cerca de 8 minutos, no computador.</p>
+  <p class="psafe">É um arquivo de texto seu. Ainda não teve falha no piloto? Registre a última vez que uma IA errou num trabalho seu, ou use a falha do botão de Rafael. As barras e os tracinhos do molde desenham a tabela: copie como está.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">| data | o que quebrou | menor correção | prompt ou infra |
+|---|---|---|---|
+| &lt;dd/mm&gt; | &lt;o que quebrou, em poucas palavras&gt; | &lt;a mudança mínima que resolveu&gt; | &lt;prompt, infra ou os dois&gt; |</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta do piloto, crie o arquivo FALHAS.md do mesmo jeito que criou o briefing.md na aula 5.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o molde e troque o que está entre &lt; &gt; pela sua falha.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Releia a coluna "menor correção": ela é mesmo a menor? Se diz "refazer", corte.</span></label></li>
+  </ol>
+  <p class="pdone">Você já tem o registro que mostra, com o tempo, onde seus pedidos falham.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Corrigir e registrar</h3>
+    <ol>
+      <li><span><b>Menor correção</b>a mudança mais curta que faz o critério voltar a passar.</span></li>
+      <li><span><b>Pedido em três partes</b>falha com evidência, só o que corrigir, relato do que mudou.</span></li>
+      <li><span><b>FALHAS.md</b>data, o que quebrou, correção, prompt ou infra.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já corrige sem abrir uma reforma e guarda o que aprendeu.</p>
+    <p class="na-action">Na próxima falha com IA, qualquer uma, escreva a linha antes de seguir para a tarefa seguinte.</p>
+    <p class="na-hook">Na próxima aula: e o erro que não sai em uma nem em duas tentativas?</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-17">← aula anterior</a><a class="next" href="#aula-19">próxima aula →</a></nav>
+<p class="aula-pe">Aula 18 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-18">
+[
+  {"front":"O relatório saiu com uma coluna errada. Você pede \"refaça o relatório\" ou outra coisa?","back":"Outra coisa: a correção só daquela coluna, com a evidência, e o pedido para contar o que mudou e o que ficou igual."},
+  {"front":"Seis linhas do seu FALHAS.md são \"prompt\" e falam de datas. O que isso sugere?","back":"Que falta dizer, em todo pedido, qual data usar. O conserto está no jeito de pedir."},
+  {"front":"A correção funcionou. Quando você escreve a linha no FALHAS.md?","back":"Antes de partir para a próxima tarefa, enquanto a falha ainda está fresca."}
+]
+</script>
+</section>

@@ -1,0 +1,153 @@
+<section class="view" id="v-aula-21" data-aula="21" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 1 de 5</p>
+  <h1>Handoff: o estado <em>num arquivo</em></h1>
+  <figure class="cena"><img src="assets/img/aula-21.webp" width="1280" height="720" alt="No fim do dia, um desenvolvedor escreve uma folha curta de anotações e a deixa sobre o teclado do notebook antes de fechar."></figure>
+  <p class="promise">Você consegue escrever, num arquivo, onde o trabalho parou, as decisões, as pendências e a próxima ação exata.</p>
+  <p class="why">Uma conversa nova com a IA começa sem lembrar de nada. Sem registro, você explica tudo de novo, e a IA às vezes desfaz uma decisão que já estava tomada. Um arquivo curto resolve isso.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O <b>handoff</b> é a passagem de plantão: um arquivo curto no fim da sessão.</li>
+      <li>Quatro partes: onde parou, decisões, pendências e <b>próxima ação exata</b>.</li>
+      <li>Ele registra o que houve. Não é ordem para a IA sair fazendo.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A conversa nova não lembra de nada</h2>
+  <p>Cada conversa com o <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> tem um tamanho máximo. Quando ela acaba, ou quando você abre outra, o que foi combinado fica para trás.</p>
+  <p>O <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span> leva esse combinado para a próxima conversa. É como a passagem de plantão num hospital: quem chega lê antes de mexer no paciente.</p>
+  <p data-ex="desenvolvedor">Rafael parou o formulário da clínica numa sexta. Na segunda, abriu uma conversa nova e disse só "continue o formulário".</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Conversa nova, segunda-feira</span></div>
+      <div class="tela-caso" data-rotulo="Sem handoff">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Continue o formulário de contato.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Posso criar o formulário com nome, e-mail, telefone e mensagem. Você quer que o envio vá para qual e-mail?</p>
+        </div>
+        <p class="tela-nota ruim">A IA começou do zero e perguntou o que já estava decidido.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Com handoff">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Leia handoffs/latest.md e me diga onde paramos, antes de mexer em qualquer arquivo.</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Paramos no envio para a recepção. Decidido: o campo telefone recusa letras. Pendente: a mensagem de teste não chegou. Próxima ação: enviar um teste e conferir a caixa da recepção.</p>
+        </div>
+        <p class="tela-nota bom">A resposta só repete o que está no arquivo. Nada foi inventado.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque ou clique nos dois botões do quadro</b> e compare a mesma segunda-feira.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>As quatro partes de um handoff</h2>
+  <p>Um bom handoff cabe numa tela. Ele diz onde o trabalho parou, o que foi decidido, o que ficou pendente e qual é a próxima ação.</p>
+  <p data-ex="analista">Carla escreve o dela toda sexta, ao fechar o relatório da semana. Leva cinco minutos.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>handoffs/latest.md · relatório de Carla</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Onde parou: relatório da semana gerado na pasta "relatorios"</div>
+        <div class="item doc"><span class="pin">2</span> Decisões: cidades em ordem alfabética; planilhas originais não mudam</div>
+        <div class="item doc"><span class="pin">3</span> Pendências: total de pedidos ainda não conferido contra a soma</div>
+        <div class="item doc"><span class="pin">4</span> Próxima ação: somar a coluna de pedidos das 5 planilhas e comparar</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Onde está o trabalho, com o nome da pasta.</span></li>
+      <li><span class="pin">2</span><span>O que não se discute de novo.</span></li>
+      <li><span class="pin">3</span><span>O que ainda não foi conferido.</span></li>
+      <li><span class="pin">4</span><span>Um passo só, que dá para fazer amanhã cedo.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>A próxima ação precisa ser exata</h2>
+  <p>A parte que mais falha é a última. "Continuar o formulário" não diz nada. A próxima ação boa diz o que fazer, onde e como saber se deu certo.</p>
+  <p data-ex="desenvolvedor">Rafael trocou a frase vaga por uma que qualquer assistente consegue seguir, até outro modelo.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Vaga</span><p>"Próxima ação: continuar o formulário."</p></div>
+      <div class="depois"><span class="rot">Exata</span><p>"Próxima ação: enviar uma mensagem de teste pela página de contato e conferir a caixa da recepção. Se não chegar, olhar o envio em contato.html."</p></div>
+      <p class="saldo"><b>Saldo:</b> a conversa nova começa pelo passo certo, sem perguntar nada.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe qual é a próxima ação? Escreva a pergunta que falta responder, como "descobrir por que a mensagem não chega". Uma pergunta clara também serve.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Peça o handoff à própria IA, e confira</h2>
+  <p>No fim da sessão, peça ao assistente que escreva o handoff. Ele lembra dos detalhes da conversa melhor que você. Depois, leia e corrija: é você quem responde pelo que está ali.</p>
+  <p>Um cuidado: o handoff registra o que houve. Ele não autoriza a próxima conversa a enviar, publicar ou apagar nada sozinha.</p>
+  <p data-ex="analista">Carla pede o handoff antes de fechar. Na primeira vez, a IA escreveu "total conferido". Carla não tinha conferido, e corrigiu para "pendente".</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Fim da sessão</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Carla</span>Antes de encerrar, escreva o handoff em handoffs/latest.md com: onde parou, decisões, pendências e a próxima ação exata. Marque como pendente tudo o que eu não conferi.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Handoff gravado. Pendências: total de pedidos não conferido contra a soma das planilhas. Próxima ação: somar a coluna de pedidos das planilhas e comparar com o total do relatório.</p>
+      </div>
+      <p class="tela-nota bom">"Marque como pendente o que eu não conferi" evita que o handoff diga mais do que aconteceu.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">O handoff do seu piloto</h3>
+  <p class="pgoal">Pronto quando o arquivo <code>latest.md</code>, dentro da pasta <code>handoffs</code> do piloto, tiver as quatro partes. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">É só um arquivo de texto seu. Não fez o piloto dos módulos anteriores? Use qualquer trabalho que você vai retomar amanhã. Arquivo novo no Windows: botão direito na pasta › Novo › Documento de texto, e renomeie (a aula 5 mostra o passo a passo).</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Handoff — &lt;data&gt;
+
+## Onde parou
+&lt;o que foi feito e em que pasta ou arquivo está&gt;
+
+## Decisões
+- &lt;o que não se discute de novo&gt;
+
+## Pendências
+- &lt;o que ainda não foi conferido&gt;
+
+## Próxima ação
+&lt;um passo exato: o quê, onde e como saber se deu certo&gt;</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta do piloto, crie a pasta <code>handoffs</code> e, dentro dela, o arquivo <code>latest.md</code>.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o molde e preencha as quatro partes, com o que você sabe hoje.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Releia a próxima ação: ela diz o quê, onde e como saber se deu certo?</span></label></li>
+  </ol>
+  <p class="pdone">Você já deixa o trabalho pronto para ser retomado por qualquer conversa.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Handoff</h3>
+    <ol>
+      <li><span><b>Passagem de plantão</b>um arquivo curto no fim de cada sessão.</span></li>
+      <li><span><b>Quatro partes</b>onde parou, decisões, pendências, próxima ação.</span></li>
+      <li><span><b>Registro, não ordem</b>quem chega lê; não sai fazendo.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe fechar uma sessão sem perder o que foi combinado.</p>
+    <p class="na-action">Na próxima sessão de trabalho com IA, peça o handoff antes de fechar e corrija uma linha que diga mais do que aconteceu.</p>
+    <p class="na-hook">Na próxima aula: o handoff está escrito. Como fazer a conversa nova ler e conferir antes de agir?</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-20">← aula anterior</a><a class="next" href="#aula-22">próxima aula →</a></nav>
+<p class="aula-pe">Aula 21 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-21">
+[
+  {"front":"Você abriu uma conversa nova e a IA perguntou algo que já estava decidido. O que faltou na sessão anterior?","back":"Um handoff: o arquivo com onde parou, decisões, pendências e próxima ação, para a conversa nova ler antes de agir."},
+  {"front":"\"Próxima ação: continuar o relatório.\" Como deixar isso utilizável?","back":"Dizendo o quê, onde e como saber se deu certo, como \"somar a coluna de pedidos das planilhas e comparar com o total\"."},
+  {"front":"A IA escreveu no handoff \"tudo conferido\", mas você não conferiu nada. O que faz?","back":"Corrige para pendente antes de fechar. O handoff só pode dizer o que de fato aconteceu."}
+]
+</script>
+</section>

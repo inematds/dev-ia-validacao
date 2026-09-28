@@ -1,0 +1,133 @@
+<section class="view" id="v-aula-25" data-aula="25" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 5 de 5</p>
+  <h1>Segunda opinião e o ciclo <em>handoff → prime</em></h1>
+  <figure class="cena"><img src="assets/img/aula-25.webp" width="1280" height="720" alt="Um desenvolvedor e uma analista de operações sentados lado a lado: ela lê em voz alta uma folha de anotações enquanto ele confere no notebook."></figure>
+  <p class="promise">Você consegue fechar no seu piloto o ciclo completo: handoff numa sessão, prime numa sessão nova, conferência e uma segunda opinião.</p>
+  <p class="why">Nas quatro aulas anteriores você viu as peças: handoff, prime, arquivos no projeto e troca de assistente. Agora elas viram rotina. E o mesmo ciclo dá, de brinde, uma segunda opinião sem precisar de outro assistente.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Conversa nova + prime + "aponte falhas" = segunda opinião no mesmo assistente.</li>
+      <li>Comandos de segunda opinião que você ouviu falar: confira se existem na sua ferramenta.</li>
+      <li>O ciclo diário: sessão, handoff, prime, sessão nova.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Segunda opinião dentro do mesmo assistente</h2>
+  <p>Uma conversa nova não carrega o apego da anterior. Com o prime, ela lê o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>, o handoff e o trabalho real. Aí você pede a crítica: falhas, com o trecho que mostra cada uma.</p>
+  <p>É a <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span> do módulo 1, feita com o que você já tem. Outro <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> olha com ainda menos apego, quando você tiver acesso.</p>
+  <p data-ex="analista">Carla só tem o Codex para trabalhar nas planilhas. Para revisar o relatório, abre uma conversa nova dele, faz o prime e pede a crítica.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Conversa nova, depois do prime</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Carla</span>Agora leia relatorios/semana.md e aponte falhas contra os critérios de aceite do briefing.md, com o trecho que mostra cada uma. Não altere nada.</p>
+        <p class="msg ia ok"><span class="quem">Codex</span>Falha 1: o critério 2 pede cada cidade uma vez, e uma das cidades aparece em duas linhas da tabela de totais. Trecho: as duas linhas com o mesmo nome, na tabela de totais.</p>
+      </div>
+      <p class="tela-nota bom">A conversa nova achou um erro que a sessão que fez o relatório não viu.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Comando novo de que ouviu falar: confira antes</h2>
+  <p>Circulam dicas de comandos para pedir uma segunda opinião de dentro do assistente, como um <code>/advisor</code> no Claude. Ferramentas mudam rápido, e o que existe numa conta pode não existir na outra.</p>
+  <p>Antes de montar a rotina em cima de um comando, confira: digite <code>/</code> no assistente e veja se ele aparece na lista. A conversa nova com prime funciona em qualquer um.</p>
+  <p data-ex="desenvolvedor">Rafael leu sobre um comando assim num grupo. Digitou <code>/</code> no Claude Code, procurou na lista e anotou no AGENTS.md o que achou, com a data.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Funciona em qualquer um</span><p>Conversa nova, prime com os arquivos, pedido de falhas com evidência.</p></div>
+      <div class="neutro"><span class="rot">Conferir no seu ambiente</span><p>Comandos prontos de segunda opinião. Veja se aparecem ao digitar <code>/</code> e o que fazem.</p></div>
+    </div>
+    <figcaption>Comece pelo cartão "Funciona em qualquer um". O outro entra quando você conferir.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O ciclo diário</h2>
+  <p>Juntando tudo, o dia de trabalho com IA tem quatro tempos. Ele é o mesmo em qualquer assistente, porque só depende de arquivos de texto.</p>
+  <p data-ex="desenvolvedor">Rafael fecha toda sessão com o <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span> e abre toda sessão com o <span class="gterm" data-gl="prime" data-def="Primeiro pedido de uma sessão: o assistente lê os arquivos do projeto e o handoff, sem mexer em nada, e devolve um resumo com as fontes.">prime</span>. Diz que perdeu o medo de fechar a conversa.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>O ciclo diário</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Sessão: trabalhar na próxima ação</div>
+        <div class="item doc"><span class="pin">2</span> Handoff: gravar e conferir handoffs/latest.md</div>
+        <div class="item doc"><span class="pin">3</span> Prime: conversa nova lê e resume, sem alterar nada</div>
+        <div class="item doc"><span class="pin">4</span> Conferir: cinco perguntas, e só então trabalhar</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O trabalho em si.</span></li>
+      <li><span class="pin">2</span><span>Antes de fechar, sempre.</span></li>
+      <li><span class="pin">3</span><span>Ao abrir, sempre.</span></li>
+      <li><span class="pin">4</span><span>Volta para o 1.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Parece ritual demais para uma tarefa de meia hora? Para tarefas curtas, basta o handoff de uma linha: a próxima ação exata.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>O laboratório: o ciclo no seu piloto</h2>
+  <p>O laboratório do módulo junta as cinco aulas numa passada só. O resultado é o piloto pronto para ser retomado por qualquer assistente, a qualquer dia.</p>
+  <p data-ex="analista">Carla fez o laboratório numa sexta e retomou na segunda. O prime acertou as cinco perguntas na primeira tentativa.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sem o ciclo</span><p>Cada segunda começa com "onde eu estava mesmo?", e a IA repete perguntas.</p></div>
+      <div class="depois"><span class="rot">Com o ciclo</span><p>Cada segunda começa com um resumo conferido e a próxima ação exata.</p></div>
+      <p class="saldo"><b>Saldo:</b> dez minutos de handoff e prime no lugar de meia hora de reconstrução.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Laboratório: feche o ciclo no piloto</h3>
+  <p class="pgoal">Pronto quando uma conversa nova tiver acertado as cinco perguntas e apontado ao menos uma falha no trabalho do piloto. Cerca de 12 minutos, no computador.</p>
+  <p class="psafe">Tudo é leitura, menos o handoff, que é um arquivo seu. Não fez as aulas anteriores? Use o briefing.md da aula 5 e um handoff de uma linha. Se a IA começar a alterar algo, clique no botão de parar.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na sessão atual, peça o handoff do piloto e confira cada linha (aula 21).</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra uma conversa nova e cole o pedido das cinco perguntas (aula 24).</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Com as cinco certas, peça: "aponte falhas contra os critérios de aceite, com o trecho de cada uma, sem alterar nada".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Anote as falhas no handoff, como pendências.</span></label></li>
+  </ol>
+  <p class="pdone">Você fechou o módulo 5 com um piloto que qualquer assistente retoma e revisa.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Ciclo e segunda opinião</h3>
+    <ol>
+      <li><span><b>Segunda opinião</b>conversa nova, prime e pedido de falhas com trecho.</span></li>
+      <li><span><b>Comando novo</b>confira no seu assistente antes de usar.</span></li>
+      <li><span><b>Ciclo diário</b>sessão, handoff, prime, conferência.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já trabalha com IA sem depender da memória de uma conversa ou de uma ferramenta.</p>
+    <p class="na-action">Amanhã, abra o dia com o prime do piloto e cronometre quanto tempo leva até a primeira ação.</p>
+    <p class="na-hook">No módulo 6: quanto custou tudo isso? Modelo, esforço e orçamento por etapa.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · Handoff e prime nos kits<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Nível 6 do Use Both</h3><p>O kit Use Both chama isso de "handoff e prime": o handoff grava o estado num arquivo portátil; o prime faz o próximo assistente ler e verificar esse estado antes de continuar. No kit agente-claude-codex, cada handoff vira um retrato com data em handoffs/history/, que nunca é sobrescrito, e handoffs/latest.md é a cópia do mais recente.</p><h3>O que a síntese marca como "a conferir"</h3><p>A sugestão de usar um comando /advisor no Claude para investigar gargalos apareceu na conversa que originou este curso. A síntese do INEMA registra que ela não foi verificada na página analisada: confirme no seu ambiente antes de virar procedimento.</p>
+    <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://eventos.inema.pro/claude-codex/">Área Claude → Codex — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-24">← aula anterior</a><a class="next" href="#trilha">voltar à trilha →</a></nav>
+<p class="aula-pe">Aula 25 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-25">
+[
+  {"front":"Você só tem um assistente e quer uma segunda opinião sobre o relatório. Como faz?","back":"Abre uma conversa nova, faz o prime com os arquivos e pede falhas contra os critérios de aceite, com o trecho de cada uma."},
+  {"front":"Alguém indicou um comando pronto de segunda opinião. O que você confere antes de adotar?","back":"Se ele aparece ao digitar / no seu assistente e o que faz de fato. Anote o resultado com a data."},
+  {"front":"A tarefa é de meia hora. Vale fazer o ciclo completo?","back":"Basta o handoff de uma linha com a próxima ação exata. O ciclo completo é para trabalho que continua outro dia."}
+]
+</script>
+</section>

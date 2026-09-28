@@ -1,0 +1,139 @@
+<section class="view" id="v-aula-9" data-aula="9" data-tempo="13min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 2 · Aula 4 de 5</p>
+  <h1>Duas rodadas de revisão <em>e ponto</em></h1>
+  <figure class="cena"><img src="assets/img/aula-9.webp" width="1280" height="720" alt="Uma analista de operações fecha uma pasta de documentos com duas notas adesivas coladas na capa, com gesto de quem decidiu encerrar a discussão."></figure>
+  <p class="promise">Você consegue responder cada achado da crítica, decidir quando parar o debate e saber quando vale automatizá-lo.</p>
+  <p class="why">Plano e crítica podem ir e voltar para sempre. Cada volta gasta tempo e uso da conta, e a partir de certo ponto os dois só concordam por cansaço. Quem decide o que fica em aberto são os testes, não mais uma rodada.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Cada achado recebe uma resposta: aceito, rejeitado com evidência ou em aberto.</li>
+      <li>No máximo duas rodadas de revisão. Concordar não é prova.</li>
+      <li>O que ficou em aberto vira teste com nome. Plano grande: o claudex automatiza.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Cada achado recebe uma resposta</h2>
+  <p>Uma <span class="gterm" data-gl="rodada-de-revisao" data-def="Uma ida e volta entre plano e crítica: o revisor aponta achados e o autor responde cada um e escreve a nova versão.">rodada de revisão</span> é uma ida e volta: a crítica chega e cada achado recebe uma resposta. Aceito: entra no plano. Rejeitado com evidência: você mostra por que não. Em aberto: ninguém sabe ainda.</p>
+  <p data-ex="analista">Carla respondeu os três achados do plano das planilhas. Um aceito, um rejeitado e um em aberto.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>review.md · respostas de Carla</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Juntar pelo nome da coluna → aceito</div>
+        <div class="item doc"><span class="pin">2</span> Trocar a planilha por um banco de dados → rejeitado: fora do briefing</div>
+        <div class="item doc"><span class="pin">3</span> Planilha com cidade em branco → em aberto</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Entra no plano.</span></li>
+      <li><span class="pin">2</span><span>Não entra, e a evidência está escrita.</span></li>
+      <li><span class="pin">3</span><span>Vira teste, no passo 3 desta aula.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Por que parar em duas rodadas</h2>
+  <p>A primeira rodada acha a maior parte das falhas. A segunda confere se as correções ficaram boas. Depois disso, cada volta acha menos e custa o mesmo. E os dois modelos começam a concordar, o que a aula 2 mostrou que não é prova.</p>
+  <p data-ex="desenvolvedor">Rafael deixou o debate do formulário ir até a quinta rodada. As três últimas só trocaram palavras de lugar.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Cinco rodadas</span><p>Rodadas 3, 4 e 5: ajustes de redação. Os dois assistentes terminam "de acordo". Nenhum teste nomeado.</p></div>
+      <div class="depois"><span class="rot">Duas rodadas</span><p>Rodada 1 acha falhas. Rodada 2 confere as correções. O que sobrou vira teste antes de construir.</p></div>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">Depois da segunda rodada, os dois modelos concordam que o plano está pronto. O que isso garante?</p>
+    <button class="opt" data-k="a" data-fb="Não. Os dois podem ter deixado passar a mesma coisa.">Que o plano não tem falhas</button>
+    <button class="opt" data-k="b" data-fb="Uma terceira rodada só traria mais concordância.">Que vale uma terceira rodada</button>
+    <button class="opt" data-k="c" data-fb="Isso. Concordância encerra o debate; quem prova são os testes.">Só que o debate acabou</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O que ficou em aberto vira teste com nome</h2>
+  <p>Achado em aberto não se resolve discutindo. Ele vira um teste escrito no plano, para rodar quando existir o que testar. Assim o debate para, mas a dúvida não some.</p>
+  <p data-ex="analista">O achado da cidade em branco virou um teste. Rodar com a planilha de Juiz de Fora, que tem cidade em branco, e conferir onde o pedido aparece.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Carla</span>O achado 3 está em aberto: não sei o que fazer com cidade em branco. Transforme em um teste para o plano, sem decidir por mim.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Teste proposto: rodar a rotina com uma planilha que tenha uma linha de cidade em branco. Conferir se o pedido aparece no total geral e onde ele é listado. A decisão sobre o que é certo fica com você.</p>
+      </div>
+      <p class="tela-nota bom">O teste diz o que conferir. A regra de negócio continua sendo de Carla.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Plano grande: o claudex automatiza o debate</h2>
+  <p>Para plano pequeno, duas rodadas feitas à mão bastam. Para plano grande, existe o claudex, um <span class="gterm" data-gl="plugin" data-def="Complemento que se acrescenta a um programa para dar a ele uma função nova.">plugin</span> do Claude Code. No comando <code>claudex:plan</code>, o Claude escreve o PLAN.md e o Codex critica de três ângulos. O ciclo repete até a aprovação ou até o número de rodadas que você fixar.</p>
+  <p data-ex="desenvolvedor">Rafael usa as duas rodadas manuais no formulário. Guardou o claudex para o sistema de agendamento da clínica, bem maior.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Tarefa pequena</span><p>Duas rodadas à mão. Você lê cada achado e responde.</p></div>
+      <div class="neutro"><span class="rot">Plano grande</span><p><code>claudex:plan</code>, com o número de rodadas fixado. No fim, você ainda lê o plano e nomeia os testes.</p></div>
+    </div>
+    <figcaption>Automatizar o debate não automatiza a decisão.</figcaption>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não usa o Claude Code? Ignore o claudex por enquanto. As duas rodadas manuais funcionam com qualquer assistente, até com uma conversa nova do mesmo.</p></div>
+</section>
+
+<section class="practice" data-mode="analise">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Responda os achados</h3>
+  <p class="pgoal">Pronto quando cada achado do caso tiver uma resposta e o em aberto tiver virado teste. Cerca de 8 minutos, no papel ou no bloco de notas.</p>
+  <p class="psafe">É um caso para treinar. Se um achado parecer tanto aceito quanto rejeitado, marque em aberto e escreva o teste que decidiria.</p>
+  <p><b>O caso.</b> O <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> de Rafael pede um formulário de contato para a clínica, só na página de contato. A crítica trouxe três achados. A: "o plano não limita o tamanho da mensagem". B: "refazer o menu do site para destacar o contato". C: "não está claro se a recepção quer cópia das mensagens no celular".</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Responda A, B e C com aceito, rejeitado com evidência ou em aberto.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Para o rejeitado, escreva a evidência em uma linha.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Transforme o em aberto num teste ou numa pergunta com nome de quem responde.</span></label></li>
+  </ol>
+  <details class="gabarito"><summary>Ver gabarito</summary>
+    <p>A: aceito, limite de tamanho entra no plano. B: rejeitado, o briefing põe o menu no "Fora". C: em aberto; vira a pergunta "a recepção quer cópia no celular?", para a clínica responder antes de construir.</p>
+  </details>
+  <p class="pdone">Você já encerra o debate com cada achado respondido e a dúvida guardada num teste.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Encerrar o debate</h3>
+    <ol>
+      <li><span><b>Três respostas</b>aceito, rejeitado com evidência, em aberto.</span></li>
+      <li><span><b>Duas rodadas</b>depois disso, concordância não acrescenta prova.</span></li>
+      <li><span><b>Em aberto</b>vira teste com nome; plano grande, claudex.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe fechar uma revisão sem ficar num debate sem fim.</p>
+    <p class="na-action">Escreva ao lado de cada achado do seu review.md: aceito, rejeitado ou em aberto. Leva dez minutos.</p>
+    <p class="na-hook">Na próxima aula: juntar as respostas no plan-v2.md do piloto e ver por que "Claude planeja" é só um começo.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · Reconciliar e parar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que o kit Use Both pede</h3><p>No fluxo "planejar e depois desafiar", o kit pede para reconciliar os achados como aceitos, rejeitados com evidência ou não resolvidos, salvar plan-v2.md e review.md, e limitar a duas rodadas de revisão. E lembra: concordância não é prova; nomeie os testes ou a evidência necessários antes de implementar.</p><h3>claudex × Use Both</h3><p>Segundo a área Codex + Claude do Eventos INEMA, os dois são complementares. O claudex é software que automatiza o debate de um plano grande. O Use Both é método para todo o resto: revisar mudança, meta com condição de parada, trocar de sessão.</p>
+    <p class="comp-fontes">Fontes: <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a> · <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-8">← aula anterior</a><a class="next" href="#aula-10">próxima aula →</a></nav>
+<p class="aula-pe">Aula 9 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-9">
+[
+  {"front":"O revisor sugeriu algo que o briefing põe no \"Fora\". Como você responde esse achado?","back":"Rejeitado, com a evidência: a linha do briefing que deixa aquilo fora do escopo."},
+  {"front":"Na quarta volta do debate, os assistentes só trocam palavras de lugar. O que fazer?","back":"Parar. Registrar o que ficou em aberto como teste e seguir para a construção."},
+  {"front":"Ninguém sabe se um achado procede. Como tirá-lo da discussão sem esquecê-lo?","back":"Transformando em teste ou pergunta com nome, escrito no plano, para decidir quando houver o que conferir."}
+]
+</script>
+</section>

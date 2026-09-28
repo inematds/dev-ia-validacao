@@ -1,0 +1,134 @@
+<section class="view" id="v-aula-19" data-aula="19" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 4 de 5</p>
+  <h1>Erro difícil pede <em>linha de chegada</em></h1>
+  <figure class="cena"><img src="assets/img/aula-19.webp" width="1280" height="720" alt="Uma analista de operações examina com uma lupa uma planilha impressa, procurando um erro, com um cronômetro de mesa ao lado do notebook."></figure>
+  <p class="promise">Você consegue escrever a meta de um erro difícil: o sucesso que dá para ver, os limites e a hora de a IA parar e relatar.</p>
+  <p class="why">Tem erro que não sai em uma nem em duas tentativas. A tentação é dizer "resolve isso, custe o que custar". Aí a IA roda muito tempo, gasta muito, e ninguém sabe dizer se chegou.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Troque "resolve isso" por uma meta com <b>sucesso observável</b>: qual entrada, qual resultado.</li>
+      <li>Dê limites: arquivos, tentativas, gasto. E um ponto de relato.</li>
+      <li>Passou no critério, a IA para. Sem enfeite a mais.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>"Resolve isso" não tem fim</h2>
+  <p>Um pedido sem linha de chegada deixa a IA decidir quando parar. Ela pode parar cedo demais ou não parar nunca. Uma meta diz como saber que chegou.</p>
+  <p data-ex="analista">O relatório de Carla dava um total diferente só em algumas semanas. Ela escreveu a meta com uma semana que falhava e o resultado esperado.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sem chegada</span><p>"O total às vezes não bate. Resolve isso."</p></div>
+      <div class="depois"><span class="rot">Meta</span><p>"Com as planilhas da semana 38, o total do relatório é igual à soma das planilhas. A célula de conferência mostra 'confere'."</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>As três partes da meta</h2>
+  <p>Sucesso observável: a entrada, o resultado esperado e como conferir. Limites: quais arquivos, quantas tentativas, quanto gasto. Ponto de relato: quando parar e contar o que tentou.</p>
+  <p data-ex="desenvolvedor">Rafael usou o mesmo molde para um erro que só acontecia com telefone de outro estado.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>meta.md · erro do total</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Sucesso: semana 38 → total igual à soma; célula diz "confere"</div>
+        <div class="item doc"><span class="pin">2</span> Limites: só a rotina do relatório; 3 tentativas; 30 minutos</div>
+        <div class="item doc"><span class="pin">3</span> Relato: a cada tentativa que falhar, e ao bater o limite</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Você confere sem perguntar nada à IA.</span></li>
+      <li><span class="pin">2</span><span>Os três limites da aula 4, no módulo 1.</span></li>
+      <li><span class="pin">3</span><span>O que tentou, o que falhou, o que falta.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Chegou: para. Não chegou: relata.</h2>
+  <p>Diga as duas saídas no pedido. Se o critério passar, a IA para, sem acrescentar recursos que ninguém pediu. Se bater o limite, ela para e descreve o bloqueio.</p>
+  <p data-ex="analista">Na terceira tentativa, a IA de Carla parou e mostrou onde estava a diferença.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Carla</span>Meta: com as planilhas da semana 38, o total do relatório é igual à soma das planilhas. Só a rotina do relatório. No máximo 3 tentativas. Se passar, pare. Se não, pare e diga o que tentou, o que falhou e o que falta.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Parei após 3 tentativas; a meta ainda não passa. Tentei somar por cidade e por dia. Falhou: uma planilha da semana 38 tem pedidos repetidos em duas linhas. Falta: você dizer se pedido repetido conta uma vez.</p>
+      </div>
+      <p class="tela-nota bom">Sem chegar, a IA entregou um bloqueio claro, com a pergunta que só Carla responde.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe o resultado esperado? Então o erro ainda não está entendido. Primeiro peça à IA só para achar um caso que falha, sem corrigir nada.</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Modo de meta: tempo longo não é qualidade</h2>
+  <p>Alguns assistentes têm um modo de meta, em que perseguem o objetivo sozinhos. O Codex tem o /goal. O kit Use Both acompanha um vídeo. O autor dele relata que esse modo gasta de 3 a 5 vezes mais tempo e <span class="gterm" data-gl="token" data-def="Pedaço de texto que o modelo lê ou escreve. O uso de IA é medido e cobrado em tokens.">tokens</span>. É relato, não medição.</p>
+  <p>Com ou sem esse modo, as condições são as mesmas: sucesso observável e limite real. Rodar muito tempo não prova nada; o que prova é o critério passando.</p>
+  <p data-ex="desenvolvedor">Rafael não usa o modo de meta para o site. Ele manda o pedido comum, com as mesmas três partes.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Com modo de meta</span><p>Mesma meta, mesmos limites, e uma trava de tempo ou gasto de verdade.</p></div>
+      <div class="neutro"><span class="rot">Sem modo de meta</span><p>Pedido comum com as mesmas três partes. Funciona em qualquer assistente.</p></div>
+    </div>
+    <figcaption>O recurso muda o jeito de rodar. A linha de chegada continua sendo sua.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Escreva a meta de um erro</h3>
+  <p class="pgoal">Pronto quando você tiver uma meta com sucesso observável, três limites e as duas saídas. Cerca de 10 minutos, no bloco de notas.</p>
+  <p class="psafe">Você só escreve; não precisa enviar agora. Sem erro difícil no piloto? Use o do total de Carla, trocando pela sua planilha ou página.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Meta: com &lt;a entrada que falha&gt;, &lt;o resultado esperado&gt;.
+Como conferir: &lt;o teste ou a conferência&gt;.
+Limites: só &lt;arquivos&gt;; no máximo &lt;3&gt; tentativas; &lt;trava de tempo ou gasto&gt;.
+Se passar, pare, sem acrescentar nada.
+Se não passar, pare e diga o que tentou, o que falhou e o que falta.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Escolha um erro do seu piloto e ache uma entrada que sempre falha.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Preencha o molde. O resultado esperado precisa ser conferível sem perguntar à IA.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Ligue a trava de tempo antes de enviar: alarme, ou <code>timeout</code> se você usa o <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span>.</span></label></li>
+  </ol>
+  <p class="pdone">Você já transforma um erro difícil numa tarefa com começo, fim e limite.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Meta com chegada</h3>
+    <ol>
+      <li><span><b>Sucesso observável</b>entrada, resultado esperado, como conferir.</span></li>
+      <li><span><b>Limites e relato</b>arquivos, tentativas, gasto, e quando parar para contar.</span></li>
+      <li><span><b>Duas saídas</b>passou, para; não passou, descreve o bloqueio.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe dar uma linha de chegada a um erro difícil.</p>
+    <p class="na-action">Guarde o molde da meta no seu bloco de notas, pronto para o próximo erro que resistir a duas tentativas.</p>
+    <p class="na-hook">Na próxima aula: tudo conferido. Quem decide se o piloto entra, e com base em quê?</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · Dê uma linha de chegada<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Nível 5 do kit Use Both</h3><p>Para um problema bem definido que precisa de trabalho longo: escreva o objetivo com condição de sucesso observável (quais testes, qual entrada, qual saída esperada); limite arquivos, ferramentas, rodadas de revisão e gasto, começando pequeno; use o recurso de meta do app se houver, ou um pedido comum com as mesmas condições; ponha um controle real de uso ou de tempo se precisar de teto; peça relato num ponto definido ou num bloqueio repetido. Quando os testes de aceite passarem, pare, sem acrescentar recursos.</p><p>Pronto quer dizer: evidência de teste que cumpre a condição, ou um bloqueio relatado com o que foi tentado. Tempo longo de execução não é nota de qualidade. As comparações de velocidade, persistência e custo do vídeo são a experiência do autor, não garantia medida.</p>
+    <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-18">← aula anterior</a><a class="next" href="#aula-20">próxima aula →</a></nav>
+<p class="aula-pe">Aula 19 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-19">
+[
+  {"front":"Você escreveu \"o site às vezes não envia, conserte\". O que falta para isso virar meta?","back":"Uma entrada que falha, o resultado esperado e como conferir, mais limites e o que fazer ao chegar ou não chegar."},
+  {"front":"A IA passou no critério e ofereceu \"melhorar também o layout\". O que você responde?","back":"Que pare: a meta foi atingida. Melhoria nova é outra tarefa, com critérios próprios."},
+  {"front":"O assistente ficou duas horas no modo de meta. Isso mostra que o trabalho ficou bom?","back":"Não. Tempo longo não é qualidade; o que mostra é o critério passando na conferência."},
+  {"front":"Você não sabe dizer o resultado esperado do erro. Qual o primeiro pedido à IA?","back":"Achar um caso que sempre falha, sem corrigir nada. Com ele, você escreve a meta."}
+]
+</script>
+</section>

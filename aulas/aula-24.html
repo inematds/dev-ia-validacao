@@ -1,0 +1,145 @@
+<section class="view" id="v-aula-24" data-aula="24" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 5 · Aula 4 de 5</p>
+  <h1>Trocar de modelo <em>sem recomeçar</em></h1>
+  <figure class="cena"><img src="assets/img/aula-24.webp" width="1280" height="720" alt="Um desenvolvedor fecha um notebook e trabalha no outro, com a pasta de anotações do projeto aberta entre os dois, como quem passa o trabalho adiante."></figure>
+  <p class="promise">Você consegue passar o seu piloto de um assistente para outro com handoff e prime, e conferir que o novo entendeu antes de ele trabalhar.</p>
+  <p class="why">Você vai trocar de assistente. O limite de uso acaba, outro faz melhor uma parte, ou você quer um olhar de fora. Sem método, a troca custa uma hora de explicação. Com os arquivos da aula 23, custa dez minutos.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>No assistente que sai: handoff. No que entra: prime.</li>
+      <li>Antes de deixar trabalhar, faça cinco perguntas de continuidade.</li>
+      <li>Resposta errada no prime quase sempre é arquivo vago. Corrija o arquivo.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A troca vai acontecer</h2>
+  <p>Ninguém usa um <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> só para sempre. O uso da conta acaba no meio da semana, o preço muda, ou outro assistente faz melhor uma parte do trabalho.</p>
+  <p>A troca boa não depende de memória. Ela passa pelos arquivos: o <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span> de quem sai e o <span class="gterm" data-gl="prime" data-def="Primeiro pedido de uma sessão: o assistente lê os arquivos do projeto e o handoff, sem mexer em nada, e devolve um resumo com as fontes.">prime</span> de quem entra.</p>
+  <p data-ex="desenvolvedor">Na quarta, o limite de uso do Claude de Rafael acabou no meio do formulário. Ele pediu o handoff e seguiu no Codex.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Recomeçar explicando</span><p>Contar o projeto de memória ao novo assistente. Uma hora, e duas regras esquecidas.</p></div>
+      <div class="depois"><span class="rot">Handoff e prime</span><p>O novo lê os arquivos, resume com as fontes, e Rafael confere. Dez minutos.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O caminho da troca, em quatro passos</h2>
+  <p>A ordem importa. Primeiro o registro, depois a leitura, depois a conferência. Só então o trabalho.</p>
+  <p data-ex="analista">Carla faz a troca ao contrário: o Codex monta o relatório e, para a revisão, ela passa ao chat de IA numa conversa nova.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Trocar de assistente</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> No que sai: pedir o handoff e conferir</div>
+        <div class="item doc"><span class="pin">2</span> No que entra: prime, sem alterar nada</div>
+        <div class="item doc"><span class="pin">3</span> Conferir o resumo com as cinco perguntas</div>
+        <div class="item doc"><span class="pin">4</span> Só então: "pode seguir com a próxima ação"</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Aula 21.</span></li>
+      <li><span class="pin">2</span><span>Aula 22.</span></li>
+      <li><span class="pin">3</span><span>O passo 4 desta aula.</span></li>
+      <li><span class="pin">4</span><span>A ordem de trabalhar é sua.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O prime também roda no terminal, só lendo</h2>
+  <p>Quem usa o <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span> pode fazer o prime do Codex com uma trava extra: o modo de <span class="gterm" data-gl="sandbox" data-def="Área protegida em que o assistente trabalha com permissões limitadas. No modo só leitura, ele lê os arquivos mas não consegue alterar nada.">sandbox</span> só leitura. Mesmo que ele quisesse, não conseguiria alterar arquivos.</p>
+  <p data-ex="desenvolvedor">Rafael roda o prime na pasta do site. A resposta fica gravada em prime.md, e ele lê com calma antes de liberar o trabalho.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do piloto</span></div>
+<pre><code><span class="pr">$</span> codex exec --sandbox read-only -o prime.md "Leia AGENTS.md e siga a ordem de leitura. Não altere nada. Diga o objetivo, a última decisão, a próxima ação e as contradições, com o arquivo de cada uma."
+<span class="out">...</span>
+<span class="pr">$</span> cat prime.md</code></pre>
+<p class="tela-nota">O <code>-o</code> grava a última resposta num arquivo. O <code>cat</code> mostra esse arquivo na tela.</p></div>
+  <figcaption>No app ou na extensão, o mesmo pedido de prime da aula 22 faz o papel desse comando.</figcaption></figure>
+  <details class="mais"><summary>E no Claude Code, pelo terminal?</summary>
+    <p>O equivalente é <code>claude -p "&lt;o mesmo pedido&gt;" &gt; prime.md</code>. O <code>-p</code> responde uma vez e sai. Para garantir que ele não altere nada, deixe isso escrito no pedido e confira depois se algum arquivo mudou.</p>
+  </details>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Cinco perguntas antes de deixar trabalhar</h2>
+  <p>Faça ao assistente que entrou as cinco perguntas de continuidade. Se uma resposta vier errada, olhe primeiro os arquivos. A falha quase sempre está num texto vago, como o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> ou o handoff, e não no modelo.</p>
+  <p data-ex="desenvolvedor">O Codex de Rafael errou a próxima ação: disse "criar o formulário". O handoff dizia só "continuar". Rafael reescreveu a próxima ação e rodou o prime de novo.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Perguntas de continuidade</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Qual é o objetivo e o critério de aceite?</div>
+        <div class="item doc"><span class="pin">2</span> Cite uma regra e o arquivo de onde ela vem.</div>
+        <div class="item doc"><span class="pin">3</span> Qual foi a última decisão?</div>
+        <div class="item doc"><span class="pin">4</span> Qual é a próxima ação exata?</div>
+        <div class="item doc"><span class="pin">5</span> Há conflito entre os arquivos?</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Confere com o briefing.md.</span></li>
+      <li><span class="pin">2</span><span>Confere com o AGENTS.md.</span></li>
+      <li><span class="pin">3</span><span>Confere com o handoff.</span></li>
+      <li><span class="pin">4</span><span>Confere com o handoff.</span></li>
+      <li><span class="pin">5</span><span>Se houver, você decide qual vale.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Cinco perguntas parecem muito para cada troca? Comece pela 4. Se a próxima ação vier certa, as outras costumam vir também.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Passe o piloto para outro assistente</h3>
+  <p class="pgoal">Pronto quando o assistente que entrou tiver respondido as cinco perguntas e você tiver marcado cada uma como certa ou errada. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Tudo aqui é leitura. Só tem um assistente? Faça a troca para uma conversa nova dele: o método é o mesmo. Sem o AGENTS.md da aula 23? Troque a primeira linha por "leia briefing.md e handoffs/latest.md".</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia AGENTS.md e siga a ordem de leitura dele.
+Não altere nenhum arquivo e não execute nada.
+Responda, citando o arquivo de cada resposta:
+1. Qual é o objetivo e o critério de aceite?
+2. Cite uma regra e o arquivo de onde ela vem.
+3. Qual foi a última decisão?
+4. Qual é a próxima ação exata?
+5. Há conflito entre os arquivos?
+Depois, espere a minha ordem.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>No assistente de hoje, peça o handoff do piloto e confira (aula 21).</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>No outro assistente, ou numa conversa nova, abra a pasta do piloto e cole o pedido do quadro.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Marque cada resposta como certa ou errada. Para cada errada, corrija o arquivo de origem.</span></label></li>
+  </ol>
+  <p class="pdone">Você já troca de assistente sem perder o que o piloto sabe.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Trocar sem recomeçar</h3>
+    <ol>
+      <li><span><b>Sai e entra</b>handoff em quem sai, prime em quem entra.</span></li>
+      <li><span><b>Cinco perguntas</b>objetivo, regra, decisão, próxima ação, conflito.</span></li>
+      <li><span><b>Resposta errada</b>corrija o arquivo, não o assistente.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já passa o trabalho de um assistente para outro e confere que ele entendeu.</p>
+    <p class="na-action">Na próxima vez que o uso da conta acabar, faça a troca pelos quatro passos em vez de esperar o limite voltar.</p>
+    <p class="na-hook">Na próxima aula: uma segunda opinião dentro do mesmo assistente, e o laboratório que fecha o ciclo.</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-23">← aula anterior</a><a class="next" href="#aula-25">próxima aula →</a></nav>
+<p class="aula-pe">Aula 24 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-24">
+[
+  {"front":"O limite de uso acabou no meio da tarefa. Qual a primeira coisa a pedir ao assistente antes de trocar?","back":"O handoff do piloto, conferido por você: onde parou, decisões, pendências e próxima ação."},
+  {"front":"O novo assistente errou a próxima ação no prime. Onde você procura o problema primeiro?","back":"No handoff. Quase sempre a próxima ação estava vaga; reescreva e rode o prime de novo."},
+  {"front":"Para que serve o --sandbox read-only no prime pelo terminal?","back":"Para o Codex só conseguir ler. Mesmo que tentasse, não alteraria nenhum arquivo durante o prime."}
+]
+</script>
+</section>

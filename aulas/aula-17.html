@@ -1,0 +1,129 @@
+<section class="view" id="v-aula-17" data-aula="17" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 2 de 5</p>
+  <h1>O teste passou. <em>Agora use de verdade.</em></h1>
+  <figure class="cena"><img src="assets/img/aula-17.webp" width="1280" height="720" alt="Um desenvolvedor, de pé junto à janela, preenche no celular o formulário do site como se fosse um paciente."></figure>
+  <p class="promise">Você consegue conferir uma mudança do seu piloto fazendo o caminho de quem vai usar, do começo ao fim, com dados de teste.</p>
+  <p class="why">Um teste confere uma regra. Quem usa o sistema passa por várias regras seguidas, num celular, com pressa. Muito erro só aparece nesse caminho inteiro.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Teste passando não quer dizer que o sistema funciona na mão de quem usa.</li>
+      <li>Faça o caminho do usuário, do começo ao fim, com dados de teste.</li>
+      <li>Se a IA mexer na tela por você, senha, pagamento e envio ficam com você.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Teste passando não é sistema funcionando</h2>
+  <p>O <span class="gterm" data-gl="teste-automatico" data-def="Verificação que o computador roda sozinho e responde 'passou' ou 'falhou', sempre do mesmo jeito. A IA pode escrever o teste para você.">teste automático</span> olha uma regra de cada vez. Ele não vê o celular pequeno, o teclado cobrindo o botão, a mensagem que cai na pasta de spam.</p>
+  <p data-ex="desenvolvedor">No formulário da clínica, o teste do telefone passou. No celular de Rafael, o teclado cobria o botão enviar, e não dava para rolar até ele.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Só o teste</span><p><b>O que Rafael viu:</b> PASSOU — o campo recusou "abc".</p><p><b>O que o paciente viu:</b> um botão enviar que não dava para alcançar.</p></div>
+      <div class="depois"><span class="rot">Caminho inteiro</span><p><b>O que Rafael fez:</b> abriu no celular, preencheu como paciente e tentou enviar.</p><p><b>O que achou:</b> o botão escondido, antes da clínica.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Faça o caminho de quem usa</h2>
+  <p>Pense em quem vai usar e onde. Faça o mesmo caminho, no mesmo tipo de aparelho, do primeiro clique até o resultado final.</p>
+  <p data-ex="analista">A diretoria lê o relatório de Carla no celular, pelo e-mail. Ela passou a mandar o relatório para si mesma e abrir no celular antes de enviar.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Caminho do paciente · formulário da clínica</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Abrir o site no celular, pelo link que a clínica divulga</div>
+        <div class="item doc"><span class="pin">2</span> Preencher nome, telefone e mensagem</div>
+        <div class="item botao"><span class="pin">3</span> Enviar</div>
+        <div class="item doc"><span class="pin">4</span> Olhar a caixa da recepção, inclusive o spam</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O mesmo aparelho e a mesma porta de entrada do paciente.</span></li>
+      <li><span class="pin">2</span><span>Digitando, não colando.</span></li>
+      <li><span class="pin">3</span><span>Até o fim, sem pular etapa.</span></li>
+      <li><span class="pin">4</span><span>O resultado lá na ponta, não a tela de "enviado".</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Dados de teste, nunca dados reais</h2>
+  <p>Confira com dados inventados e deixe claro que são de teste. Assim ninguém confunde o teste com um caso de verdade, e nenhum dado de pessoa real circula.</p>
+  <p data-ex="desenvolvedor">Rafael envia como "Paciente Teste" e combina com a recepção: mensagem com esse nome pode apagar.</p>
+  <p data-ex="analista">Carla confere numa cópia das planilhas, nunca nas originais.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Dado real</span><p>Nome e telefone de um paciente de verdade no formulário de teste.</p></div>
+      <div class="depois"><span class="rot">Dado de teste</span><p>"Paciente Teste", telefone de exemplo e a recepção avisada.</p></div>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não dá para testar sem mexer em coisa real, como um envio de e-mail? Mande para você mesmo primeiro. Só depois, uma vez, para o destino de verdade, avisando quem recebe.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Quando a IA usa a tela por você</h2>
+  <p>Alguns assistentes conseguem mexer no navegador ou no computador. Isso só funciona se a ferramenta estiver disponível na sua conta: ter o assistente no computador não basta.</p>
+  <p>Mesmo com a ferramenta, três coisas ficam com você: senha, pagamento e o clique final de enviar. A IA prepara e para. Se ela recusar uma ação por segurança, não troque de <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> para contornar: faça você pelo caminho normal.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente com uso do navegador</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Rafael</span>Abra a página de contato da clínica e preencha: nome "Paciente Teste", telefone "11 90000-0000", mensagem "teste do formulário". Pare antes de enviar.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Preenchi nome "Paciente Teste", telefone "11 90000-0000" e mensagem "teste do formulário". Parei antes de enviar. Confira os campos e me diga se posso clicar em enviar.</p>
+      </div>
+      <p class="tela-nota bom">A IA preparou; o envio espera a sua confirmação.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">O caminho inteiro, uma vez</h3>
+  <p class="pgoal">Pronto quando você tiver feito o caminho de quem usa, do começo ao fim, e anotado o que viu. Cerca de 10 minutos, no aparelho que o usuário usa.</p>
+  <p class="psafe">Use dados de teste e uma cópia, nunca o original. Se o seu piloto ainda não tem nada funcionando, faça o caminho no resultado de qualquer tarefa com IA desta semana.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Escreva em quatro linhas o caminho de quem usa: onde entra, o que faz, o que envia, onde vê o resultado.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Faça esse caminho no mesmo tipo de aparelho, com dados de teste.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Anote no <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>.md, em "Como confiro", o que passou e o que travou.</span></label></li>
+  </ol>
+  <p class="pdone">Você já confere o sistema do jeito que ele vai ser usado.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Caminho do usuário</h3>
+    <ol>
+      <li><span><b>Além do teste</b>o caminho inteiro pega o que a regra solta não vê.</span></li>
+      <li><span><b>Mesmo aparelho</b>e dados de teste, com quem recebe avisado.</span></li>
+      <li><span><b>IA na tela</b>ela prepara; senha, pagamento e envio são seus.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já confere o piloto como o usuário vai usar.</p>
+    <p class="na-action">Combine hoje com quem recebe os resultados do seu piloto um nome de teste, como "Paciente Teste".</p>
+    <p class="na-hook">Na próxima aula: você achou um problema. Quanto pedir para a IA mudar?</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · Uso supervisionado do computador<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Nível 4 do kit Use Both</h3><p>O kit chama de "uso supervisionado do computador": delegar uma ação autorizada numa interface quando não há outro caminho. Prefira conta de teste e registro inventado. Confirme que o assistente tem mesmo a ferramenta de uso do computador. Digite senha e código de verificação você mesmo, nunca no pedido. Peça para preparar e parar antes de enviar, comprar, publicar ou apagar. Revise os campos finais e confira o resultado depois.</p><p>O kit também diz: se uma ferramenta recusar uma ação sensível, não passe para outro modelo para contornar a recusa. Use o caminho normal, feito por uma pessoa.</p>
+    <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-16">← aula anterior</a><a class="next" href="#aula-18">próxima aula →</a></nav>
+<p class="aula-pe">Aula 17 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-17">
+[
+  {"front":"Todos os testes passaram, mas você ainda não abriu o sistema no celular. Pode entregar?","back":"Ainda não. Falta fazer o caminho de quem usa, no mesmo aparelho, do primeiro clique ao resultado final."},
+  {"front":"Você precisa testar um envio de e-mail para o cliente. Por onde começa?","back":"Mandando para você mesmo, com dados de teste. Depois, uma vez, para o destino real, avisando quem recebe."},
+  {"front":"O assistente recusou clicar em \"pagar\" por segurança. Você passa a tarefa para outra IA?","back":"Não. Faça você pelo caminho normal; trocar de modelo para contornar a recusa não é permitido no método."}
+]
+</script>
+</section>

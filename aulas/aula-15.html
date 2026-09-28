@@ -1,0 +1,139 @@
+<section class="view" id="v-aula-15" data-aula="15" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 5 de 5</p>
+  <h1>Inverter os papéis e <em>registrar a revisão</em></h1>
+  <figure class="cena"><img src="assets/img/aula-15.webp" width="1280" height="720" alt="Um desenvolvedor e uma analista de operações, sentados à mesma mesa com dois notebooks, revisam o trabalho um do outro."></figure>
+  <p class="promise">Você consegue entregar uma mudança do seu piloto com a revisão cruzada registrada num arquivo: achados, o que corrigiu e o que recusou.</p>
+  <p class="why">Revisão que fica só na conversa se perde. Amanhã ninguém lembra o que foi achado nem por que um ponto foi recusado. E, sempre com o mesmo revisor, você não descobre se a outra rota funciona melhor na sua tarefa.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Quem faz e quem revisa pode trocar. Teste a outra rota na sua tarefa.</li>
+      <li>Corrija o achado que tem evidência; recuse o resto, com o motivo.</li>
+      <li>Registre tudo em <code>revisao-etapa-N.md</code>, ao lado do código.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Quem faz e quem revisa podem trocar</h2>
+  <p>"Claude faz, Codex revisa" é uma rota para começar, não um ranking. Numa etapa, experimente o inverso e compare pela sua régua: qual rota achou mais falhas reais?</p>
+  <p>Só tem um assistente? A troca é entre conversas: uma faz, outra nova revisa, e na etapa seguinte o contrário.</p>
+  <p data-ex="desenvolvedor">Rafael fez a etapa 2 com o Codex e pediu a revisão ao Claude. O Claude achou uma falha no envio que a rota anterior não tinha pegado nesta tarefa.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Rota A</span><p>Claude faz a etapa. Codex revisa o <span class="gterm" data-gl="diff" data-def="A lista do que mudou entre duas versões de um arquivo: linhas que saíram (com −) e linhas que entraram (com +).">diff</span>.</p></div>
+      <div class="neutro"><span class="rot">Rota B</span><p>Codex faz a etapa. Claude revisa o diff.</p></div>
+    </div>
+    <figcaption>As duas rotas são válidas. Fique com a que der mais falhas reais na sua tarefa, não com a mais famosa.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Corrija o que tem evidência; recuse com motivo</h2>
+  <p>Nem todo achado vale correção. Corrija o que aponta onde, mostra a falha e bate com um critério do <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>. Recuse o que é gosto ou está fora do escopo, e escreva por quê.</p>
+  <p data-ex="analista">Carla recebeu dois achados. Um apontava cidades repetidas por causa do acento: corrigiu. O outro sugeria trocar o formato do relatório, que está no "Fora" do briefing: recusou.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Corrigido</span><p>"São Paulo" e "Sao Paulo" contavam como duas cidades. Critério 2 do briefing.</p></div>
+      <div class="neutro"><span class="rot">Recusado</span><p>"Trocar o formato do relatório." Motivo: está no Fora do briefing.</p></div>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Na dúvida se corrige ou recusa? Pergunte: isso quebra algum critério do briefing? Se sim, corrija. Se não, anote e siga.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O registro da revisão</h2>
+  <p>Um arquivo curto por etapa guarda a revisão. Quem revisou, o que achou, o que foi corrigido, o que foi recusado e por quê. Ele fica na pasta do piloto, junto do código.</p>
+  <p data-ex="desenvolvedor">O <code>revisao-etapa-2.md</code> de Rafael tem seis linhas. No módulo 5, é esse arquivo que outra conversa vai ler para continuar.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>revisao-etapa-2.md · formulário da clínica</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Fez: Codex · Revisou: Claude</div>
+        <div class="item doc"><span class="pin">2</span> Achado 1: envio não mostra aviso quando a mensagem falha · corrigido</div>
+        <div class="item doc"><span class="pin">3</span> Achado 2: trocar as cores do botão · recusado (Fora do briefing)</div>
+        <div class="item doc"><span class="pin">4</span> Conferido depois: envio de teste chegou na recepção</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Quem fez e quem revisou.</span></li>
+      <li><span class="pin">2</span><span>Achado corrigido, com o que era.</span></li>
+      <li><span class="pin">3</span><span>Achado recusado, com o motivo.</span></li>
+      <li><span class="pin">4</span><span>A conferência depois da correção.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>O laboratório: uma mudança completa</h2>
+  <p>O laboratório junta o módulo inteiro numa sequência. Linha de teste, etapa, pacote, revisão, correção, registro e versão salva. É a primeira mudança do seu piloto feita e conferida por dois olhares.</p>
+  <p data-ex="analista">Carla fez a etapa 2 pelo app, na ordem da janela abaixo. Levou vinte minutos, e o <code>revisao-etapa-2.md</code> ficou na pasta.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Uma mudança revisada</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Branch de teste (aula 11)</div>
+        <div class="item doc"><span class="pin">2</span> Etapa com critério colado e parada (aula 12)</div>
+        <div class="item doc"><span class="pin">3</span> Pacote e revisão só leitura (aula 13)</div>
+        <div class="item doc"><span class="pin">4</span> Corrigir, registrar, fazer o commit (esta aula)</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Linha separada da versão que funciona.</span></li>
+      <li><span class="pin">2</span><span>Mudança pequena.</span></li>
+      <li><span class="pin">3</span><span>Outro olhar sobre o trabalho real.</span></li>
+      <li><span class="pin">4</span><span>Registro e versão salva.</span></li>
+    </ol>
+    <figcaption>O <span class="gterm" data-gl="branch" data-def="Linha de trabalho separada dentro do Git. Você testa mudanças nela sem mexer na versão que já funciona.">branch</span> e o <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span> vêm das aulas 11 e 12. Pelo app, peça cada passo ao assistente.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Uma mudança do piloto, com a revisão registrada</h3>
+  <p class="pgoal">Pronto quando a pasta do piloto tiver o <code>revisao-etapa-N.md</code> e a etapa estiver salva. Cerca de 12 minutos, no computador, se a etapa já estiver feita; senão, reserve mais tempo.</p>
+  <p class="psafe">Tudo acontece na linha de teste; a versão que funciona não muda. Se a revisão pedir algo grande, recuse por agora e anote: "fica para outra etapa".</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Revisão da etapa &lt;N&gt;
+Fez: &lt;modelo ou conversa&gt; · Revisou: &lt;outro&gt;
+Achado 1: &lt;o que é&gt; · corrigido | recusado (motivo)
+Achado 2: &lt;o que é&gt; · corrigido | recusado (motivo)
+Conferido depois: &lt;o que você testou e o resultado&gt;</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Pegue a etapa da aula 12 (ou faça uma pequena agora), trocando quem faz e quem revisa.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Peça a revisão com o pacote da aula 13.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Corrija ou recuse cada achado e preencha o molde em <code>revisao-etapa-N.md</code>.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Confira de novo os critérios da etapa e salve a versão.</span></label></li>
+  </ol>
+  <p class="pdone">Você fechou o módulo 3 com uma mudança feita, revisada, corrigida e registrada.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Revisão registrada</h3>
+    <ol>
+      <li><span><b>Rotas</b>troque quem faz e quem revisa; compare na sua tarefa.</span></li>
+      <li><span><b>Decidir</b>corrija com evidência, recuse com motivo.</span></li>
+      <li><span><b>Arquivo</b>revisao-etapa-N.md ao lado do código.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já entrega mudanças com dois olhares e um registro que outra pessoa entende.</p>
+    <p class="na-action">Releia o seu <code>revisao-etapa-N.md</code> amanhã. Se não entender algo, escreva mais uma linha.</p>
+    <p class="na-hook">No módulo 4: revisão feita. Mas a mudança funciona de verdade? Hora de comprovar e decidir.</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-14">← aula anterior</a><a class="next" href="#trilha">voltar à trilha →</a></nav>
+<p class="aula-pe">Aula 15 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-15">
+[
+  {"front":"Faz três etapas que o mesmo revisor só acha detalhes. O que você testa na próxima?","back":"Inverter os papéis: quem revisava faz, quem fazia revisa. E comparar quantas falhas reais cada rota acha."},
+  {"front":"A revisão sugeriu mudar algo que está no Fora do briefing. O que você faz?","back":"Recusa e anota o motivo no registro da revisão: está fora do escopo combinado."},
+  {"front":"Por que guardar a revisão num arquivo, e não só na conversa?","back":"Para a próxima sessão, outro modelo ou outra pessoa saber o que foi achado, corrigido e recusado."}
+]
+</script>
+</section>

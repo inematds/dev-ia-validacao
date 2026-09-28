@@ -1,0 +1,144 @@
+<section class="view" id="v-aula-6" data-aula="6" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 2 · Aula 1 de 5</p>
+  <h1>O plano mora num arquivo, <em>não na conversa</em></h1>
+  <figure class="cena"><img src="assets/img/aula-6.webp" width="1280" height="720" alt="Um desenvolvedor marca com lápis o desenho técnico de uma casa, numa folha azul estendida sobre a mesa, antes de começar a obra."></figure>
+  <p class="promise">Você consegue pedir à IA um <code>plan-v1.md</code> com escopo, suposições, critérios de aceite e riscos, sem ela mexer em nada ainda.</p>
+  <p class="why">Quando o plano fica no meio da conversa, ele se mistura com perguntas, correções e código. Ninguém consegue criticá-lo inteiro. Num arquivo, o plano vira uma coisa que outra IA e você leem do começo ao fim.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Peça o plano num arquivo: <code>plan-v1.md</code>, na pasta do piloto.</li>
+      <li>Quatro partes: escopo, suposições, critérios de aceite e riscos.</li>
+      <li>Escreva "não implemente nada ainda". Criticar um plano custa menos que desfazer código.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Plano na conversa some; plano em arquivo fica</h2>
+  <p>O plano é a primeira coisa que a IA escreve. Se ele sai só na conversa, some quando você rola a tela. Em arquivo, ele fica na pasta, com nome e versão.</p>
+  <p>Assim o segundo <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> lê exatamente o mesmo texto que você leu.</p>
+  <p data-ex="desenvolvedor">Rafael pediu o plano do formulário da clínica. Na primeira vez, veio na conversa, misturado com código. Na segunda, pediu um arquivo.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-caso" data-rotulo="Na conversa">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Planeje o formulário de contato da clínica.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Claro. Primeiro vou criar o formulário. Já criei o arquivo contato.html com os campos. Em seguida…</p>
+        </div>
+        <p class="tela-nota ruim">O plano virou obra no meio da resposta. Não sobrou nada para criticar.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Em arquivo">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Leia briefing.md. Escreva o plano em plan-v1.md, com escopo, suposições, critérios de aceite e riscos. Não implemente nada ainda.</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Gravei plan-v1.md na pasta do piloto. Não alterei nenhum outro arquivo.</p>
+        </div>
+        <p class="tela-nota bom">Um arquivo que qualquer pessoa, ou outra IA, pode ler inteiro.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque ou clique nos dois botões do quadro</b> e compare os dois pedidos.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>As quatro partes de um plano</h2>
+  <p>Um plano que se critica tem quatro partes. Escopo: o que entra e o que fica fora. Suposições: o que a IA está dando por certo. Critérios de aceite: como conferir. Riscos: o que pode dar errado.</p>
+  <p>Os <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critérios de aceite</span> vêm do seu <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>. O plano diz como cada um vai ser testado.</p>
+  <p data-ex="desenvolvedor">No plan-v1.md de Rafael, a parte de riscos avisou: a hospedagem da clínica pode bloquear o envio de e-mail.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>plan-v1.md · formulário da clínica</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Escopo: só a página de contato. Fora: menu e cores</div>
+        <div class="item doc"><span class="pin">2</span> Suposições: a recepção usa um único e-mail</div>
+        <div class="item doc"><span class="pin">3</span> Critérios de aceite: os 3 do briefing, cada um com o teste</div>
+        <div class="item doc"><span class="pin">4</span> Riscos: a hospedagem pode bloquear o envio de e-mail</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>O que entra e o que fica fora.</span></li>
+      <li><span class="pin">2</span><span>O que a IA deu por certo.</span></li>
+      <li><span class="pin">3</span><span>Como cada critério vai ser conferido.</span></li>
+      <li><span class="pin">4</span><span>O que pode dar errado.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>"Não implemente nada ainda"</h2>
+  <p>Assistentes de código gostam de começar logo. Sem a frase "não implemente nada ainda", o plano vira obra. E obra errada custa mais para desfazer do que plano errado para corrigir.</p>
+  <p data-ex="analista">Carla pediu o plano da rotina das planilhas e esqueceu a frase. O assistente já criou três arquivos novos na pasta. Ela teve de apagar tudo e pedir de novo.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sem a frase</span><p><b>Pedido:</b> "Planeje a rotina das planilhas."</p><p><b>Resultado:</b> três arquivos criados antes de alguém ler o plano.</p></div>
+      <div class="depois"><span class="rot">Com a frase</span><p><b>Pedido:</b> "Escreva o plano em plan-v1.md. Não implemente nada ainda."</p><p><b>Resultado:</b> um arquivo só, para ler em cinco minutos.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Suposição escrita é erro que se acha</h2>
+  <p>A parte de suposições é a mais valiosa. Os erros costumam se esconder no que ninguém escreveu. Quando a IA escreve o que deu por certo, você e o revisor conseguem discordar.</p>
+  <p data-ex="analista">No plan-v1.md de Carla apareceu: "todas as planilhas têm as mesmas colunas, na mesma ordem". Ela sabia que não era verdade para uma cidade. O erro apareceu antes de qualquer tentativa.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Suposição escondida</span><p>O plano manda "juntar as planilhas pela ordem das colunas". Ninguém percebe o que isso supõe.</p></div>
+      <div class="depois"><span class="rot">Suposição escrita</span><p>"Suponho que todas as planilhas têm as mesmas colunas, na mesma ordem." Carla lê e corrige na hora.</p></div>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O plano veio longo demais? Peça: "resuma em uma página, mantendo as quatro partes". Plano curto se critica melhor.</p></div>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Peça o plan-v1.md do seu piloto</h3>
+  <p class="pgoal">Pronto quando existir um <code>plan-v1.md</code> na pasta do piloto com as quatro partes e nenhum outro arquivo novo. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">O pedido diz para não implementar nada. Se o assistente criar outros arquivos mesmo assim, clique no botão de parar e apague só o que ele criou. Não fez a aula 5? Escreva três linhas de briefing no próprio pedido.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia briefing.md. Escreva o plano em plan-v1.md, na mesma pasta.
+Inclua quatro partes: escopo (dentro e fora), suposições,
+critérios de aceite (cada um com o teste que vai conferir) e riscos.
+Não implemente nada ainda. Não altere nenhum outro arquivo.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o assistente de código com a pasta do piloto como pasta de trabalho: é onde está o <code>briefing.md</code> da aula 5. Num chat comum, cole o texto do briefing antes do pedido.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Cole o molde e envie. No chat comum, copie a resposta e salve como <code>plan-v1.md</code>, do mesmo jeito que criou o briefing.md na aula 5.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Abra o <code>plan-v1.md</code> e marque a suposição que mais pode estar errada.</span></label></li>
+  </ol>
+  <p class="pdone">Você já tem um plano em arquivo, pronto para outra IA atacar.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Plano em arquivo</h3>
+    <ol>
+      <li><span><b>plan-v1.md</b>o plano fica na pasta do piloto, não na conversa.</span></li>
+      <li><span><b>Quatro partes</b>escopo, suposições, critérios de aceite e riscos.</span></li>
+      <li><span><b>Sem obra</b>"não implemente nada ainda" vai no pedido.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já transforma "planeje isso" num arquivo que dá para criticar.</p>
+    <p class="na-action">Leia o seu plan-v1.md em voz baixa, só a parte de suposições. Anote uma pergunta que faria a quem escreveu.</p>
+    <p class="na-hook">Na próxima aula: quem vai ler esse plano sem piedade, e como pedir uma crítica que sirva.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · De onde vem o plan-v1.md<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O pedido do kit Use Both</h3><p>O primeiro fluxo do kit Use Both, "planejar e depois desafiar", começa assim: criar plan-v1.md para a tarefa, sem implementar nada, com escopo, suposições, testes de aceite e riscos. O mesmo arquivo segue depois para a crítica do outro modelo, só leitura. O nome com número de versão permite guardar o plano original quando vier a versão revisada.</p>
+    <p class="comp-fontes">Fontes: <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a> · <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-5">← aula anterior</a><a class="next" href="#aula-7">próxima aula →</a></nav>
+<p class="aula-pe">Aula 6 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-6">
+[
+  {"front":"Você pediu \"planeje o formulário\" e a IA já criou arquivos. O que faltou no pedido?","back":"Pedir o plano num arquivo e dizer \"não implemente nada ainda\"."},
+  {"front":"Qual parte do plano costuma esconder o erro que ninguém viu?","back":"A de suposições: o que a IA deu por certo sem conferir."},
+  {"front":"Por que plano num arquivo, e não só na conversa, ajuda a revisão?","back":"Porque o revisor lê exatamente o mesmo texto, inteiro, sem as perguntas e o código que se misturam na conversa."}
+]
+</script>
+</section>

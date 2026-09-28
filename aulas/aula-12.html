@@ -1,0 +1,136 @@
+<section class="view" id="v-aula-12" data-aula="12" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 3 · Aula 2 de 5</p>
+  <h1>Uma etapa por vez, <em>com o critério colado</em></h1>
+  <figure class="cena"><img src="assets/img/aula-12.webp" width="1280" height="720" alt="Uma analista de operações monta uma estante em etapas: prende a primeira prateleira e confere com um nível antes de pegar a próxima peça."></figure>
+  <p class="promise">Você consegue pedir só a primeira etapa do seu piloto, com os critérios do briefing colados e uma parada no fim.</p>
+  <p class="why">Pedir a tarefa inteira de uma vez gera uma mudança enorme. Ninguém revisa bem trezentas linhas. Em etapas, cada mudança é pequena, conferida e salva antes da próxima.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Quebre o plano em etapas pequenas, cada uma com o seu critério.</li>
+      <li>Peça uma etapa, com os critérios colados e "pare ao terminar".</li>
+      <li>Conferiu a etapa? Salve uma versão no Git e só então peça a próxima.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Tudo de uma vez vira um diff que ninguém lê</h2>
+  <p>Quando a IA faz tudo num pedido só, o <span class="gterm" data-gl="diff" data-def="A lista do que mudou entre duas versões de um arquivo: linhas que saíram (com −) e linhas que entraram (com +).">diff</span> fica longo. Você passa os olhos, cansa e aprova. É assim que o erro entra.</p>
+  <p data-ex="desenvolvedor">Rafael pediu "o formulário inteiro, com envio e validação". Voltaram mudanças em sete arquivos. Na etapa seguinte, pediu só os campos: um arquivo, vinte linhas.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Tudo de uma vez</span><p><b>Pedido:</b> formulário completo.</p><p><b>Diff:</b> sete arquivos. Rafael aprovou sem ler tudo.</p></div>
+      <div class="depois"><span class="rot">Uma etapa</span><p><b>Pedido:</b> só os campos do formulário.</p><p><b>Diff:</b> um arquivo, que ele leu linha a linha.</p></div>
+      <p class="saldo"><b>Saldo:</b> mudança pequena é mudança que você de fato confere.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Cada etapa com o seu critério</h2>
+  <p>Pegue o plano do módulo 2 e separe em etapas que caibam em um pedido. Cada etapa herda do <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> o <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> que ela deve cumprir.</p>
+  <p data-ex="analista">Carla dividiu a rotina das planilhas em três etapas. A primeira só lê as planilhas da semana. O critério dela: o total de linhas lidas é igual à soma das linhas das planilhas.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Etapas do piloto de Carla</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Ler as planilhas · critério: total de linhas lidas confere</div>
+        <div class="item doc"><span class="pin">2</span> Somar por cidade · critério: cada cidade uma vez</div>
+        <div class="item doc"><span class="pin">3</span> Gravar o relatório · critério: arquivo novo, originais intactas</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Começa pelo que as outras precisam.</span></li>
+      <li><span class="pin">2</span><span>Uma coisa nova por etapa.</span></li>
+      <li><span class="pin">3</span><span>A última entrega o resultado.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O pedido da etapa: critério colado e parada</h2>
+  <p>O pedido tem quatro partes: onde ler o contexto, qual etapa fazer, os critérios dela e a ordem de parar no fim. Com a parada, a IA não emenda a etapa seguinte sem você conferir.</p>
+  <p data-ex="desenvolvedor">Rafael cita os arquivos pelo nome, com <code>@</code>, e pede a etapa 1. A resposta lista o que mudou e como conferir.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Rafael</span>Leia @briefing.md e @plan-v2.md. Faça só a etapa 1: os campos do formulário.
+Critérios desta etapa:
+1. Nome, telefone e mensagem aparecem na página.
+2. O campo telefone recusa letras.
+Altere só contato.html. No fim, pare, liste os arquivos mudados e diga como conferir cada critério.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Etapa 1 feita. Arquivo mudado: contato.html.
+Para conferir: 1. abra a página e veja os três campos; 2. digite letras no telefone e tente enviar.
+Parei aqui. A etapa 2 é o envio.</p>
+      </div>
+      <p class="tela-nota bom">Um arquivo, dois critérios, e a IA parou esperando você.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não tem o <code>plan-v2.md</code> do módulo 2? Use só o briefing da aula 5 e escreva você a etapa 1 no pedido. O resto funciona igual.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Conferiu? Salve a versão antes da próxima</h2>
+  <p>Etapa conferida vira um <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span>: uma versão salva no <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span>, com uma frase do que mudou. Se a etapa 2 estragar algo, você volta para cá.</p>
+  <p data-ex="analista">Carla pede ao Codex, pelo app: "faça o commit da etapa 1 com a mensagem 'etapa 1: ler planilhas'". Depois confere na resposta que foi um arquivo só.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do site</span></div>
+<pre><code><span class="pr">$</span> git add contato.html
+<span class="pr">$</span> git commit -m "etapa 1: campos do formulário"
+<span class="out">[formulario-contato 3f2a1c9] etapa 1: campos do formulário
+ 1 file changed, 12 insertions(+), 2 deletions(-)</span></code></pre>
+<p class="tela-nota">"1 file changed" confirma que só um arquivo entrou. O código entre colchetes identifica esta versão.</p></div>
+  <figcaption>Pelo <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span> ou pedindo ao assistente: o importante é salvar entre uma etapa e outra.</figcaption></figure>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Peça a etapa 1 do seu piloto</h3>
+  <p class="pgoal">Pronto quando o pedido da etapa 1 tiver contexto, etapa, critérios e parada, e você tiver conferido a resposta. Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">A IA mexe só no arquivo que você listar, dentro do <span class="gterm" data-gl="branch" data-def="Linha de trabalho separada dentro do Git. Você testa mudanças nela sem mexer na versão que já funciona.">branch</span> de teste da aula 11 (não fez? peça ao assistente: "crie um branch de teste e entre nele"). Se ela passar da etapa 1, aperte o botão de parar (Esc no terminal) e peça o relato. Num chat comum, cole o texto do briefing no lugar do <code>@</code>.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia @briefing.md &lt;e @plan-v2.md, se tiver&gt;.
+Faça só a etapa 1: &lt;o que é a etapa 1&gt;.
+Critérios desta etapa:
+1. &lt;sim ou não&gt;
+2. &lt;sim ou não&gt;
+Altere só: &lt;arquivo&gt;.
+No fim, pare, liste os arquivos mudados e diga como conferir cada critério.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Escreva a etapa 1 do seu piloto em uma frase, com dois critérios.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Preencha o molde e envie ao seu assistente, na pasta do piloto.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira se ele parou e se listou só o arquivo pedido. Se sim, salve a versão com um commit.</span></label></li>
+  </ol>
+  <p class="pdone">Você já pede trabalho em etapas que dá para conferir uma a uma.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Etapas</h3>
+    <ol>
+      <li><span><b>Pequena</b>uma etapa cabe num diff que você lê inteiro.</span></li>
+      <li><span><b>Pedido</b>contexto, etapa, critérios e "pare no fim".</span></li>
+      <li><span><b>Commit</b>versão salva entre uma etapa e outra.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já transforma um plano em pedidos pequenos e conferíveis.</p>
+    <p class="na-action">Escreva as etapas 2 e 3 do seu piloto, cada uma com um critério. Leva cinco minutos.</p>
+    <p class="na-hook">Na próxima aula: a etapa está feita. Quem confere, e o que essa pessoa precisa receber?</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-11">← aula anterior</a><a class="next" href="#aula-13">próxima aula →</a></nav>
+<p class="aula-pe">Aula 12 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-12">
+[
+  {"front":"A IA devolveu mudanças em sete arquivos e você está cansado de ler. O que faz na próxima vez?","back":"Pede uma etapa menor, com critério próprio e uma lista curta de arquivos, e confere antes de seguir."},
+  {"front":"Por que escrever \"pare no fim\" no pedido de uma etapa?","back":"Para a IA não emendar a etapa seguinte antes de você conferir e salvar a atual."},
+  {"front":"A etapa 2 estragou o que a etapa 1 tinha feito. Como voltar?","back":"Pela versão salva no commit da etapa 1: por isso se salva entre uma etapa e outra."}
+]
+</script>
+</section>

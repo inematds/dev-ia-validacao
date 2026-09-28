@@ -1,0 +1,153 @@
+<section class="view" id="v-aula-16" data-aula="16" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 4 · Aula 1 de 5</p>
+  <h1>Cada critério pede <em>uma verificação</em></h1>
+  <figure class="cena"><img src="assets/img/aula-16.webp" width="1280" height="720" alt="Uma analista de operações liga a lápis, com setas, cada item de uma ficha de papel a uma linha de uma planilha impressa, para saber como vai conferir cada um."></figure>
+  <p class="promise">Você consegue escrever, ao lado de cada critério do seu <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>, como ele vai ser conferido e quem confere.</p>
+  <p class="why">No módulo 1 você escreveu os critérios. Critério sem jeito de conferir vira enfeite do briefing. Na hora da entrega, cada um precisa de uma verificação combinada antes.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Cada critério ganha uma linha: <b>como confiro</b> e <b>quem confere</b>.</li>
+      <li>Regra que se repete vira teste automático. Aparência e sentido ficam com olhos humanos.</li>
+      <li>Teste que nunca falhou não prova nada. Peça para ver ele falhar antes.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Critério sem verificação é enfeite</h2>
+  <p>Todo <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> precisa de um jeito combinado de conferir. Sem isso, cada pessoa confere de um jeito, ou ninguém confere.</p>
+  <p data-ex="desenvolvedor">Rafael pegou os três critérios do formulário da clínica e escreveu, ao lado de cada um, como ia conferir.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>briefing.md · como confiro</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Mensagem chega na recepção → enviar pela página e olhar a caixa</div>
+        <div class="item doc"><span class="pin">2</span> Telefone recusa letras → teste automático</div>
+        <div class="item doc"><span class="pin">3</span> Não rola para os lados no celular → abrir no celular</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Conferência manual, feita por Rafael.</span></li>
+      <li><span class="pin">2</span><span>Uma regra que se repete: o computador confere.</span></li>
+      <li><span class="pin">3</span><span>Aparência: olhos humanos.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Automático para regra, olho humano para sentido</h2>
+  <p>Um <span class="gterm" data-gl="teste-automatico" data-def="Verificação que o computador roda sozinho e responde 'passou' ou 'falhou', sempre do mesmo jeito. A IA pode escrever o teste para você.">teste automático</span> confere uma regra do mesmo jeito, quantas vezes você quiser. Ele é ótimo para "recusa letras" ou "o total bate". Ele é fraco para "o texto faz sentido" ou "a página está bonita".</p>
+  <p data-ex="analista">Carla pôs uma célula de conferência na planilha: ela compara o total do relatório com a soma das planilhas e mostra "confere" ou "não confere". Já a lista de cidades ela lê com os próprios olhos.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Teste automático</span><p>Regras que se repetem: soma, formato, campo obrigatório. Roda igual toda vez.</p></div>
+      <div class="neutro"><span class="rot">Conferência manual</span><p>Sentido, aparência, tom, o caminho do usuário. Precisa de alguém olhando.</p></div>
+    </div>
+    <figcaption>Um critério bom diz qual dos dois vai conferi-lo.</figcaption>
+  </figure>
+  <details class="mais"><summary>Como Carla fez a célula de conferência</summary>
+    <p>Numa célula vazia da planilha do relatório, ela escreveu uma fórmula que compara o total com a soma das planilhas. Por exemplo: <code>=SE(B2=SOMA(C2:C8);"confere";"não confere")</code>, com B2 sendo o total do relatório e C2 a C8 os totais de cada planilha. Troque as células pelas suas. Não sabe montar? Peça à IA a fórmula, dizendo quais células comparar.</p>
+  </details>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe se um critério dá teste automático? Pergunte: a resposta muda se outra pessoa conferir? Se não muda, dá. Se muda, é conferência manual.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>Você não precisa escrever o teste</h2>
+  <p>A IA escreve o teste automático. Seu trabalho é pedir um teste por critério e ver a saída dele: o texto que ele mostra ao rodar. Não aceite só "criei os testes, todos passam".</p>
+  <p data-ex="desenvolvedor">Rafael pediu um teste só para o critério do telefone e a saída dele, antes e depois da correção.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-caso" data-rotulo="Pedido vago">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Crie testes para o formulário.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Criei testes para o formulário. Todos passam.</p>
+        </div>
+        <p class="tela-nota ruim">Quais testes? Conferindo qual critério? Não dá para saber.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Um teste por critério">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Crie um teste para o critério 2 do briefing.md: o telefone recusa letras. Rode antes de corrigir e me mostre a saída. Depois corrija e rode de novo.</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Antes da correção: FALHOU — o campo aceitou "abc".
+Depois da correção: PASSOU — o campo recusou "abc".</p>
+        </div>
+        <p class="tela-nota bom">Um critério, um teste, e a saída mostrada nas duas vezes.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque ou clique nos dois botões do quadro</b> e compare as duas respostas.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>Teste que nunca falhou não prova nada</h2>
+  <p>Um teste mal escrito pode passar sempre, com o erro ou sem ele. Por isso vale ver o teste falhar uma vez, quando o erro ainda existe. Se ele nunca falhou, você não sabe se ele olha para a coisa certa.</p>
+  <p data-ex="analista">A célula de conferência de Carla dizia "confere" até com uma planilha faltando. Ela apagou uma planilha de propósito, numa cópia, e a célula continuou dizendo "confere". A fórmula olhava para a coluna errada.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Sempre passou</span><p>"Confere" com todas as planilhas e também com uma faltando.</p><p><b>O que prova:</b> nada.</p></div>
+      <div class="depois"><span class="rot">Já falhou uma vez</span><p>"Não confere" com uma planilha faltando; "confere" com todas.</p><p><b>O que prova:</b> que ele enxerga o erro.</p></div>
+    </div>
+  </figure>
+  <div class="quiz" data-answer="b">
+    <p class="qk">Teste-se</p>
+    <p class="q">A IA escreveu um teste para "o total bate" e ele passou de primeira. O que você pede em seguida?</p>
+    <button class="opt" data-k="a" data-fb="Mais testes que também nunca falharam não mudam nada.">Mais três testes iguais</button>
+    <button class="opt" data-k="b" data-fb="Isso. Com o erro de propósito, o teste tem de falhar.">Rodar com um erro de propósito</button>
+    <button class="opt" data-k="c" data-fb="Passar de primeira não é prova. Falta vê-lo falhar.">Nada: passou, está certo</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Como você vai conferir cada critério</h3>
+  <p class="pgoal">Pronto quando cada critério do seu briefing tiver uma linha "como confiro" e "quem confere". Cerca de 10 minutos, no computador.</p>
+  <p class="psafe">Você só escreve no seu arquivo; nada roda ainda. Não tem o briefing.md da aula 5 (na pasta do piloto)? Use três critérios de qualquer tarefa sua.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">## Como confiro
+1. &lt;critério 1&gt; → &lt;como confiro&gt; · &lt;teste automático ou manual&gt;
+2. &lt;critério 2&gt; → &lt;como confiro&gt; · &lt;teste automático ou manual&gt;
+3. &lt;critério 3&gt; → &lt;como confiro&gt; · &lt;teste automático ou manual&gt;
+
+Exemplo da Carla:
+1. Total igual à soma das planilhas → célula de conferência · automático
+2. Cada cidade uma vez → ler a lista · manual
+3. Origem embaixo de cada tabela → olhar cada tabela · manual</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o briefing.md do seu piloto e cole o molde no fim.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Para cada critério, escreva como vai conferir e se é automático ou manual.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Marque um critério automático para pedir o teste à IA, com a saída antes e depois.</span></label></li>
+  </ol>
+  <p class="pdone">Você já sabe como cada critério do seu piloto vai ser conferido.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Critério e verificação</h3>
+    <ol>
+      <li><span><b>Como confiro</b>uma linha ao lado de cada critério.</span></li>
+      <li><span><b>Automático ou manual</b>regra que se repete × sentido e aparência.</span></li>
+      <li><span><b>Ver falhar</b>um teste só vale depois de pegar o erro uma vez.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já liga cada critério a uma verificação combinada.</p>
+    <p class="na-action">Peça à IA o teste do critério que você marcou, com a saída antes e depois da correção.</p>
+    <p class="na-hook">Na próxima aula: o teste passou. Isso quer dizer que o sistema funciona na mão de quem usa?</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-15">← aula anterior</a><a class="next" href="#aula-17">próxima aula →</a></nav>
+<p class="aula-pe">Aula 16 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-16">
+[
+  {"front":"\"A página fica bonita no celular.\" Isso dá teste automático ou conferência manual?","back":"Manual. Aparência depende de quem olha; alguém precisa abrir no celular e ver."},
+  {"front":"A IA disse \"criei os testes, todos passam\". O que você pede para confiar nisso?","back":"Um teste por critério e a saída de cada um, antes e depois da correção."},
+  {"front":"Como saber se uma célula de conferência da planilha enxerga o erro?","back":"Numa cópia, cause o erro de propósito, como apagar uma planilha, e veja se ela passa a dizer \"não confere\"."}
+]
+</script>
+</section>
