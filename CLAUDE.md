@@ -11,3 +11,5 @@
 When I correct you, or you catch yourself making a mistake: before continuing, add the lesson as a one-line rule under ## Lessons, so it never happens again.
 
 ## Lessons
+- Comportamento de comando/atalho (código de saída, tecla, menu) só entra na aula depois de conferido; o leitor simulado pegou "timeout: zero = terminou antes" errado e "modo lista" no lugar de Detalhes no Windows. (28/09/2026)
+- flux2-klein não desenha dois objetos idênticos (relógios iguais falharam em 3 seeds): trocar a metáfora da cena, não insistir no seed. (28/09/2026)
