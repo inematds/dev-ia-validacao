@@ -44,21 +44,23 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">2</span>Quem faz o quê é uma rota inicial</h2>
-  <p>Um ponto de partida comum: o Claude escreve o plano e o Codex critica. Depois, um constrói e o outro revisa. Essa é uma rota para começar, não um ranking de qual modelo é melhor.</p>
-  <p data-ex="analista">Carla começou pela rota comum. Na revisão das fórmulas, inverteu os papéis e comparou qual rota achou mais falhas na tarefa dela.</p>
+  <p>Um ponto de partida comum: o Claude escreve o plano e o Codex critica. Depois, um constrói e o outro revisa. Essa é uma rota para começar, não um ranking de qual <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> é melhor.</p>
+  <p>Só tem um assistente? Comece com ele fazendo e uma conversa nova dele criticando. O método é o mesmo.</p>
+  <p data-ex="analista">Carla tem o Codex e um chat de IA. Ela usa o Codex para fazer e o chat, numa conversa nova, para criticar.</p>
   <figure class="largo">
     <div class="lado">
       <div class="bom"><span class="rot">Rota inicial</span><p><b>Plano:</b> Claude escreve, Codex critica.<br><b>Construção:</b> um faz, o outro revisa o que mudou.</p></div>
       <div class="neutro"><span class="rot">O que decide</span><p>A qualidade da entrega na sua tarefa. Modelos, acesso e cobrança mudam de conta para conta.</p></div>
     </div>
-    <figcaption>Os dois cartões valem juntos: comece pela rota e fique com a que der melhor resultado.</figcaption>
+    <figcaption>Comece pela rota inicial e fique com a que der melhor resultado na sua tarefa.</figcaption>
   </figure>
 </section>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>O briefing é o arquivo que todos leem</h2>
   <p>O <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> junta num arquivo de texto o que você escreveu nas aulas 3 e 4. Os dois modelos recebem o mesmo arquivo. Assim, ninguém trabalha com um resumo.</p>
-  <p data-ex="desenvolvedor">Rafael salva o briefing como <code>briefing.md</code>, dentro da pasta do projeto do cliente. É o primeiro arquivo que ele passa para qualquer modelo.</p>
+  <p>A terminação <code>.md</code> quer dizer texto simples, no formato Markdown: os <code>#</code> marcam títulos. Os assistentes leem bem esse formato.</p>
+  <p data-ex="desenvolvedor">Rafael salva o <code>briefing.md</code> na pasta do projeto do cliente. No Claude Code e no Codex, ele digita <code>@</code> no pedido e escolhe o arquivo. Num chat, ele cola o texto.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>briefing.md · formulário da clínica</span></div>
@@ -66,7 +68,7 @@
         <div class="item doc"><span class="pin">1</span> Objetivo: pacientes mandam mensagem pelo site</div>
         <div class="item doc"><span class="pin">2</span> Dentro: página de contato · Fora: página inicial e cores</div>
         <div class="item doc"><span class="pin">3</span> Aceite: mensagem chega na recepção; telefone recusa letras; abre no celular</div>
-        <div class="item doc"><span class="pin">4</span> Limites: 2 tentativas; só contato.html; 30 minutos</div>
+        <div class="item doc"><span class="pin">4</span> Limites: 2 tentativas; só contato.html; alarme de 30 minutos a cada vez que a IA trabalha</div>
       </div>
     </div>
     <ol class="passos">
@@ -80,7 +82,7 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">4</span>O piloto: uma tarefa pequena de verdade</h2>
-  <p>O curso inteiro gira em torno de um piloto seu. Escolha uma tarefa real, pequena, de uma ou duas horas. Grande demais, o ciclo se perde. De mentira, ninguém confere de verdade.</p>
+  <p>O curso inteiro gira em torno de um piloto seu. Escolha uma tarefa real e pequena, que caiba em uma ou duas horas do seu trabalho. Grande demais, o ciclo se perde. De mentira, ninguém confere de verdade.</p>
   <p data-ex="analista">Carla escolheu a rotina que junta as planilhas de entrega da semana. É pequena, ela faz toda semana e sabe dizer quando está certa.</p>
   <figure class="largo">
     <div class="lado">
@@ -94,8 +96,8 @@
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
   <h3 class="ph">Escreva o briefing do seu piloto</h3>
-  <p class="pgoal">Pronto quando o arquivo <code>briefing.md</code> tiver as quatro partes preenchidas. Cerca de 12 minutos, no computador; no celular, use o app de notas.</p>
-  <p class="psafe">É um arquivo de texto seu; nada é enviado. Se não souber um limite, escreva "a definir" e siga: o módulo 2 volta nele.</p>
+  <p class="pgoal">Pronto quando o arquivo <code>briefing.md</code> tiver as quatro partes preenchidas. Cerca de 12 minutos, no computador.</p>
+  <p class="psafe">É um arquivo de texto seu; nada é enviado. Se não souber um limite, escreva "a definir" e volte à aula 4. Sem computador agora? Escreva no app de notas do celular e crie o arquivo depois.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Briefing: &lt;nome do piloto&gt;
 
 ## Objetivo
@@ -111,12 +113,14 @@ Fora: &lt;o que não pode mudar&gt;
 3. &lt;sim ou não&gt;
 
 ## Limites
-- Rodadas: &lt;no máximo 2&gt;
+- Tentativas: &lt;no máximo 2&gt;
 - Arquivos: &lt;quais&gt;
 - Tempo ou gasto: &lt;onde fica a trava&gt;</pre></div>
+  <div class="calma"><p><span class="k">Criar o arquivo no Windows</span>Abra a pasta do piloto. Ligue as terminações: no Explorador, Exibir › Mostrar › Extensões de nomes de arquivos (no Windows 10: aba Exibir, marque Extensões de nomes de arquivos). Clique com o botão direito num espaço vazio › Novo › Documento de texto. Renomeie para <code>briefing.md</code> e confirme. Para abrir: botão direito › Abrir com › Bloco de Notas.</p></div>
+  <div class="calma"><p><span class="k">Criar o arquivo no Mac</span>Abra o TextEdit, vá em Formatar › Converter em Texto Simples, cole o molde e salve como <code>briefing.md</code> na pasta do piloto. Se ele perguntar, escolha "Usar .md". Deu problema com a terminação? Um <code>briefing.txt</code> também serve.</p></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Escolha a tarefa do piloto: real, pequena, de uma ou duas horas.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Crie uma pasta para o piloto e, dentro dela, um arquivo de texto chamado <code>briefing.md</code>.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Crie uma pasta para o piloto e, dentro dela, o arquivo <code>briefing.md</code>, pelo caminho dos quadros "Criar o arquivo" acima.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Cole o molde e preencha objetivo, dentro e fora.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Preencha critérios e limites, reaproveitando o que escreveu nas aulas 3 e 4.</span></label></li>
   </ol>
@@ -147,8 +151,8 @@ Fora: &lt;o que não pode mudar&gt;
 [
   {"front":"Em que passo do ciclo entram os critérios de aceite e os limites?","back":"No primeiro, definir a tarefa. Eles vão para o briefing antes de qualquer plano."},
   {"front":"\"Claude planeja, Codex critica\" quer dizer que o Claude é melhor para planejar?","back":"Não. É uma rota para começar. O que decide é a qualidade da entrega na sua tarefa."},
-  {"front":"Por que mandar o mesmo briefing aos dois modelos?","back":"Para os dois trabalharem com a mesma informação, e a revisão conferir o trabalho contra o pedido real, não contra um resumo."},
-  {"front":"Sua ideia de piloto é \"automatizar o atendimento inteiro\". O que você faz?","back":"Corta um pedaço pequeno e real, de uma ou duas horas, que você sabe conferir, como responder uma pergunta frequente."}
+  {"front":"Como entregar o briefing.md a um assistente de código?","back":"Digitando @ no pedido e escolhendo o arquivo. Num chat comum, colando o texto do briefing."},
+  {"front":"Sua ideia de piloto é \"refazer o site inteiro do cliente\". O que você faz?","back":"Corta um pedaço pequeno e real, de uma ou duas horas, que você sabe conferir, como a página de contato."}
 ]
 </script>
 </section>

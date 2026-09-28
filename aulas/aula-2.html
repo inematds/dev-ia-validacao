@@ -18,8 +18,8 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">1</span>Quem escreveu tende a aprovar o que escreveu</h2>
-  <p>Quando você pede ao mesmo modelo, na mesma conversa, que revise o próprio trabalho, ele costuma concordar consigo mesmo. Um modelo diferente, ou uma conversa nova, olha com menos apego.</p>
-  <p>O curso chama isso de <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span>: um faz, o outro confere.</p>
+  <p>Quando você pede ao mesmo <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span>, na mesma conversa, que revise o próprio trabalho, ele costuma concordar consigo mesmo. Um modelo diferente, ou uma conversa nova, olha com menos apego.</p>
+  <p>Só tem um assistente? Abra uma conversa nova nele: já é um olhar com menos apego. Outro modelo é melhor ainda. O curso chama isso de <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span>: um faz, o outro confere.</p>
   <p data-ex="desenvolvedor">Rafael pediu ao Claude o plano de uma área de acesso com senha para o site da clínica. Depois pediu ao Codex que lesse o mesmo plano e apontasse falhas.</p>
   <figure class="largo">
     <div class="tela">
@@ -34,22 +34,22 @@
       <div class="tela-caso" data-rotulo="Outro modelo">
         <div class="tela-body">
           <p class="msg eu"><span class="quem">Rafael</span>Leia o plano abaixo e aponte falhas, com o trecho que mostra cada uma.</p>
-          <p class="msg ia ok"><span class="quem">Codex</span>Falha 1: o plano não diz o que acontece quando a pessoa erra a senha várias vezes. Trecho: "tela de entrada com e-mail e senha".</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Falha 1: o plano não diz o que acontece quando a pessoa erra a senha várias vezes. Onde: a parte "Entrada" do plano lista só e-mail, senha e o botão entrar.</p>
         </div>
         <p class="tela-nota bom">Um olhar de fora achou um caso que o autor não previu.</p>
       </div>
     </div>
-    <figcaption><b>Toque nos dois botões</b> e compare as duas revisões.</figcaption>
+    <figcaption><b>Toque ou clique nos dois botões do quadro</b> e compare as duas revisões.</figcaption>
   </figure>
 </section>
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">2</span>Os dois podem errar juntos</h2>
   <p>A revisão cruzada acha falhas. Ela não garante que não sobrou nenhuma. Se os dois modelos leram o mesmo dado errado, os dois vão concordar com o erro.</p>
-  <p data-ex="analista">Carla pediu a um modelo a fórmula do prazo médio de entrega. O segundo modelo revisou e aprovou. Os dois usaram a coluna de data do pedido, e não a de data de saída.</p>
+  <p data-ex="analista">Carla pediu a um modelo a fórmula do prazo médio de transporte, da saída do armazém até a entrega. O segundo modelo revisou e aprovou. Os dois contaram a partir da data do pedido, e não da data de saída do armazém.</p>
   <figure class="largo">
     <div class="lado">
-      <div class="antes"><span class="rot">Dois aprovaram</span><p><b>O que Carla tinha:</b> a fórmula e o "está correta" dos dois modelos.</p><p><b>O que aconteceu:</b> o prazo médio saiu dois dias menor que o real.</p></div>
+      <div class="antes"><span class="rot">Dois aprovaram</span><p><b>O que Carla tinha:</b> a fórmula e o "está correta" dos dois modelos.</p><p><b>O que aconteceu:</b> o prazo de transporte saiu dois dias maior que o real.</p></div>
       <div class="depois"><span class="rot">Conferiu no real</span><p><b>O que Carla fez:</b> calculou à mão três pedidos e comparou com a fórmula.</p><p><b>O que aconteceu:</b> a diferença apareceu no primeiro pedido.</p></div>
       <p class="saldo"><b>Saldo:</b> três contas à mão pegaram o que duas revisões deixaram passar.</p>
     </div>
@@ -60,7 +60,7 @@
 <section class="step" data-kind="fundamento">
   <h2><span class="n">3</span>O que fecha a conferência</h2>
   <p>Três coisas fecham o ciclo, e nenhuma é a opinião de um modelo. O <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> escrito antes. O teste no resultado real. A sua decisão.</p>
-  <p data-ex="desenvolvedor">Na área de acesso da clínica, o critério de Rafael era "depois de cinco senhas erradas, a conta espera dez minutos". Ele testou errando a senha cinco vezes.</p>
+  <p data-ex="desenvolvedor">Na área de acesso da clínica, o critério de Rafael era "depois de cinco senhas erradas, aparece o aviso de esperar dez minutos". Ele testou errando a senha cinco vezes.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>O que fecha o ciclo</span></div>
@@ -89,7 +89,7 @@
 <section class="step" data-kind="fundamento">
   <h2><span class="n">4</span>O revisor recebe o original, não um resumo</h2>
   <p>Para a revisão valer, o segundo modelo recebe o mesmo <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o trabalho de verdade: o arquivo, o plano, a planilha. Nunca um resumo do que o primeiro disse que fez.</p>
-  <p data-ex="analista">Carla passou a mandar ao revisor a planilha e o pedido original. Antes, ela colava só a resposta do primeiro modelo.</p>
+  <p data-ex="analista">Carla passou a colar o pedido original e anexar a planilha pelo clipe do chat. Antes, ela colava só a resposta da primeira IA. Num assistente de código, basta citar o arquivo pelo nome.</p>
   <figure class="largo">
     <div class="lado">
       <div class="antes"><span class="rot">Resumo</span><p>"O outro modelo disse que a fórmula está certa. Confira."</p></div>
@@ -111,7 +111,7 @@
     <li><label><input type="checkbox" data-ptask="3"> <span>Que teste de cinco minutos Carla faria antes de enviar?</span></label></li>
   </ol>
   <details class="gabarito"><summary>Ver gabarito</summary>
-    <p>1. Só a resposta do Claude, sem as planilhas: um resumo. 2. Algo como "o total de pedidos do relatório é igual à soma das planilhas da semana". 3. Somar a coluna de pedidos das planilhas e comparar com o total do relatório.</p>
+    <p>1. Só a resposta do Claude, sem as planilhas e sem o pedido original: faltou o material para conferir. 2. Algo como "o total de pedidos do relatório é igual à soma das planilhas da semana". 3. Somar a coluna de pedidos das planilhas e comparar com o total do relatório.</p>
   </details>
   <p class="pdone">Você já sabe o que falta quando "os dois concordaram".</p>
 </section>
@@ -143,8 +143,8 @@
 </div>
 <script type="application/json" id="cards-2">
 [
-  {"front":"Você pediu ao mesmo modelo, na mesma conversa, que revisasse o que escreveu. Por que desconfiar do \"está tudo certo\"?","back":"Porque quem escreveu tende a aprovar o próprio trabalho. Um modelo diferente, ou uma conversa nova, olha com menos apego."},
-  {"front":"Dois modelos aprovaram uma fórmula que está errada. Como isso pode acontecer?","back":"Os dois leram o mesmo dado errado ou a mesma suposição. Concordar não é prova; o teste no resultado real é que mostra."},
+  {"front":"Você só tem um assistente de IA. Como conseguir um segundo olhar sobre o trabalho dele?","back":"Abrindo uma conversa nova, com o pedido original e o arquivo, e pedindo falhas com evidência. Outra IA é ainda melhor."},
+  {"front":"Uma fórmula foi aprovada por duas IAs. Qual o teste mais barato antes de enviar o relatório?","back":"Calcular à mão dois ou três casos e comparar com o que a fórmula deu."},
   {"front":"O que mandar ao modelo revisor para a revisão valer?","back":"O mesmo briefing e o trabalho de verdade (arquivo, plano, planilha), pedindo falhas com o trecho que mostra cada uma."}
 ]
 </script>

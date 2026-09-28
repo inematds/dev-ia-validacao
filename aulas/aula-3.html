@@ -18,12 +18,12 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>Desejo não se confere; critério sim</h2>
-  <p>O <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> troca um desejo por uma coisa que dá para olhar. "Rápido" vira "abre em menos de três segundos no celular".</p>
+  <p>O <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> troca um desejo por uma coisa que dá para olhar. "Fácil de achar" vira "o link Contato aparece no menu de todas as páginas".</p>
   <p data-ex="desenvolvedor">Rafael reescreveu o pedido do formulário da clínica. Saíram "bonito" e "funcionando". Entraram três frases que ele consegue conferir.</p>
   <figure class="largo">
     <div class="lado">
       <div class="antes"><span class="rot">Desejo</span><p>"Um formulário de contato bonito e funcionando."</p></div>
-      <div class="depois"><span class="rot">Critério</span><p>1. A mensagem de teste chega na caixa da recepção.<br>2. O campo telefone recusa letras.<br>3. A página abre sem cortes num celular.</p></div>
+      <div class="depois"><span class="rot">Critério</span><p>1. A mensagem de teste chega na caixa da recepção.<br>2. O campo telefone recusa letras.<br>3. No celular, a página não rola para os lados.</p></div>
       <p class="saldo"><b>Saldo:</b> três coisas que qualquer pessoa confere em cinco minutos.</p>
     </div>
   </figure>
@@ -39,13 +39,13 @@
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> Total de pedidos igual à soma das planilhas da semana</div>
         <div class="item doc"><span class="pin">2</span> Cada cidade aparece uma vez, com o seu total</div>
-        <div class="item doc"><span class="pin">3</span> Nenhum número sem a planilha de origem indicada</div>
+        <div class="item doc"><span class="pin">3</span> Embaixo de cada tabela, o nome da planilha de onde veio</div>
       </div>
     </div>
     <ol class="passos">
       <li><span class="pin">1</span><span>Confere com uma soma.</span></li>
       <li><span class="pin">2</span><span>Confere lendo a lista de cidades.</span></li>
-      <li><span class="pin">3</span><span>Confere procurando a origem de cada número.</span></li>
+      <li><span class="pin">3</span><span>Confere lendo a linha embaixo de cada tabela.</span></li>
     </ol>
   </figure>
   <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sai critério nenhum? Pense em como o trabalho pode dar errado na mão do cliente. Cada erro possível, virado ao contrário, é um critério.</p></div>
@@ -58,21 +58,38 @@
   <figure class="largo">
     <div class="tela">
       <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-caso" data-rotulo="Pedido do Rafael">
       <div class="tela-body">
         <p class="msg eu"><span class="quem">Rafael</span>Crie o formulário de contato da clínica.
 Critérios de aceite:
 1. A mensagem de teste chega na caixa da recepção.
 2. O campo telefone recusa letras.
-3. A página abre sem cortes num celular.
+3. No celular, a página não rola para os lados.
 No fim, diga como conferir cada critério.</p>
         <p class="msg ia ok"><span class="quem">IA</span>Formulário criado. Para conferir:
 1. Envie uma mensagem de teste e veja a caixa da recepção.
 2. Digite letras no telefone: o envio deve ser bloqueado.
-3. Abra a página no celular e role até o fim.</p>
+3. Abra a página no celular e tente rolar para os lados.</p>
       </div>
       <p class="tela-nota bom">A IA devolve um roteiro de conferência, não um "funcionando".</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Pedido da Carla">
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Carla</span>Junte as planilhas de entrega da semana num relatório novo.
+Critérios de aceite:
+1. Total de pedidos igual à soma das planilhas.
+2. Cada cidade aparece uma vez, com o seu total.
+3. Embaixo de cada tabela, o nome da planilha de onde veio.
+No fim, diga como conferir cada critério.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Relatório criado. Para conferir:
+1. Some a coluna de pedidos das planilhas e compare com o total do relatório.
+2. Leia a lista de cidades procurando nomes repetidos.
+3. Confira se cada tabela tem o nome da planilha embaixo.</p>
+      </div>
+      <p class="tela-nota bom">O mesmo jeito de pedir funciona para relatório.</p>
+      </div>
     </div>
-    <figcaption>O roteiro é para você executar. Ele não substitui a conferência.</figcaption>
+    <figcaption><b>Toque ou clique nos dois botões do quadro.</b> O roteiro é para você executar; ele não substitui a conferência.</figcaption>
   </figure>
 </section>
 
@@ -83,9 +100,9 @@ No fim, diga como conferir cada critério.</p>
   <figure class="largo">
     <div class="lado">
       <div class="bom"><span class="rot">Dentro</span><p>Gerar o relatório semanal num arquivo novo, com os três critérios.</p></div>
-      <div class="neutro"><span class="rot">Fora</span><p>Não alterar as planilhas originais. Não mudar o modelo do relatório.</p></div>
+      <div class="neutro"><span class="rot">Fora</span><p>Não alterar as planilhas originais. Não mudar o formato do relatório.</p></div>
     </div>
-    <figcaption>Os dois cartões fazem parte do pedido. O "Fora" diminui o que você precisa conferir.</figcaption>
+    <figcaption>"Dentro" e "Fora" vão no mesmo pedido. O "Fora" diminui o que você precisa conferir.</figcaption>
   </figure>
 </section>
 
@@ -105,7 +122,7 @@ Exemplo da Carla:
 Tarefa: relatório semanal de entregas
 1. Total de pedidos igual à soma das planilhas da semana
 2. Cada cidade aparece uma vez, com o seu total
-3. Nenhum número sem a planilha de origem indicada
+3. Embaixo de cada tabela, o nome da planilha de onde veio
 Fora: não alterar as planilhas originais</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Escolha uma tarefa que você vai pedir à IA nesta semana.</span></label></li>
@@ -138,8 +155,8 @@ Fora: não alterar as planilhas originais</pre></div>
 <script type="application/json" id="cards-3">
 [
   {"front":"\"O site precisa ficar rápido.\" Como transformar isso num critério de aceite?","back":"Numa frase que se confere com sim ou não, como \"a página abre em menos de três segundos no celular\"."},
-  {"front":"Como saber se um critério ainda é só um desejo?","back":"Pergunte se alguém que não fez o trabalho responde com sim ou não. Se a resposta for \"depende\", ainda é desejo."},
-  {"front":"Por que escrever no pedido o que a IA não deve tocar?","back":"Porque sem isso ela muda coisas que ninguém pediu, e você passa a ter mais para conferir."},
+  {"front":"Carla escreveu \"relatório claro\". O que falta para isso virar critério de aceite?","back":"Algo que outra pessoa confira com sim ou não, como \"cada cidade aparece uma vez, com o seu total\"."},
+  {"front":"Rafael não quer que a IA mexa no menu do site. Onde isso entra?","back":"No próprio pedido, numa linha \"Fora: não alterar o menu\", junto dos critérios."},
   {"front":"A IA devolveu um roteiro de conferência para cada critério. Isso já é a conferência?","back":"Não. É o roteiro. A conferência é você executar cada passo no resultado real."}
 ]
 </script>

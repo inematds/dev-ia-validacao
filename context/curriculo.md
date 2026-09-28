@@ -1,4 +1,4 @@
-# Dev com IA v6.2 — currículo (PROPOSTA, aguardando o Passo 0)
+# Dev com IA v6.2 — currículo
 
 Formato: `formato-curso-v6` (skill hoje na 6.3.3) no molde do **OSWork v6.2**: `perfil: tecnico`, `modulos`,
 glossário e material complementar. `<meta name="curso" content="devia62">`.
@@ -8,7 +8,7 @@ Fontes: `docs/sintese-executiva-2026-09-27.md` (base das afirmações — tem re
 `~/projetos/inemaeventos/codex-claude/` e `~/projetos/inemaeventos/claude-codex/` (seis níveis do Use Both,
 tabela de rotas, comandos `codex exec` / `claude -p`, handoff e prime, núcleo portátil).
 
-## Passo 0 — descoberta (PROPOSTA — confirmar com o Nei antes de escrever aulas)
+## Passo 0 — descoberta (aprovado pelo Nei em 28/09/2026: propostas aceitas, 30 aulas, vídeos pelo explicavideos v2)
 
 1. **Aluno (proposta):** quem já usa Claude Code ou Codex para produzir código ou automações e aceita o resultado
    "porque parece certo". Quer um método para conferir, gastar menos e não depender de um só modelo.
