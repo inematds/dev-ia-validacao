@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="papel">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="curso" content="devia62">
+<meta name="formato" content="formato-curso-v6">
+<meta name="perfil" content="tecnico">
+<meta name="termos" content="diff|briefing|handoff|prime|sandbox|token">
+<title>Dev com IA v6.2 — Um faz, o outro confere · INEMA.CLUB PRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/aula.css">
+<script>(function(){try{var s=JSON.parse(localStorage.getItem("devia62"));if(s&&s.prefs&&s.prefs.theme)document.documentElement.setAttribute("data-theme",s.prefs.theme);}catch(e){}})();</script>
+</head>
+<body>
+<header class="bar"><div class="bar-inner">
+  <span class="brand"><a class="mark" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a><a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a><a class="course" href="landing.html">Dev com IA v6.2</a></span>
+  <a class="btn back" href="#trilha" hidden>← <span class="t">trilha</span></a>
+  <button class="btn" id="revbtn" hidden>revisar</button>
+  <button class="btn" id="prefsbtn" aria-label="Tamanho da letra e tema">Aa</button>
+  <button class="btn" id="menubtn" aria-label="Menu">☰</button>
+</div></header>
+
+<section class="view" id="v-trilha">
+  <div class="wrap">
+    <header class="t-hero">
+      <p class="kicker">Dev com IA v6.2 · módulos · aulas de uns 15 minutos</p>
+      <h1>Um faz, o outro <em>confere</em></h1>
+      <p class="lead">Claude e Codex juntos, do briefing ao aceite: um planeja ou implementa, o outro critica o artefato real, e os testes e você decidem. Com modelo e esforço escolhidos por etapa e o custo medido.</p>
+      <figure class="cena"><img src="assets/img/trilha.webp" alt="Um desenvolvedor e uma analista de operações conferem juntos uma folha impressa com marcações de caneta, ao lado de dois notebooks abertos." width="1280" height="720"></figure>
+    </header>
+    <div class="statcards"></div>
+    <a class="continuar" href="#aula-1"></a>
+    <section class="modulo" id="modulo-1" data-modulo="1">
+      <h2 class="sec-title">Módulo 1 · Validar é o trabalho</h2>
+      <p class="mod-resumo">Trocar "parece certo" por "conferi assim".</p>
+      <div class="aulas">
+    <a class="au" data-aula="1" href="#aula-1">
+      <img class="thumb" src="assets/img/aula-1.webp" alt="" loading="lazy" width="96" height="72">
+      <div><span class="n">Aula 1</span><h3>Gerar ficou fácil. Conferir, não.</h3><p class="meta">12 min</p><div class="bar2"><i></i></div></div>
+    </a>
+    <a class="au" data-aula="2" href="#aula-2">
+      <img class="thumb" src="assets/img/aula-2.webp" alt="" loading="lazy" width="96" height="72">
+      <div><span class="n">Aula 2</span><h3>Duas IAs concordando não é prova</h3><p class="meta">12 min</p><div class="bar2"><i></i></div></div>
+    </a>
+    <a class="au" data-aula="3" href="#aula-3">
+      <img class="thumb" src="assets/img/aula-3.webp" alt="" loading="lazy" width="96" height="72">
+      <div><span class="n">Aula 3</span><h3>O critério de aceite vem antes do trabalho</h3><p class="meta">14 min</p><div class="bar2"><i></i></div></div>
+    </a>
+    <a class="au" data-aula="4" href="#aula-4">
+      <img class="thumb" src="assets/img/aula-4.webp" alt="" loading="lazy" width="96" height="72">
+      <div><span class="n">Aula 4</span><h3>&quot;Pare em duas horas&quot; é um pedido, não uma trava</h3><p class="meta">15 min</p><div class="bar2"><i></i></div></div>
+    </a>
+    <a class="au" data-aula="5" href="#aula-5">
+      <img class="thumb" src="assets/img/aula-5.webp" alt="" loading="lazy" width="96" height="72">
+      <div><span class="n">Aula 5</span><h3>O ciclo em cinco passos e o briefing do seu piloto</h3><p class="meta">15 min</p><div class="bar2"><i></i></div></div>
+    </a>
+      </div>
+    </section>
+    <a class="gl-link" href="#glossario">Glossário · 8 termos <span aria-hidden="true">→</span></a>
+  </div>
+  <footer class="pe">Dev com IA v6.2 · INEMA.CLUB · <a href="landing.html">sobre o curso</a></footer>
+</section>
+
+<section class="view" id="v-glossario">
+  <div class="wrap">
+    <header class="t-hero">
+      <p class="kicker">Dev com IA v6.2</p>
+      <h1>Glossário</h1>
+      <p class="lead">Os termos técnicos do curso em palavras simples. Cada termo leva às aulas em que aparece.</p>
+    </header>
+    <dl class="glossario">
+      <div class="gl-item" id="g-briefing"><dt>briefing</dt><dd><p>Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.</p><p class="gl-aulas">Aparece em: <a href="#aula-2">Aula 2</a> <a href="#aula-5">Aula 5</a></p></dd></div>
+      <div class="gl-item" id="g-claude-code"><dt>Claude Code</dt><dd><p>Assistente de programação da Anthropic que lê e altera arquivos numa pasta do seu computador.</p><p class="gl-aulas">Aparece em: <a href="#aula-1">Aula 1</a></p></dd></div>
+      <div class="gl-item" id="g-codex"><dt>Codex</dt><dd><p>Assistente de programação da OpenAI que lê e altera arquivos numa pasta do seu computador.</p><p class="gl-aulas">Aparece em: <a href="#aula-1">Aula 1</a></p></dd></div>
+      <div class="gl-item" id="g-criterio-de-aceite"><dt>critério de aceite</dt><dd><p>Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: &#x27;a mensagem de teste chega na caixa da recepção&#x27;.</p><p class="gl-aulas">Aparece em: <a href="#aula-1">Aula 1</a> <a href="#aula-2">Aula 2</a> <a href="#aula-3">Aula 3</a></p></dd></div>
+      <div class="gl-item" id="g-handoff"><dt>handoff</dt><dd><p>Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.</p><p class="gl-aulas">Aparece em: <a href="#aula-5">Aula 5</a></p></dd></div>
+      <div class="gl-item" id="g-revisao-cruzada"><dt>revisão cruzada</dt><dd><p>Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.</p><p class="gl-aulas">Aparece em: <a href="#aula-2">Aula 2</a></p></dd></div>
+      <div class="gl-item" id="g-terminal"><dt>terminal</dt><dd><p>Janela de texto em que você digita comandos para o computador executar e lê a resposta.</p><p class="gl-aulas">Aparece em: <a href="#aula-4">Aula 4</a></p></dd></div>
+      <div class="gl-item" id="g-token"><dt>tokens</dt><dd><p>Pedaço de texto que o modelo lê ou escreve. O uso de IA é medido e cobrado em tokens.</p><p class="gl-aulas">Aparece em: <a href="#aula-4">Aula 4</a></p></dd></div>
+    </dl>
+  </div>
+  <footer class="pe">Dev com IA v6.2 · INEMA.CLUB · <a href="landing.html">sobre o curso</a></footer>
+</section>
+
+<section class="view" id="v-aula-1" data-aula="1" data-tempo="12min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 1 de 5</p>
+  <h1>Gerar ficou fácil. <em>Conferir, não.</em></h1>
+  <figure class="cena"><img src="assets/img/aula-1.webp" width="1280" height="720" alt="Um desenvolvedor segura a página impressa de um site e circula um erro com caneta vermelha, com o notebook aberto ao lado."></figure>
+  <p class="promise">Você consegue olhar um resultado feito com IA e separar o que você conferiu do que você só aceitou.</p>
+  <p class="why">A IA escreve código, texto e planilha em minutos, e com muita segurança. O problema é que segurança não é prova. Quem entrega o trabalho responde por ele, não a IA.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>A IA diz "pronto" com a mesma confiança quando acerta e quando erra.</li>
+      <li>Conferir é olhar <b>o resultado real</b>, não o resumo que a IA fez dele.</li>
+      <li>A decisão de entregar é sua. A IA ajuda a conferir, mas não assina.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>A IA diz "pronto" com a mesma voz quando erra</h2>
+  <p>Assistentes de código como o <span class="gterm" data-gl="claude-code" data-def="Assistente de programação da Anthropic que lê e altera arquivos numa pasta do seu computador.">Claude Code</span> e o <span class="gterm" data-gl="codex" data-def="Assistente de programação da OpenAI que lê e altera arquivos numa pasta do seu computador.">Codex</span> trabalham rápido. No fim, escrevem um resumo do que fizeram.</p>
+  <p>Esse resumo é a opinião da IA sobre o próprio trabalho. Às vezes está certo. Às vezes diz "testado" sem ter testado nada.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael, desenvolvedor autônomo, pediu um formulário de contato para o site de uma clínica. A resposta veio em dois minutos, com "testado e funcionando".</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-caso" data-rotulo="O resumo">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Crie o formulário de contato da página da clínica. O envio vai para o e-mail da recepção.</p>
+          <p class="msg ia falha"><span class="quem">IA</span>Pronto. Criei o formulário com nome, telefone e mensagem, e o envio para a recepção. Testado e funcionando.</p>
+        </div>
+        <p class="tela-nota ruim">Parece completo. Mas o que foi testado, e como?</p>
+      </div>
+      <div class="tela-caso" data-rotulo="A pergunta">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Como exatamente você testou o envio para a recepção?</p>
+          <p class="msg ia ok"><span class="quem">IA</span>Conferi que a página abre e que o formulário aparece. Não enviei nenhuma mensagem de verdade. Para testar o envio, mande uma mensagem pela página e veja a caixa da recepção.</p>
+        </div>
+        <p class="tela-nota bom">Uma pergunta mostrou que "testado" era só a página abrindo.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b>: a mesma tarefa, antes e depois de perguntar.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Conferir é olhar o resultado real</h2>
+  <p>Aceitar é confiar no resumo. Conferir é abrir a coisa feita e ver se ela faz o que devia.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael abriu a página, preencheu o formulário e clicou em enviar. A tela mostrou "mensagem enviada", mas nada chegou na caixa da recepção.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Aceitou</span><p><b>O que fez:</b> leu "testado e funcionando" e mandou o link para a clínica.</p><p><b>Resultado:</b> a recepção descobre o erro dias depois, com pacientes sem resposta.</p></div>
+      <div class="depois"><span class="rot">Conferiu</span><p><b>O que fez:</b> enviou uma mensagem de teste e olhou a caixa da recepção.</p><p><b>Resultado:</b> achou o erro antes da entrega e pediu a correção.</p></div>
+      <p class="saldo"><b>Saldo:</b> cinco minutos de conferência no lugar de uma semana de mensagens perdidas.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>Três formas de conferir</h2>
+  <p>Não existe uma conferência só. Este curso usa três, sempre juntas.</p>
+  <p>A primeira é um <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span>, escrito antes. A segunda é abrir e usar o resultado. A terceira é um segundo olhar: outro modelo ou outra pessoa.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla, analista de operações, gera com IA o relatório semanal de entregas. Ela confere o total de pedidos contra a planilha original antes de enviar à diretoria.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Conferência do relatório de Carla</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Critério: total de pedidos igual ao da planilha</div>
+        <div class="item doc"><span class="pin">2</span> Abrir o relatório e somar a coluna de pedidos</div>
+        <div class="item doc"><span class="pin">3</span> Pedir a outro modelo que aponte números sem fonte</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Escrito antes de pedir o relatório.</span></li>
+      <li><span class="pin">2</span><span>Feito por ela, no arquivo real.</span></li>
+      <li><span class="pin">3</span><span>Um olhar de fora, que o módulo 2 ensina.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Parece trabalho demais para cada pedido? Não é para cada pedido. Comece só pelo que vai para outra pessoa: cliente, chefe, equipe.</p></div>
+  <div class="quiz" data-answer="c">
+    <p class="qk">Teste-se</p>
+    <p class="q">A IA terminou a tarefa e escreveu "todos os testes passaram". O que isso é?</p>
+    <button class="opt" data-k="a" data-fb="Não. Ninguém viu os testes rodando; só há a frase.">Uma prova de que funciona</button>
+    <button class="opt" data-k="b" data-fb="Não é mentira de propósito. Mas também não foi conferido.">Uma mentira da ferramenta</button>
+    <button class="opt" data-k="c" data-fb="Isso. É uma declaração da IA. Vale conferir abrindo o resultado.">Uma declaração a conferir</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>A IA ajuda a conferir; quem decide é você</h2>
+  <p>Um segundo modelo acha falhas que o primeiro não viu. Mesmo assim, a decisão de entregar continua sua.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla pede a outro modelo que revise o relatório. Ele aponta duas cidades trocadas. Quem decide se o relatório sai hoje é ela.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">O que a IA faz</span><p>Produz, revisa e aponta falhas com a evidência.</p></div>
+      <div class="neutro"><span class="rot">O que é seu</span><p>Define o critério, olha o resultado real e decide se entrega.</p></div>
+    </div>
+    <figcaption>Os dois lados estão certos. Só não se trocam.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="analise">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Conferido ou só aceito?</h3>
+  <p class="pgoal">Pronto quando você tiver marcado cada item do caso como "conferido" ou "aceito". Cerca de 8 minutos, no papel ou no bloco de notas.</p>
+  <p class="psafe">É só leitura de um caso. Se ficar em dúvida num item, marque "aceito": na dúvida, não foi conferido.</p>
+  <p><b>O caso.</b> Rafael pediu à IA uma página de preços. Ela respondeu: "Página criada, os três planos aparecem, o botão leva ao pagamento e o texto foi revisado". Rafael abriu a página e viu os três planos. Não clicou no botão. Não leu o texto. Mandou o link ao cliente.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Liste as três afirmações da IA.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Ao lado de cada uma, escreva "conferido" ou "aceito".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Escreva o que Rafael faria em um minuto para conferir o que faltou.</span></label></li>
+  </ol>
+  <details class="gabarito"><summary>Ver gabarito</summary>
+    <p>Três planos: conferido, ele viu. Botão: aceito, ninguém clicou. Texto revisado: aceito, ninguém leu. Em um minuto: clicar no botão e ver se abre o pagamento certo.</p>
+  </details>
+  <p class="pdone">Você já separa o que foi visto do que foi só dito.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Conferir</h3>
+    <ol>
+      <li><span><b>Resumo da IA</b>é uma declaração, não uma prova.</span></li>
+      <li><span><b>Três conferências</b>critério escrito antes, resultado aberto, segundo olhar.</span></li>
+      <li><span><b>Decisão</b>entregar ou não é sempre sua.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe separar o que conferiu do que só aceitou.</p>
+    <p class="na-action">No próximo resultado de IA que for para outra pessoa, confira uma afirmação abrindo o resultado real. Leva cinco minutos.</p>
+    <p class="na-hook">Na próxima aula: e se outro modelo disser que está tudo certo? Duas IAs concordando ainda não é prova.</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#trilha">← trilha</a><a class="next" href="#aula-2">próxima aula →</a></nav>
+<p class="aula-pe">Aula 1 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-1">
+[
+  {"front":"A IA escreveu \"funcionando\" no fim da tarefa. Qual a primeira coisa a fazer antes de entregar?","back":"Abrir o resultado real e usar como o cliente vai usar: enviar, clicar, somar."},
+  {"front":"Qual a diferença entre aceitar e conferir um resultado de IA?","back":"Aceitar é confiar no resumo que a IA escreveu. Conferir é abrir o que foi feito e ver se faz o que devia."},
+  {"front":"Um segundo modelo revisou e aprovou o trabalho. Quem decide se ele vai para o cliente?","back":"Você. A revisão ajuda a achar falhas, mas a decisão de entregar é de quem responde pelo trabalho."}
+]
+</script>
+</section>
+<section class="view" id="v-aula-2" data-aula="2" data-tempo="12min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 2 de 5</p>
+  <h1>Duas IAs concordando <em>não é prova</em></h1>
+  <figure class="cena"><img src="assets/img/aula-2.webp" width="1280" height="720" alt="Uma analista de operações confere à mão, com uma calculadora de mesa, uma linha de um relatório impresso que dois modelos já tinham aprovado."></figure>
+  <p class="promise">Você consegue dizer o que fecha a conferência de um trabalho além da opinião de um segundo modelo.</p>
+  <p class="why">Pedir a outro modelo que revise é um bom passo. O risco é parar aí: "o outro também aprovou, então está certo". Duas calculadoras com o mesmo número errado digitado dão o mesmo resultado errado.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Um modelo diferente acha falhas que o autor não vê.</li>
+      <li>Mas os dois podem errar juntos, se leram a mesma coisa errada.</li>
+      <li>Quem fecha: critério de aceite, teste no resultado real e a sua decisão.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Quem escreveu tende a aprovar o que escreveu</h2>
+  <p>Quando você pede ao mesmo modelo, na mesma conversa, que revise o próprio trabalho, ele costuma concordar consigo mesmo. Um modelo diferente, ou uma conversa nova, olha com menos apego.</p>
+  <p>O curso chama isso de <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span>: um faz, o outro confere.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael pediu ao Claude o plano de uma área de acesso com senha para o site da clínica. Depois pediu ao Codex que lesse o mesmo plano e apontasse falhas.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Revisão do plano</span></div>
+      <div class="tela-caso" data-rotulo="Mesma conversa">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Revise o plano que você acabou de escrever.</p>
+          <p class="msg ia falha"><span class="quem">Claude</span>O plano está completo e cobre os requisitos. Não vejo ajustes necessários.</p>
+        </div>
+        <p class="tela-nota ruim">Quem escreveu, na mesma conversa, confirmou o próprio plano.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Outro modelo">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Leia o plano abaixo e aponte falhas, com o trecho que mostra cada uma.</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Falha 1: o plano não diz o que acontece quando a pessoa erra a senha várias vezes. Trecho: "tela de entrada com e-mail e senha".</p>
+        </div>
+        <p class="tela-nota bom">Um olhar de fora achou um caso que o autor não previu.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare as duas revisões.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Os dois podem errar juntos</h2>
+  <p>A revisão cruzada acha falhas. Ela não garante que não sobrou nenhuma. Se os dois modelos leram o mesmo dado errado, os dois vão concordar com o erro.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla pediu a um modelo a fórmula do prazo médio de entrega. O segundo modelo revisou e aprovou. Os dois usaram a coluna de data do pedido, e não a de data de saída.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Dois aprovaram</span><p><b>O que Carla tinha:</b> a fórmula e o "está correta" dos dois modelos.</p><p><b>O que aconteceu:</b> o prazo médio saiu dois dias menor que o real.</p></div>
+      <div class="depois"><span class="rot">Conferiu no real</span><p><b>O que Carla fez:</b> calculou à mão três pedidos e comparou com a fórmula.</p><p><b>O que aconteceu:</b> a diferença apareceu no primeiro pedido.</p></div>
+      <p class="saldo"><b>Saldo:</b> três contas à mão pegaram o que duas revisões deixaram passar.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Então a revisão não serve? Serve, e muito. Ela só não é a última palavra. Pense nela como mais um par de olhos, não como o carimbo final.</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O que fecha a conferência</h2>
+  <p>Três coisas fecham o ciclo, e nenhuma é a opinião de um modelo. O <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> escrito antes. O teste no resultado real. A sua decisão.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Na área de acesso da clínica, o critério de Rafael era "depois de cinco senhas erradas, a conta espera dez minutos". Ele testou errando a senha cinco vezes.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>O que fecha o ciclo</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Critério de aceite, escrito antes do trabalho</div>
+        <div class="item doc"><span class="pin">2</span> Teste no resultado real, feito por alguém</div>
+        <div class="item doc"><span class="pin">3</span> Decisão humana: entra ou não entra</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Diz o que conferir.</span></li>
+      <li><span class="pin">2</span><span>Mostra se passou.</span></li>
+      <li><span class="pin">3</span><span>Assume a responsabilidade.</span></li>
+    </ol>
+  </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">Claude escreveu, Codex revisou e aprovou. O que ainda falta antes de entregar?</p>
+    <button class="opt" data-k="a" data-fb="Isso. A aprovação ajuda, mas quem fecha é o teste contra o critério.">Testar contra o critério</button>
+    <button class="opt" data-k="b" data-fb="Um terceiro modelo é mais uma opinião. Continua faltando o teste.">Pedir um terceiro modelo</button>
+    <button class="opt" data-k="c" data-fb="Pedir de novo ao autor tende a repetir a aprovação.">Pedir ao Claude revisar</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>O revisor recebe o original, não um resumo</h2>
+  <p>Para a revisão valer, o segundo modelo recebe o mesmo <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o trabalho de verdade: o arquivo, o plano, a planilha. Nunca um resumo do que o primeiro disse que fez.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla passou a mandar ao revisor a planilha e o pedido original. Antes, ela colava só a resposta do primeiro modelo.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Resumo</span><p>"O outro modelo disse que a fórmula está certa. Confira."</p></div>
+      <div class="depois"><span class="rot">Original</span><p>O pedido inicial, a planilha e a fórmula, com: "aponte falhas com o trecho que mostra cada uma".</p></div>
+    </div>
+    <figcaption>Com o resumo, o revisor confere uma frase. Com o original, confere o trabalho.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="analise">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">O que ainda falta?</h3>
+  <p class="pgoal">Pronto quando você tiver respondido as três perguntas do caso. Cerca de 8 minutos, no papel ou no bloco de notas.</p>
+  <p class="psafe">É só leitura de um caso. Se duas respostas parecerem certas, escolha a que tem teste no resultado real.</p>
+  <p><b>O caso.</b> Carla pediu ao Claude uma rotina que junta as planilhas de entrega da semana. Colou a resposta no Codex com "está certo?". O Codex respondeu "sim, parece correto". Carla mandou o relatório à diretoria.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>O que o Codex recebeu: o original ou um resumo?</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Qual critério de aceite faltou escrever antes?</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Que teste de cinco minutos Carla faria antes de enviar?</span></label></li>
+  </ol>
+  <details class="gabarito"><summary>Ver gabarito</summary>
+    <p>1. Só a resposta do Claude, sem as planilhas: um resumo. 2. Algo como "o total de pedidos do relatório é igual à soma das planilhas da semana". 3. Somar a coluna de pedidos das planilhas e comparar com o total do relatório.</p>
+  </details>
+  <p class="pdone">Você já sabe o que falta quando "os dois concordaram".</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Revisão cruzada</h3>
+    <ol>
+      <li><span><b>Outro olhar</b>modelo diferente ou conversa nova acha o que o autor não vê.</span></li>
+      <li><span><b>Não é prova</b>dois modelos podem errar juntos.</span></li>
+      <li><span><b>Quem fecha</b>critério, teste no real e a sua decisão.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe usar um segundo modelo sem tratá-lo como carimbo final.</p>
+    <p class="na-action">Na próxima revisão que pedir, mande o original e peça "falhas com o trecho que mostra cada uma". Leva dois minutos a mais.</p>
+    <p class="na-hook">Na próxima aula: se o critério de aceite fecha o ciclo, como escrever um que funcione?</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · De onde vem esta aula<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que as fontes dizem</h3><p>A síntese do INEMA de 27 de setembro de 2026 resume assim: a revisão cruzada ajuda a revelar problemas, mas concordância entre modelos não comprova que o sistema funciona. Critérios de aceite, testes e verificação humana fecham o ciclo.</p><p>O kit Use Both, resumido na área Codex + Claude do Eventos INEMA, diz o mesmo no nível 1: uma IA escreve o plano, a outra critica o mesmo arquivo, só lendo, com achados com evidência e gravidade, em no máximo duas rodadas. "Duas IAs concordando não é prova independente."</p><h3>Por que o autorrevisor falha</h3><p>Na leitura de Mark Kashef, autor do vídeo que acompanha o kit, o modelo que escreveu o plano, ainda mais na mesma sessão, tende a aprová-lo. Um modelo diferente, ou uma sessão nova, dá outro resultado. É um relato do autor, sem medição publicada.</p>
+    <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-1">← aula anterior</a><a class="next" href="#aula-3">próxima aula →</a></nav>
+<p class="aula-pe">Aula 2 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-2">
+[
+  {"front":"Você pediu ao mesmo modelo, na mesma conversa, que revisasse o que escreveu. Por que desconfiar do \"está tudo certo\"?","back":"Porque quem escreveu tende a aprovar o próprio trabalho. Um modelo diferente, ou uma conversa nova, olha com menos apego."},
+  {"front":"Dois modelos aprovaram uma fórmula que está errada. Como isso pode acontecer?","back":"Os dois leram o mesmo dado errado ou a mesma suposição. Concordar não é prova; o teste no resultado real é que mostra."},
+  {"front":"O que mandar ao modelo revisor para a revisão valer?","back":"O mesmo briefing e o trabalho de verdade (arquivo, plano, planilha), pedindo falhas com o trecho que mostra cada uma."}
+]
+</script>
+</section>
+<section class="view" id="v-aula-3" data-aula="3" data-tempo="14min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 3 de 5</p>
+  <h1>O critério de aceite vem <em>antes</em> do trabalho</h1>
+  <figure class="cena"><img src="assets/img/aula-3.webp" width="1280" height="720" alt="Uma analista de operações escreve à mão uma lista curta de conferências numa ficha de papel, antes de pedir o relatório à IA."></figure>
+  <p class="promise">Você consegue escrever três critérios de aceite, que se conferem com sim ou não, para uma tarefa real sua.</p>
+  <p class="why">Sem critério escrito antes, "pronto" vira o que a IA achar que é pronto. Aí a conferência depende de memória e de humor. Com o critério, qualquer pessoa confere do mesmo jeito.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Desejo é "bonito e funcionando". Critério é "a mensagem de teste chega".</li>
+      <li>Um bom critério se responde com sim ou não, por quem não fez o trabalho.</li>
+      <li>O critério vai dentro do pedido, junto com o que <b>não</b> pode mudar.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">1</span>Desejo não se confere; critério sim</h2>
+  <p>O <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> troca um desejo por uma coisa que dá para olhar. "Rápido" vira "abre em menos de três segundos no celular".</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael reescreveu o pedido do formulário da clínica. Saíram "bonito" e "funcionando". Entraram três frases que ele consegue conferir.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Desejo</span><p>"Um formulário de contato bonito e funcionando."</p></div>
+      <div class="depois"><span class="rot">Critério</span><p>1. A mensagem de teste chega na caixa da recepção.<br>2. O campo telefone recusa letras.<br>3. A página abre sem cortes num celular.</p></div>
+      <p class="saldo"><b>Saldo:</b> três coisas que qualquer pessoa confere em cinco minutos.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>O teste do sim ou não</h2>
+  <p>Leia cada critério e pergunte: alguém que não fez o trabalho responde com sim ou não? Se a resposta for "depende", o critério ainda é desejo.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla escreveu "relatório claro". Não passou no teste. Trocou por "cada cidade aparece uma vez, com o total de pedidos da semana".</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Ficha de Carla · relatório semanal</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Total de pedidos igual à soma das planilhas da semana</div>
+        <div class="item doc"><span class="pin">2</span> Cada cidade aparece uma vez, com o seu total</div>
+        <div class="item doc"><span class="pin">3</span> Nenhum número sem a planilha de origem indicada</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Confere com uma soma.</span></li>
+      <li><span class="pin">2</span><span>Confere lendo a lista de cidades.</span></li>
+      <li><span class="pin">3</span><span>Confere procurando a origem de cada número.</span></li>
+    </ol>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sai critério nenhum? Pense em como o trabalho pode dar errado na mão do cliente. Cada erro possível, virado ao contrário, é um critério.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O critério vai dentro do pedido</h2>
+  <p>Escrever o critério só para você ajuda. Colar o critério no pedido ajuda mais: a IA passa a trabalhar para passar nele. E você pede que ela diga como vai conferir cada um.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael colou os três critérios no fim do pedido. A resposta passou a listar como conferir cada um, em vez de só dizer "testado".</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Rafael</span>Crie o formulário de contato da clínica.
+Critérios de aceite:
+1. A mensagem de teste chega na caixa da recepção.
+2. O campo telefone recusa letras.
+3. A página abre sem cortes num celular.
+No fim, diga como conferir cada critério.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Formulário criado. Para conferir:
+1. Envie uma mensagem de teste e veja a caixa da recepção.
+2. Digite letras no telefone: o envio deve ser bloqueado.
+3. Abra a página no celular e role até o fim.</p>
+      </div>
+      <p class="tela-nota bom">A IA devolve um roteiro de conferência, não um "funcionando".</p>
+    </div>
+    <figcaption>O roteiro é para você executar. Ele não substitui a conferência.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Diga também o que não pode mudar</h2>
+  <p>Um bom pedido tem a parte de fora: o que a IA não deve tocar. Sem isso, ela "melhora" coisas que ninguém pediu, e a conferência fica maior.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla acrescentou: "não altere as planilhas originais; grave o relatório num arquivo novo". Ela não precisa mais conferir se os dados de origem mudaram.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Dentro</span><p>Gerar o relatório semanal num arquivo novo, com os três critérios.</p></div>
+      <div class="neutro"><span class="rot">Fora</span><p>Não alterar as planilhas originais. Não mudar o modelo do relatório.</p></div>
+    </div>
+    <figcaption>Os dois cartões fazem parte do pedido. O "Fora" diminui o que você precisa conferir.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Três critérios para uma tarefa sua</h3>
+  <p class="pgoal">Pronto quando você tiver três critérios que passam no teste do sim ou não e uma linha do que fica de fora. Cerca de 10 minutos, no papel ou no bloco de notas.</p>
+  <p class="psafe">Você só escreve; nada é enviado a ninguém. Se não tiver tarefa de código, use uma de texto ou planilha: o critério funciona igual.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Tarefa: &lt;o que você vai pedir à IA&gt;
+Critérios de aceite:
+1. &lt;algo que se confere com sim ou não&gt;
+2. &lt;outro&gt;
+3. &lt;outro&gt;
+Fora: &lt;o que a IA não deve tocar&gt;
+
+Exemplo da Carla:
+Tarefa: relatório semanal de entregas
+1. Total de pedidos igual à soma das planilhas da semana
+2. Cada cidade aparece uma vez, com o seu total
+3. Nenhum número sem a planilha de origem indicada
+Fora: não alterar as planilhas originais</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Escolha uma tarefa que você vai pedir à IA nesta semana.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Escreva três critérios no molde. Passe cada um no teste do sim ou não.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Escreva uma linha do que fica de fora.</span></label></li>
+  </ol>
+  <p class="pdone">Você já transforma um desejo em critérios que outra pessoa consegue conferir.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Critério de aceite</h3>
+    <ol>
+      <li><span><b>Antes</b>escreva o critério antes de pedir o trabalho.</span></li>
+      <li><span><b>Sim ou não</b>quem não fez precisa conseguir responder.</span></li>
+      <li><span><b>No pedido</b>cole os critérios e o que fica de fora.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já escreve o "pronto" antes de começar.</p>
+    <p class="na-action">Use os três critérios da prática no próximo pedido real. Cole no fim e peça o roteiro de conferência.</p>
+    <p class="na-hook">Na próxima aula: critério sem limite vira trabalho sem fim. Como pôr uma trava de verdade?</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-2">← aula anterior</a><a class="next" href="#aula-4">próxima aula →</a></nav>
+<p class="aula-pe">Aula 3 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-3">
+[
+  {"front":"\"O site precisa ficar rápido.\" Como transformar isso num critério de aceite?","back":"Numa frase que se confere com sim ou não, como \"a página abre em menos de três segundos no celular\"."},
+  {"front":"Como saber se um critério ainda é só um desejo?","back":"Pergunte se alguém que não fez o trabalho responde com sim ou não. Se a resposta for \"depende\", ainda é desejo."},
+  {"front":"Por que escrever no pedido o que a IA não deve tocar?","back":"Porque sem isso ela muda coisas que ninguém pediu, e você passa a ter mais para conferir."},
+  {"front":"A IA devolveu um roteiro de conferência para cada critério. Isso já é a conferência?","back":"Não. É o roteiro. A conferência é você executar cada passo no resultado real."}
+]
+</script>
+</section>
+<section class="view" id="v-aula-4" data-aula="4" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 4 de 5</p>
+  <h1>"Pare em duas horas" é um pedido, <em>não uma trava</em></h1>
+  <figure class="cena"><img src="assets/img/aula-4.webp" width="1280" height="720" alt="Um desenvolvedor põe um cronômetro de cozinha e uma ficha de papel ao lado do notebook antes de começar uma tarefa com IA."></figure>
+  <p class="promise">Você consegue trocar um limite vago por três limites que dá para conferir: rodadas, arquivos e tempo ou gasto.</p>
+  <p class="why">Tarefa longa com IA consome tempo e cota da sua conta. Uma frase como "pare em duas horas" parece um limite, mas a IA pode não cumprir. O limite que protege você é o que alguém ou alguma coisa confere.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Frase no pedido é pedido. Trava é o que para o trabalho mesmo sem a IA querer.</li>
+      <li>Três limites conferíveis: <b>rodadas</b>, <b>arquivos</b> e <b>tempo ou gasto</b>.</li>
+      <li>Bateu o limite, a IA para e descreve o bloqueio. Ela não insiste.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Frase no pedido não é trava</h2>
+  <p>A IA lê "pare em duas horas" como qualquer outra frase. Ela pode não ter relógio à mão, e pode achar que falta pouco. A frase ajuda, mas não garante nada.</p>
+  <p>Em metas longas, o consumo cresce rápido. O autor do vídeo que acompanha o kit Use Both relata que o modo de meta do Codex gasta de 3 a 5 vezes mais tempo e <span class="gterm" data-gl="token" data-def="Pedaço de texto que o modelo lê ou escreve. O uso de IA é medido e cobrado em tokens.">tokens</span>. É um relato, não uma medição.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael pediu uma correção "em no máximo uma hora". Voltou do almoço e a IA ainda tentava, já na décima tentativa.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Pedido</span><p>"Corrija o envio do formulário. Pare em uma hora."</p><p><b>O que aconteceu:</b> dez tentativas, e o trabalho seguiu depois da hora.</p></div>
+      <div class="depois"><span class="rot">Trava</span><p>"No máximo duas tentativas. Só o arquivo do formulário." E um relógio que encerra o programa em 30 minutos.</p><p><b>O que aconteceu:</b> parou na segunda tentativa e descreveu o que faltava.</p></div>
+    </div>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">2</span>Três limites que se conferem</h2>
+  <p>Cada limite responde a uma pergunta que você consegue checar depois. Quantas vezes tentou? Que arquivos mudou? Quanto tempo ou cota gastou?</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla limitou a rotina das planilhas a uma pasta de cópias. Depois, conferiu que as planilhas originais não tinham data de alteração nova.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Limites da tarefa</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Rodadas: no máximo 2 tentativas ou 2 rodadas de revisão</div>
+        <div class="item doc"><span class="pin">2</span> Arquivos: só os que o pedido lista</div>
+        <div class="item doc"><span class="pin">3</span> Tempo ou gasto: uma trava fora da IA</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Confere contando as tentativas no histórico.</span></li>
+      <li><span class="pin">2</span><span>Confere vendo quais arquivos mudaram.</span></li>
+      <li><span class="pin">3</span><span>Confere no relógio ou no painel de uso da conta.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>A trava de tempo mora fora da IA</h2>
+  <p>No <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span> do Linux, o comando <code>timeout</code> encerra outro programa quando o tempo acaba. A IA não precisa concordar.</p>
+  <p>Para gasto, a trava fica na sua conta: limite de uso, cota ou orçamento, onde o serviço oferecer. Confira na conta o que existe antes de começar.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael passou a rodar as tarefas longas do Codex dentro de um <code>timeout</code> de 30 minutos.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · Linux</span></div>
+<pre><code><span class="pr">$</span> timeout 30m codex exec "Corrija o envio do formulário. No máximo 2 tentativas. Altere só contato.html."
+<span class="out">...</span>
+<span class="pr">$</span> echo $?
+<span class="out">124</span></code></pre>
+<p class="tela-nota">O número 124 quer dizer que o tempo acabou e o programa foi encerrado. Zero quer dizer que terminou antes.</p></div>
+  <figcaption>O limite de rodadas e arquivos vai no pedido; o de tempo vai no <code>timeout</code>.</figcaption></figure>
+  <details class="mais"><summary>Uso Mac: o timeout não existe</summary>
+    <p>O macOS não traz o <code>timeout</code>. Ele vem no pacote coreutils, com o nome <code>gtimeout</code>. Sem ele, use o relógio e encerre o programa com Ctrl+C.</p>
+  </details>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Nunca abriu um terminal? Fique com os dois primeiros limites, que vão no próprio pedido. O terminal é ensinado com calma no módulo 3.</p></div>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>Bateu o limite: parar e descrever o bloqueio</h2>
+  <p>O limite só funciona se você disser o que fazer quando ele chega. Peça: pare, descreva o que tentou, o que falhou e o que precisaria para seguir.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla recebeu um aviso claro depois de duas tentativas: uma planilha tinha colunas em outra ordem. Ela arrumou a planilha em dois minutos.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
+      <div class="tela-body">
+        <p class="msg eu"><span class="quem">Carla</span>Junte as planilhas da pasta "entregas-copia". No máximo 2 tentativas. Se não der, pare e diga o que tentou, o que falhou e o que falta.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Parei após 2 tentativas. Tentei juntar as planilhas pela ordem das colunas. Falhou: uma das planilhas tem a coluna "cidade" em outra posição. Falta: me dizer se posso reordenar as colunas dessa planilha na cópia.</p>
+      </div>
+      <p class="tela-nota bom">Um bloqueio descrito vale mais que uma décima tentativa.</p>
+    </div>
+  </figure>
+</section>
+
+<section class="practice" data-mode="prompt">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">Ponha três limites no seu pedido</h3>
+  <p class="pgoal">Pronto quando o pedido da aula 3 tiver limite de rodadas, lista de arquivos e a instrução de parada. Cerca de 10 minutos, no bloco de notas.</p>
+  <p class="psafe">Você só escreve o pedido; não precisa enviar agora. Não fez a aula 3? Use qualquer tarefa que você pediria à IA nesta semana.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">&lt;seu pedido, com os critérios de aceite&gt;
+
+Limites:
+- No máximo 2 tentativas.
+- Altere só: &lt;arquivo ou pasta&gt;.
+- Se bater um limite, pare e diga o que tentou, o que falhou e o que falta.</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Copie o molde e cole o seu pedido no começo.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Troque o que está entre &lt; &gt; pelo arquivo ou pasta que a IA pode mexer.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Anote onde fica a trava de tempo ou gasto: o <code>timeout</code>, o relógio ou o limite da sua conta.</span></label></li>
+  </ol>
+  <p class="pdone">Você já transforma "não demore" em limites que dá para conferir.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Limites de verdade</h3>
+    <ol>
+      <li><span><b>Pedido não é trava</b>a frase ajuda, mas não para nada.</span></li>
+      <li><span><b>Três limites</b>rodadas, arquivos e tempo ou gasto.</span></li>
+      <li><span><b>Parada</b>no limite, a IA descreve o bloqueio.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe pôr uma trava que funciona mesmo sem a IA concordar.</p>
+    <p class="na-action">Abra o painel de uso da sua conta de IA e anote onde fica o limite de gasto, se existir. Leva cinco minutos.</p>
+    <p class="na-hook">Na próxima aula: juntar tarefa, critério e limites num arquivo só, e ver o ciclo inteiro.</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · Meta com condição de parada<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Nível 5 do kit Use Both</h3><p>O kit chama isso de "meta com condição de parada": objetivo com sucesso observável (quais testes, qual saída) e limites de arquivos, rodadas e gasto. Pedir "pare em duas horas" é um pedido, não um limite garantido.</p><h3>O que a síntese recomenda</h3><p>Defina limites verificáveis para tarefas longas. Confira preços, cotas e ferramentas disponíveis na conta antes de usar recursos pagos. Preços e limites mudam; o que vale é o que a sua conta mostra no dia.</p>
+    <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-3">← aula anterior</a><a class="next" href="#aula-5">próxima aula →</a></nav>
+<p class="aula-pe">Aula 4 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-4">
+[
+  {"front":"Você escreveu \"pare em duas horas\" no pedido. Por que isso não protege a sua cota?","back":"Porque é só uma frase para a IA. A trava de verdade fica fora dela: timeout, relógio ou limite de uso da conta."},
+  {"front":"Quais três limites dá para conferir depois de uma tarefa com IA?","back":"Quantas rodadas ela fez, quais arquivos mudou e quanto tempo ou gasto consumiu."},
+  {"front":"O comando terminou e o terminal mostrou 124. O que aconteceu?","back":"O timeout encerrou o programa porque o tempo acabou antes de a tarefa terminar."},
+  {"front":"A IA bateu o limite de tentativas. O que você quer receber dela?","back":"O que tentou, o que falhou e o que falta para seguir. Um bloqueio descrito, não mais uma tentativa."}
+]
+</script>
+</section>
+<section class="view" id="v-aula-5" data-aula="5" data-tempo="15min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 5 de 5</p>
+  <h1>O ciclo em cinco passos e <em>o briefing do seu piloto</em></h1>
+  <figure class="cena"><img src="assets/img/aula-5.webp" width="1280" height="720" alt="Um desenvolvedor e uma analista de operações prendem fichas de papel em sequência num quadro de cortiça, ligadas por setas, montando o caminho de uma tarefa."></figure>
+  <p class="promise">Você consegue montar o briefing do seu piloto: objetivo, o que fica dentro e fora, critérios de aceite e limites, num arquivo só.</p>
+  <p class="why">Nas aulas anteriores você viu as peças soltas: conferir, revisão cruzada, critério e limite. Soltas, elas se perdem entre um pedido e outro. Juntas num arquivo, viram o começo de um método que qualquer modelo segue.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>O ciclo: definir, planejar e criticar, construir e revisar, comprovar, registrar.</li>
+      <li>Tudo começa num arquivo: o <b>briefing</b>, que os dois modelos leem.</li>
+      <li>O piloto é uma tarefa pequena, de uma ou duas horas, não o sistema inteiro.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>O ciclo inteiro numa ficha</h2>
+  <p>Este curso segue cinco passos, um módulo para cada. O primeiro você já praticou: definir a tarefa. Os outros vêm nos próximos módulos.</p>
+  <p>O último passo é o <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span>: um registro para a próxima conversa continuar sem você explicar tudo de novo.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael colou os cinco passos na parede do escritório. Toda tarefa com IA para um cliente passa por eles.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>O ciclo do curso</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Definir: objetivo, dentro e fora, critérios, limites</div>
+        <div class="item doc"><span class="pin">2</span> Planejar e criticar: um escreve o plano, o outro ataca</div>
+        <div class="item doc"><span class="pin">3</span> Construir e revisar: um faz, o outro lê o que mudou</div>
+        <div class="item doc"><span class="pin">4</span> Comprovar: testes, resultado real, sua decisão</div>
+        <div class="item doc"><span class="pin">5</span> Registrar: handoff para a próxima conversa</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Módulo 1, este.</span></li>
+      <li><span class="pin">2</span><span>Módulo 2.</span></li>
+      <li><span class="pin">3</span><span>Módulo 3.</span></li>
+      <li><span class="pin">4</span><span>Módulo 4.</span></li>
+      <li><span class="pin">5</span><span>Módulo 5. O módulo 6 mede o custo de tudo.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Quem faz o quê é uma rota inicial</h2>
+  <p>Um ponto de partida comum: o Claude escreve o plano e o Codex critica. Depois, um constrói e o outro revisa. Essa é uma rota para começar, não um ranking de qual modelo é melhor.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla começou pela rota comum. Na revisão das fórmulas, inverteu os papéis e comparou qual rota achou mais falhas na tarefa dela.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="bom"><span class="rot">Rota inicial</span><p><b>Plano:</b> Claude escreve, Codex critica.<br><b>Construção:</b> um faz, o outro revisa o que mudou.</p></div>
+      <div class="neutro"><span class="rot">O que decide</span><p>A qualidade da entrega na sua tarefa. Modelos, acesso e cobrança mudam de conta para conta.</p></div>
+    </div>
+    <figcaption>Os dois cartões valem juntos: comece pela rota e fique com a que der melhor resultado.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">3</span>O briefing é o arquivo que todos leem</h2>
+  <p>O <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> junta num arquivo de texto o que você escreveu nas aulas 3 e 4. Os dois modelos recebem o mesmo arquivo. Assim, ninguém trabalha com um resumo.</p>
+  <p data-ex="desenvolvedor" data-exlbl="Na prática · Desenvolvedor">Rafael salva o briefing como <code>briefing.md</code>, dentro da pasta do projeto do cliente. É o primeiro arquivo que ele passa para qualquer modelo.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>briefing.md · formulário da clínica</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Objetivo: pacientes mandam mensagem pelo site</div>
+        <div class="item doc"><span class="pin">2</span> Dentro: página de contato · Fora: página inicial e cores</div>
+        <div class="item doc"><span class="pin">3</span> Aceite: mensagem chega na recepção; telefone recusa letras; abre no celular</div>
+        <div class="item doc"><span class="pin">4</span> Limites: 2 tentativas; só contato.html; 30 minutos</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Uma frase: para que serve.</span></li>
+      <li><span class="pin">2</span><span>O que pode e o que não pode mudar.</span></li>
+      <li><span class="pin">3</span><span>Os critérios da aula 3.</span></li>
+      <li><span class="pin">4</span><span>Os limites da aula 4.</span></li>
+    </ol>
+  </figure>
+</section>
+
+<section class="step" data-kind="ferramenta">
+  <h2><span class="n">4</span>O piloto: uma tarefa pequena de verdade</h2>
+  <p>O curso inteiro gira em torno de um piloto seu. Escolha uma tarefa real, pequena, de uma ou duas horas. Grande demais, o ciclo se perde. De mentira, ninguém confere de verdade.</p>
+  <p data-ex="analista" data-exlbl="Na prática · Analista">Carla escolheu a rotina que junta as planilhas de entrega da semana. É pequena, ela faz toda semana e sabe dizer quando está certa.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Grande demais</span><p>"Automatizar todos os relatórios da empresa."</p></div>
+      <div class="depois"><span class="rot">Bom piloto</span><p>"Juntar as planilhas de entrega da semana num relatório, conferido contra a soma."</p></div>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Nenhuma tarefa parece pequena o bastante? Pegue um pedaço de uma grande: só uma página, só um relatório, só uma fórmula.</p></div>
+</section>
+
+<section class="practice" data-mode="tarefa">
+  <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
+  <h3 class="ph">Escreva o briefing do seu piloto</h3>
+  <p class="pgoal">Pronto quando o arquivo <code>briefing.md</code> tiver as quatro partes preenchidas. Cerca de 12 minutos, no computador; no celular, use o app de notas.</p>
+  <p class="psafe">É um arquivo de texto seu; nada é enviado. Se não souber um limite, escreva "a definir" e siga: o módulo 2 volta nele.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Briefing: &lt;nome do piloto&gt;
+
+## Objetivo
+&lt;uma frase: para que serve&gt;
+
+## Dentro e fora
+Dentro: &lt;o que pode mudar&gt;
+Fora: &lt;o que não pode mudar&gt;
+
+## Critérios de aceite
+1. &lt;sim ou não&gt;
+2. &lt;sim ou não&gt;
+3. &lt;sim ou não&gt;
+
+## Limites
+- Rodadas: &lt;no máximo 2&gt;
+- Arquivos: &lt;quais&gt;
+- Tempo ou gasto: &lt;onde fica a trava&gt;</pre></div>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>Escolha a tarefa do piloto: real, pequena, de uma ou duas horas.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Crie uma pasta para o piloto e, dentro dela, um arquivo de texto chamado <code>briefing.md</code>.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Cole o molde e preencha objetivo, dentro e fora.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Preencha critérios e limites, reaproveitando o que escreveu nas aulas 3 e 4.</span></label></li>
+  </ol>
+  <p class="pdone">Você já tem o briefing que os dois modelos vão ler no módulo 2.</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Ciclo e briefing</h3>
+    <ol>
+      <li><span><b>Cinco passos</b>definir, planejar e criticar, construir e revisar, comprovar, registrar.</span></li>
+      <li><span><b>Briefing</b>um arquivo com objetivo, dentro e fora, critérios e limites.</span></li>
+      <li><span><b>Piloto</b>uma tarefa real e pequena, que você sabe conferir.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você fechou o módulo 1 com o briefing do seu piloto pronto.</p>
+    <p class="na-action">Releia o briefing amanhã, com a cabeça descansada. Corrija um critério que ainda dependa de opinião.</p>
+    <p class="na-hook">No módulo 2: um modelo escreve o plano a partir do seu briefing, e o outro tenta derrubá-lo.</p>
+  </div>
+</div>
+<nav class="lnav"><a href="#aula-4">← aula anterior</a><a class="next" href="#trilha">voltar à trilha →</a></nav>
+<p class="aula-pe">Aula 5 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-5">
+[
+  {"front":"Em que passo do ciclo entram os critérios de aceite e os limites?","back":"No primeiro, definir a tarefa. Eles vão para o briefing antes de qualquer plano."},
+  {"front":"\"Claude planeja, Codex critica\" quer dizer que o Claude é melhor para planejar?","back":"Não. É uma rota para começar. O que decide é a qualidade da entrega na sua tarefa."},
+  {"front":"Por que mandar o mesmo briefing aos dois modelos?","back":"Para os dois trabalharem com a mesma informação, e a revisão conferir o trabalho contra o pedido real, não contra um resumo."},
+  {"front":"Sua ideia de piloto é \"automatizar o atendimento inteiro\". O que você faz?","back":"Corta um pedaço pequeno e real, de uma ou duas horas, que você sabe conferir, como responder uma pergunta frequente."}
+]
+</script>
+</section>
+
+<script src="assets/curso.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<section class="view" id="v-aula-2" data-aula="2" data-tempo="12min">
+<div class="aula">
+<header class="a-hero">
+  <p class="kicker">Módulo 1 · Aula 2 de 5</p>
+  <h1>Duas IAs concordando <em>não é prova</em></h1>
+  <figure class="cena"><img src="assets/img/aula-2.webp" width="1280" height="720" alt="Uma analista de operações confere à mão, com uma calculadora de mesa, uma linha de um relatório impresso que dois modelos já tinham aprovado."></figure>
+  <p class="promise">Você consegue dizer o que fecha a conferência de um trabalho além da opinião de um segundo modelo.</p>
+  <p class="why">Pedir a outro modelo que revise é um bom passo. O risco é parar aí: "o outro também aprovou, então está certo". Duas calculadoras com o mesmo número errado digitado dão o mesmo resultado errado.</p>
+  <div class="em1min">
+    <p class="k">Em 1 minuto</p>
+    <ol>
+      <li>Um modelo diferente acha falhas que o autor não vê.</li>
+      <li>Mas os dois podem errar juntos, se leram a mesma coisa errada.</li>
+      <li>Quem fecha: critério de aceite, teste no resultado real e a sua decisão.</li>
+    </ol>
+  </div>
+</header>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">1</span>Quem escreveu tende a aprovar o que escreveu</h2>
+  <p>Quando você pede ao mesmo modelo, na mesma conversa, que revise o próprio trabalho, ele costuma concordar consigo mesmo. Um modelo diferente, ou uma conversa nova, olha com menos apego.</p>
+  <p>O curso chama isso de <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span>: um faz, o outro confere.</p>
+  <p data-ex="desenvolvedor">Rafael pediu ao Claude o plano de uma área de acesso com senha para o site da clínica. Depois pediu ao Codex que lesse o mesmo plano e apontasse falhas.</p>
+  <figure class="largo">
+    <div class="tela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Revisão do plano</span></div>
+      <div class="tela-caso" data-rotulo="Mesma conversa">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Revise o plano que você acabou de escrever.</p>
+          <p class="msg ia falha"><span class="quem">Claude</span>O plano está completo e cobre os requisitos. Não vejo ajustes necessários.</p>
+        </div>
+        <p class="tela-nota ruim">Quem escreveu, na mesma conversa, confirmou o próprio plano.</p>
+      </div>
+      <div class="tela-caso" data-rotulo="Outro modelo">
+        <div class="tela-body">
+          <p class="msg eu"><span class="quem">Rafael</span>Leia o plano abaixo e aponte falhas, com o trecho que mostra cada uma.</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Falha 1: o plano não diz o que acontece quando a pessoa erra a senha várias vezes. Trecho: "tela de entrada com e-mail e senha".</p>
+        </div>
+        <p class="tela-nota bom">Um olhar de fora achou um caso que o autor não previu.</p>
+      </div>
+    </div>
+    <figcaption><b>Toque nos dois botões</b> e compare as duas revisões.</figcaption>
+  </figure>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">2</span>Os dois podem errar juntos</h2>
+  <p>A revisão cruzada acha falhas. Ela não garante que não sobrou nenhuma. Se os dois modelos leram o mesmo dado errado, os dois vão concordar com o erro.</p>
+  <p data-ex="analista">Carla pediu a um modelo a fórmula do prazo médio de entrega. O segundo modelo revisou e aprovou. Os dois usaram a coluna de data do pedido, e não a de data de saída.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Dois aprovaram</span><p><b>O que Carla tinha:</b> a fórmula e o "está correta" dos dois modelos.</p><p><b>O que aconteceu:</b> o prazo médio saiu dois dias menor que o real.</p></div>
+      <div class="depois"><span class="rot">Conferiu no real</span><p><b>O que Carla fez:</b> calculou à mão três pedidos e comparou com a fórmula.</p><p><b>O que aconteceu:</b> a diferença apareceu no primeiro pedido.</p></div>
+      <p class="saldo"><b>Saldo:</b> três contas à mão pegaram o que duas revisões deixaram passar.</p>
+    </div>
+  </figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Então a revisão não serve? Serve, e muito. Ela só não é a última palavra. Pense nela como mais um par de olhos, não como o carimbo final.</p></div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">3</span>O que fecha a conferência</h2>
+  <p>Três coisas fecham o ciclo, e nenhuma é a opinião de um modelo. O <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critério de aceite</span> escrito antes. O teste no resultado real. A sua decisão.</p>
+  <p data-ex="desenvolvedor">Na área de acesso da clínica, o critério de Rafael era "depois de cinco senhas erradas, a conta espera dez minutos". Ele testou errando a senha cinco vezes.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>O que fecha o ciclo</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> Critério de aceite, escrito antes do trabalho</div>
+        <div class="item doc"><span class="pin">2</span> Teste no resultado real, feito por alguém</div>
+        <div class="item doc"><span class="pin">3</span> Decisão humana: entra ou não entra</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Diz o que conferir.</span></li>
+      <li><span class="pin">2</span><span>Mostra se passou.</span></li>
+      <li><span class="pin">3</span><span>Assume a responsabilidade.</span></li>
+    </ol>
+  </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">Claude escreveu, Codex revisou e aprovou. O que ainda falta antes de entregar?</p>
+    <button class="opt" data-k="a" data-fb="Isso. A aprovação ajuda, mas quem fecha é o teste contra o critério.">Testar contra o critério</button>
+    <button class="opt" data-k="b" data-fb="Um terceiro modelo é mais uma opinião. Continua faltando o teste.">Pedir um terceiro modelo</button>
+    <button class="opt" data-k="c" data-fb="Pedir de novo ao autor tende a repetir a aprovação.">Pedir ao Claude revisar</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="step" data-kind="fundamento">
+  <h2><span class="n">4</span>O revisor recebe o original, não um resumo</h2>
+  <p>Para a revisão valer, o segundo modelo recebe o mesmo <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o trabalho de verdade: o arquivo, o plano, a planilha. Nunca um resumo do que o primeiro disse que fez.</p>
+  <p data-ex="analista">Carla passou a mandar ao revisor a planilha e o pedido original. Antes, ela colava só a resposta do primeiro modelo.</p>
+  <figure class="largo">
+    <div class="lado">
+      <div class="antes"><span class="rot">Resumo</span><p>"O outro modelo disse que a fórmula está certa. Confira."</p></div>
+      <div class="depois"><span class="rot">Original</span><p>O pedido inicial, a planilha e a fórmula, com: "aponte falhas com o trecho que mostra cada uma".</p></div>
+    </div>
+    <figcaption>Com o resumo, o revisor confere uma frase. Com o original, confere o trabalho.</figcaption>
+  </figure>
+</section>
+
+<section class="practice" data-mode="analise">
+  <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
+  <h3 class="ph">O que ainda falta?</h3>
+  <p class="pgoal">Pronto quando você tiver respondido as três perguntas do caso. Cerca de 8 minutos, no papel ou no bloco de notas.</p>
+  <p class="psafe">É só leitura de um caso. Se duas respostas parecerem certas, escolha a que tem teste no resultado real.</p>
+  <p><b>O caso.</b> Carla pediu ao Claude uma rotina que junta as planilhas de entrega da semana. Colou a resposta no Codex com "está certo?". O Codex respondeu "sim, parece correto". Carla mandou o relatório à diretoria.</p>
+  <ol class="psteps">
+    <li><label><input type="checkbox" data-ptask="1"> <span>O que o Codex recebeu: o original ou um resumo?</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Qual critério de aceite faltou escrever antes?</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Que teste de cinco minutos Carla faria antes de enviar?</span></label></li>
+  </ol>
+  <details class="gabarito"><summary>Ver gabarito</summary>
+    <p>1. Só a resposta do Claude, sem as planilhas: um resumo. 2. Algo como "o total de pedidos do relatório é igual à soma das planilhas da semana". 3. Somar a coluna de pedidos das planilhas e comparar com o total do relatório.</p>
+  </details>
+  <p class="pdone">Você já sabe o que falta quando "os dois concordaram".</p>
+</section>
+
+<div class="fecho">
+  <div class="cola">
+    <p class="k">Cola da aula</p>
+    <h3>Revisão cruzada</h3>
+    <ol>
+      <li><span><b>Outro olhar</b>modelo diferente ou conversa nova acha o que o autor não vê.</span></li>
+      <li><span><b>Não é prova</b>dois modelos podem errar juntos.</span></li>
+      <li><span><b>Quem fecha</b>critério, teste no real e a sua decisão.</span></li>
+    </ol>
+  </div>
+  <div class="next-action">
+    <p class="nak">Seu próximo passo</p>
+    <p class="na-win">Você já sabe usar um segundo modelo sem tratá-lo como carimbo final.</p>
+    <p class="na-action">Na próxima revisão que pedir, mande o original e peça "falhas com o trecho que mostra cada uma". Leva dois minutos a mais.</p>
+    <p class="na-hook">Na próxima aula: se o critério de aceite fecha o ciclo, como escrever um que funcione?</p>
+  </div>
+</div>
+<details class="complementar">
+  <summary>Material complementar · De onde vem esta aula<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>O que as fontes dizem</h3><p>A síntese do INEMA de 27 de setembro de 2026 resume assim: a revisão cruzada ajuda a revelar problemas, mas concordância entre modelos não comprova que o sistema funciona. Critérios de aceite, testes e verificação humana fecham o ciclo.</p><p>O kit Use Both, resumido na área Codex + Claude do Eventos INEMA, diz o mesmo no nível 1: uma IA escreve o plano, a outra critica o mesmo arquivo, só lendo, com achados com evidência e gravidade, em no máximo duas rodadas. "Duas IAs concordando não é prova independente."</p><h3>Por que o autorrevisor falha</h3><p>Na leitura de Mark Kashef, autor do vídeo que acompanha o kit, o modelo que escreveu o plano, ainda mais na mesma sessão, tende a aprová-lo. Um modelo diferente, ou uma sessão nova, dá outro resultado. É um relato do autor, sem medição publicada.</p>
+    <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
+</details>
+<nav class="lnav"><a href="#aula-1">← aula anterior</a><a class="next" href="#aula-3">próxima aula →</a></nav>
+<p class="aula-pe">Aula 2 · Dev com IA v6.2 · INEMA.CLUB</p>
+</div>
+<script type="application/json" id="cards-2">
+[
+  {"front":"Você pediu ao mesmo modelo, na mesma conversa, que revisasse o que escreveu. Por que desconfiar do \"está tudo certo\"?","back":"Porque quem escreveu tende a aprovar o próprio trabalho. Um modelo diferente, ou uma conversa nova, olha com menos apego."},
+  {"front":"Dois modelos aprovaram uma fórmula que está errada. Como isso pode acontecer?","back":"Os dois leram o mesmo dado errado ou a mesma suposição. Concordar não é prova; o teste no resultado real é que mostra."},
+  {"front":"O que mandar ao modelo revisor para a revisão valer?","back":"O mesmo briefing e o trabalho de verdade (arquivo, plano, planilha), pedindo falhas com o trecho que mostra cada uma."}
+]
+</script>
+</section>
