@@ -4,7 +4,7 @@ Curso INEMA.CLUB (formato v6, perfil técnico, em módulos) sobre desenvolver co
 cruzada** e **orçamento consciente**: briefing com critério de aceite → plano criticado → implementação com *diff*
 revisado → testes e aceite humano → handoff. Modelo e esforço escolhidos por etapa.
 
-**Estado (1.1.0, 28/09/2026):** curso completo em PT: 6 módulos, 30 aulas.
+**Estado (1.2.0, 28/09/2026):** curso completo, 6 módulos e 30 aulas, em PT, [EN](https://inematds.github.io/dev-ia-validacao/en/) e [ES](https://inematds.github.io/dev-ia-validacao/es/).
 
 **Curso:** https://inematds.github.io/dev-ia-validacao/
 

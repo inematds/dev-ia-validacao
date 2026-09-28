@@ -1,0 +1,14 @@
+{
+ "en": {
+  "briefing": "briefing (always this word, never 'brief')",
+  "fluxo": "flow (never 'workflow')",
+  "roteiro automático": "automatic routine (never 'workflow')",
+  "repositório": "repository"
+ },
+ "es": {
+  "briefing": "briefing (siempre esta palabra)",
+  "fluxo": "flujo",
+  "roteiro automático": "rutina automática",
+  "pasta": "carpeta (nunca 'repositorio')"
+ }
+}

@@ -1,5 +1,11 @@
 # Changelog — Dev com IA v6.2
 
+## 1.2.0 — 2026-09-28
+
+- Versões em inglês (`en/`) e espanhol (`es/`), traduzidas pelo Codex da assinatura (gpt-6-luna, 188 chamadas, US$ 0 de API),
+  com glossário do curso (`i18n/glossario.json`) e definições do glossário unificadas por termo. Auditor 30/30 aprovadas nos
+  três idiomas; motor 26/26 em PT, EN e ES.
+
 ## 1.1.0 — 2026-09-28
 
 - Curso completo: módulos 2 a 6 (aulas 6–30) — planejar e criticar, construir e revisar o diff, comprovar e decidir,
