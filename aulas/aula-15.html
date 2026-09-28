@@ -68,8 +68,8 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">4</span>O laboratório: uma mudança completa</h2>
-  <p>O laboratório junta o módulo inteiro numa sequência. Linha de teste, etapa, pacote, revisão, correção, registro e versão salva. É a primeira mudança do seu piloto feita e conferida por dois olhares.</p>
-  <p data-ex="analista">Carla fez a etapa 2 pelo app, na ordem da janela abaixo. Levou vinte minutos, e o <code>revisao-etapa-2.md</code> ficou na pasta.</p>
+  <p>No <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span>, o módulo inteiro vira uma sequência: branch, etapa, pacote, revisão, correção, registro e commit. O commit vem por último, depois da revisão. É a primeira mudança do seu piloto feita e conferida por dois olhares.</p>
+  <p data-ex="analista">Carla fez a etapa 2 pelo app, na ordem da janela abaixo. Da etapa ao commit, levou uns quarenta minutos, e o <code>revisao-etapa-2.md</code> ficou na pasta.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>Uma mudança revisada</span></div>
@@ -77,34 +77,41 @@
         <div class="item doc"><span class="pin">1</span> Branch de teste (aula 11)</div>
         <div class="item doc"><span class="pin">2</span> Etapa com critério colado e parada (aula 12)</div>
         <div class="item doc"><span class="pin">3</span> Pacote e revisão só leitura (aula 13)</div>
-        <div class="item doc"><span class="pin">4</span> Corrigir, registrar, fazer o commit (esta aula)</div>
+        <div class="item doc"><span class="pin">4</span> Corrigir, registrar, git add -A e commit (esta aula)</div>
       </div>
     </div>
     <ol class="passos">
-      <li><span class="pin">1</span><span>Linha separada da versão que funciona.</span></li>
+      <li><span class="pin">1</span><span>Separado da versão que funciona.</span></li>
       <li><span class="pin">2</span><span>Mudança pequena.</span></li>
       <li><span class="pin">3</span><span>Outro olhar sobre o trabalho real.</span></li>
-      <li><span class="pin">4</span><span>Registro e versão salva.</span></li>
+      <li><span class="pin">4</span><span>Registro e, só então, o commit.</span></li>
     </ol>
-    <figcaption>O <span class="gterm" data-gl="branch" data-def="Linha de trabalho separada dentro do Git. Você testa mudanças nela sem mexer na versão que já funciona.">branch</span> e o <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span> vêm das aulas 11 e 12. Pelo app, peça cada passo ao assistente.</figcaption>
+    <figcaption>O <span class="gterm" data-gl="branch" data-def="Linha de teste separada dentro do Git. Você testa mudanças nela sem mexer na versão que já funciona.">branch</span> e o <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span> vêm das aulas 11 e 12. Pelo app, peça cada passo ao assistente. O laboratório completo, com os comandos, está no material complementar.</figcaption>
   </figure>
 </section>
 
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
   <h3 class="ph">Uma mudança do piloto, com a revisão registrada</h3>
-  <p class="pgoal">Pronto quando a pasta do piloto tiver o <code>revisao-etapa-N.md</code> e a etapa estiver salva. Cerca de 12 minutos, no computador, se a etapa já estiver feita; senão, reserve mais tempo.</p>
-  <p class="psafe">Tudo acontece na linha de teste; a versão que funciona não muda. Se a revisão pedir algo grande, recuse por agora e anote: "fica para outra etapa".</p>
+  <p class="pgoal">Pronto quando a pasta do piloto tiver o <code>revisao-etapa-N.md</code> preenchido a partir do <code>review.md</code> da aula 13 e a etapa estiver salva num commit. Cerca de 12 minutos, no computador.</p>
+  <p class="psafe">Tudo acontece no branch de teste; a versão que funciona não muda. Não tem o <code>review.md</code> da aula 13? Treine com o exemplo da Carla no molde. Se a revisão pedir algo grande, anote "fica para outra etapa" e siga.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Revisão da etapa &lt;N&gt;
 Fez: &lt;modelo ou conversa&gt; · Revisou: &lt;outro&gt;
 Achado 1: &lt;o que é&gt; · corrigido | recusado (motivo)
 Achado 2: &lt;o que é&gt; · corrigido | recusado (motivo)
-Conferido depois: &lt;o que você testou e o resultado&gt;</pre></div>
+Conferido depois: &lt;o que você testou e o resultado&gt;
+
+Exemplo da Carla:
+# Revisão da etapa 2
+Fez: Codex · Revisou: chat de IA, conversa nova
+Achado 1: cidade com e sem acento virava duas · corrigido
+Achado 2: trocar o formato do relatório · recusado (Fora do briefing)
+Conferido depois: cada cidade aparece uma vez; total confere com as planilhas</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Pegue a etapa da aula 12 (ou faça uma pequena agora), trocando quem faz e quem revisa.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Peça a revisão com o pacote da aula 13.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Corrija ou recuse cada achado e preencha o molde em <code>revisao-etapa-N.md</code>.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="4"> <span>Confira de novo os critérios da etapa e salve a versão.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Abra o <code>review.md</code> da revisão que você pediu na aula 13.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Para cada achado, decida: corrige (quebra um critério) ou recusa (com o motivo).</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Faça as correções e preencha o molde em <code>revisao-etapa-N.md</code>, criado como o briefing da aula 5.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="4"> <span>Confira de novo os critérios da etapa e faça o commit: <code>git add -A</code> e <code>git commit -m "etapa N revisada"</code>, ou peça ao assistente.</span></label></li>
   </ol>
   <p class="pdone">Você fechou o módulo 3 com uma mudança feita, revisada, corrigida e registrada.</p>
 </section>
@@ -126,14 +133,26 @@ Conferido depois: &lt;o que você testou e o resultado&gt;</pre></div>
     <p class="na-hook">No módulo 4: revisão feita. Mas a mudança funciona de verdade? Hora de comprovar e decidir.</p>
   </div>
 </div>
+<details class="complementar">
+  <summary>Material complementar · O laboratório completo do módulo<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
+  <section class="comp-sec"><h3>Uma mudança revisada, do começo ao fim</h3><p>Reserve de 30 a 45 minutos. Na etapa seguinte do piloto, inverta a rota: quem revisava faz, quem fazia revisa. Só tem um assistente? Uma conversa faz, outra nova revisa.</p>
+  <ol><li>No branch de teste, peça a etapa com os critérios colados e a parada (aula 12).</li><li>Confira no <code>git status</code> e anote o resultado de cada critério em <code>conferencias.txt</code>.</li><li>Gere o pacote e peça a revisão só leitura (aula 13).</li><li>Corrija ou recuse cada achado e registre no <code>revisao-etapa-N.md</code>.</li><li>Confira de novo e faça o commit.</li></ol>
+  <pre class="cmd"><code>git add -A
+git diff --staged --output=mudanca.diff
+codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correção. Não altere arquivos."
+git add -A
+git commit -m "etapa 2 revisada"</code></pre>
+  <p>No Claude, a revisão só leitura é <code>claude -p --permission-mode plan "…" &gt; review-claude.md</code>.</p>
+  <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
+</details>
 <nav class="lnav"><a href="#aula-14">← aula anterior</a><a class="next" href="#trilha">voltar à trilha →</a></nav>
 <p class="aula-pe">Aula 15 · Dev com IA v6.2 · INEMA.CLUB</p>
 </div>
 <script type="application/json" id="cards-15">
 [
   {"front":"Faz três etapas que o mesmo revisor só acha detalhes. O que você testa na próxima?","back":"Inverter os papéis: quem revisava faz, quem fazia revisa. E comparar quantas falhas reais cada rota acha."},
-  {"front":"A revisão sugeriu mudar algo que está no Fora do briefing. O que você faz?","back":"Recusa e anota o motivo no registro da revisão: está fora do escopo combinado."},
-  {"front":"Por que guardar a revisão num arquivo, e não só na conversa?","back":"Para a próxima sessão, outro modelo ou outra pessoa saber o que foi achado, corrigido e recusado."}
+  {"front":"A revisão pediu uma mudança grande, dentro do escopo, mas que não cabe nesta etapa. O que você faz?","back":"Anota no revisao-etapa-N.md como \"fica para outra etapa\" e segue. Etapa pequena continua pequena."},
+  {"front":"Você fez o commit antes de gerar o mudanca.diff. Como recupera o diff para o revisor?","back":"Pelo git show, que mostra o que entrou no último commit; grave o resultado em mudanca.diff (o comando exato está na aula 13)."}
 ]
 </script>
 </section>

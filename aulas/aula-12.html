@@ -5,13 +5,13 @@
   <h1>Uma etapa por vez, <em>com o critério colado</em></h1>
   <figure class="cena"><img src="assets/img/aula-12.webp" width="1280" height="720" alt="Uma analista de operações monta uma estante em etapas: prende a primeira prateleira e confere com um nível antes de pegar a próxima peça."></figure>
   <p class="promise">Você consegue pedir só a primeira etapa do seu piloto, com os critérios do briefing colados e uma parada no fim.</p>
-  <p class="why">Pedir a tarefa inteira de uma vez gera uma mudança enorme. Ninguém revisa bem trezentas linhas. Em etapas, cada mudança é pequena, conferida e salva antes da próxima.</p>
+  <p class="why">Pedir a tarefa inteira de uma vez gera uma mudança enorme. Ninguém revisa bem trezentas linhas. Em etapas, cada mudança é pequena, conferida e revisada antes da próxima.</p>
   <div class="em1min">
     <p class="k">Em 1 minuto</p>
     <ol>
       <li>Quebre o plano em etapas pequenas, cada uma com o seu critério.</li>
       <li>Peça uma etapa, com os critérios colados e "pare ao terminar".</li>
-      <li>Conferiu a etapa? Salve uma versão no Git e só então peça a próxima.</li>
+      <li>Conferiu a etapa? Ela vai para a revisão da aula 13; o commit vem depois.</li>
     </ol>
   </div>
 </header>
@@ -19,7 +19,7 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>Tudo de uma vez vira um diff que ninguém lê</h2>
   <p>Quando a IA faz tudo num pedido só, o <span class="gterm" data-gl="diff" data-def="A lista do que mudou entre duas versões de um arquivo: linhas que saíram (com −) e linhas que entraram (com +).">diff</span> fica longo. Você passa os olhos, cansa e aprova. É assim que o erro entra.</p>
-  <p data-ex="desenvolvedor">Rafael pediu "o formulário inteiro, com envio e validação". Voltaram mudanças em sete arquivos. Na etapa seguinte, pediu só os campos: um arquivo, vinte linhas.</p>
+  <p data-ex="desenvolvedor">Rafael pediu "o formulário inteiro, com envio e validação". Voltaram mudanças em sete arquivos. Na vez seguinte, pediu só os campos: um arquivo, poucas linhas.</p>
   <figure class="largo">
     <div class="lado">
       <div class="antes"><span class="rot">Tudo de uma vez</span><p><b>Pedido:</b> formulário completo.</p><p><b>Diff:</b> sete arquivos. Rafael aprovou sem ler tudo.</p></div>
@@ -74,34 +74,48 @@ Parei aqui. A etapa 2 é o envio.</p>
 </section>
 
 <section class="step" data-kind="ferramenta">
-  <h2><span class="n">4</span>Conferiu? Salve a versão antes da próxima</h2>
-  <p>Etapa conferida vira um <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span>: uma versão salva no <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span>, com uma frase do que mudou. Se a etapa 2 estragar algo, você volta para cá.</p>
-  <p data-ex="analista">Carla pede ao Codex, pelo app: "faça o commit da etapa 1 com a mensagem 'etapa 1: ler planilhas'". Depois confere na resposta que foi um arquivo só.</p>
-  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do site</span></div>
-<pre><code><span class="pr">$</span> git add contato.html
-<span class="pr">$</span> git commit -m "etapa 1: campos do formulário"
-<span class="out">[formulario-contato 3f2a1c9] etapa 1: campos do formulário
- 1 file changed, 12 insertions(+), 2 deletions(-)</span></code></pre>
-<p class="tela-nota">"1 file changed" confirma que só um arquivo entrou. O código entre colchetes identifica esta versão.</p></div>
-  <figcaption>Pelo <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span> ou pedindo ao assistente: o importante é salvar entre uma etapa e outra.</figcaption></figure>
+  <h2><span class="n">4</span>Etapa ruim? Volte atrás antes de salvar</h2>
+  <p>A versão salva no <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span> se chama <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span>. Neste curso ele vem depois da revisão da aula 13. Até lá, a mudança está só nos arquivos, e dá para desfazer.</p>
+  <p>Se a etapa não prestou, o <code>git restore .</code> devolve os arquivos que o Git já acompanha à última versão salva. Arquivo novo que a IA criou não some com ele: veja no <code>git status</code> e apague à mão.</p>
+  <p data-ex="analista">Carla não gostou da primeira tentativa da etapa 1. Pediu ao Codex, pelo app: "desfaça as mudanças desta etapa com git restore e mostre o git status". Tudo voltou como antes.</p>
+  <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do piloto de Carla</span></div>
+<pre><code><span class="pr">$</span> git status
+<span class="out">On branch etapas-relatorio
+Changes not staged for commit:
+	modified:   juntar.py</span>
+<span class="pr">$</span> git restore .
+<span class="pr">$</span> git status
+<span class="out">On branch etapas-relatorio
+nothing to commit, working tree clean</span></code></pre>
+<p class="tela-nota">"modified" = arquivo mudado e ainda não salvo. Depois do <code>git restore .</code>, "nothing to commit" = voltou à última versão salva.</p></div>
+  <figcaption>Pelo <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span> ou pedindo ao assistente. Se você já rodou o <code>git add</code> da aula 13, use <code>git restore --staged --worktree .</code> para desfazer também o que foi preparado.</figcaption></figure>
 </section>
 
 <section class="practice" data-mode="prompt">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Peça a etapa 1 do seu piloto</h3>
   <p class="pgoal">Pronto quando o pedido da etapa 1 tiver contexto, etapa, critérios e parada, e você tiver conferido a resposta. Cerca de 10 minutos, no computador.</p>
-  <p class="psafe">A IA mexe só no arquivo que você listar, dentro do <span class="gterm" data-gl="branch" data-def="Linha de trabalho separada dentro do Git. Você testa mudanças nela sem mexer na versão que já funciona.">branch</span> de teste da aula 11 (não fez? peça ao assistente: "crie um branch de teste e entre nele"). Se ela passar da etapa 1, aperte o botão de parar (Esc no terminal) e peça o relato. Num chat comum, cole o texto do briefing no lugar do <code>@</code>.</p>
+  <p class="psafe">A IA mexe só no arquivo que você listar, dentro do <span class="gterm" data-gl="branch" data-def="Linha de teste separada dentro do Git. Você testa mudanças nela sem mexer na versão que já funciona.">branch</span> de teste da aula 11 (não fez? peça ao assistente: "crie um branch de teste e entre nele"). Se ela passar da etapa 1, aperte o botão de parar (Esc no terminal) e peça o relato. Num chat comum, cole o texto do briefing no lugar do <code>@</code>.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia @briefing.md &lt;e @plan-v2.md, se tiver&gt;.
 Faça só a etapa 1: &lt;o que é a etapa 1&gt;.
 Critérios desta etapa:
 1. &lt;sim ou não&gt;
 2. &lt;sim ou não&gt;
 Altere só: &lt;arquivo&gt;.
+No fim, pare, liste os arquivos mudados e diga como conferir cada critério.
+
+Exemplo da Carla:
+Leia @briefing.md.
+Faça só a etapa 1: ler as planilhas da semana.
+Critérios desta etapa:
+1. O total de linhas lidas é igual à soma das linhas das planilhas.
+2. As planilhas originais não mudam.
+Altere só: juntar.py.
 No fim, pare, liste os arquivos mudados e diga como conferir cada critério.</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Escreva a etapa 1 do seu piloto em uma frase, com dois critérios.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Preencha o molde e envie ao seu assistente, na pasta do piloto.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Confira se ele parou e se listou só o arquivo pedido. Se sim, salve a versão com um commit.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira no <code>git status</code> se ele parou e mexeu só no arquivo pedido. Não faça o commit ainda: a etapa vai para a revisão na aula 13. Não prestou? <code>git restore .</code> e peça de novo.</span></label></li>
   </ol>
   <p class="pdone">Você já pede trabalho em etapas que dá para conferir uma a uma.</p>
 </section>
@@ -113,7 +127,7 @@ No fim, pare, liste os arquivos mudados e diga como conferir cada critério.</pr
     <ol>
       <li><span><b>Pequena</b>uma etapa cabe num diff que você lê inteiro.</span></li>
       <li><span><b>Pedido</b>contexto, etapa, critérios e "pare no fim".</span></li>
-      <li><span><b>Commit</b>versão salva entre uma etapa e outra.</span></li>
+      <li><span><b>Desfazer</b>git restore . antes do commit, que vem depois da revisão.</span></li>
     </ol>
   </div>
   <div class="next-action">
@@ -130,7 +144,7 @@ No fim, pare, liste os arquivos mudados e diga como conferir cada critério.</pr
 [
   {"front":"A IA devolveu mudanças em sete arquivos e você está cansado de ler. O que faz na próxima vez?","back":"Pede uma etapa menor, com critério próprio e uma lista curta de arquivos, e confere antes de seguir."},
   {"front":"Por que escrever \"pare no fim\" no pedido de uma etapa?","back":"Para a IA não emendar a etapa seguinte antes de você conferir e salvar a atual."},
-  {"front":"A etapa 2 estragou o que a etapa 1 tinha feito. Como voltar?","back":"Pela versão salva no commit da etapa 1: por isso se salva entre uma etapa e outra."}
+  {"front":"A etapa ainda não foi salva e ficou ruim. Como voltar, e o que o comando não desfaz?","back":"git restore . devolve os arquivos acompanhados à última versão salva. Arquivo novo criado pela IA fica: apague à mão, depois de ver no git status."}
 ]
 </script>
 </section>

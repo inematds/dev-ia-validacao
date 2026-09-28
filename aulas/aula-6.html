@@ -52,7 +52,7 @@
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>plan-v1.md · formulário da clínica</span></div>
       <div class="janela-body">
-        <div class="item doc"><span class="pin">1</span> Escopo: só a página de contato. Fora: menu e cores</div>
+        <div class="item doc"><span class="pin">1</span> Escopo: página de contato com nome, "campo telefone, texto livre" e mensagem; "enviar para o e-mail da recepção". Fora: página inicial e cores</div>
         <div class="item doc"><span class="pin">2</span> Suposições: a recepção usa um único e-mail</div>
         <div class="item doc"><span class="pin">3</span> Critérios de aceite: os 3 do briefing, cada um com o teste</div>
         <div class="item doc"><span class="pin">4</span> Riscos: a hospedagem pode bloquear o envio de e-mail</div>
@@ -70,6 +70,7 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>"Não implemente nada ainda"</h2>
   <p>Assistentes de código gostam de começar logo. Sem a frase "não implemente nada ainda", o plano vira obra. E obra errada custa mais para desfazer do que plano errado para corrigir.</p>
+  <p>A frase é um pedido. No Claude Code existe uma trava de verdade: o modo de planejamento, que impede editar arquivos. Aperte Shift+Tab até ele aparecer; o plano volta na conversa, e você mesmo o salva em plan-v1.md.</p>
   <p data-ex="analista">Carla pediu o plano da rotina das planilhas e esqueceu a frase. O assistente já criou três arquivos novos na pasta. Ela teve de apagar tudo e pedir de novo.</p>
   <figure class="largo">
     <div class="lado">
@@ -96,7 +97,7 @@
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Peça o plan-v1.md do seu piloto</h3>
   <p class="pgoal">Pronto quando existir um <code>plan-v1.md</code> na pasta do piloto com as quatro partes e nenhum outro arquivo novo. Cerca de 10 minutos, no computador.</p>
-  <p class="psafe">O pedido diz para não implementar nada. Se o assistente criar outros arquivos mesmo assim, clique no botão de parar e apague só o que ele criou. Não fez a aula 5? Escreva três linhas de briefing no próprio pedido.</p>
+  <p class="psafe">O pedido diz para não implementar nada. Se o assistente criar outros arquivos mesmo assim, interrompa (tecla Esc no Claude Code; botão de parar no app) e apague só o que ele criou. Não fez a aula 5? Escreva três linhas de briefing no próprio pedido.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia briefing.md. Escreva o plano em plan-v1.md, na mesma pasta.
 Inclua quatro partes: escopo (dentro e fora), suposições,
 critérios de aceite (cada um com o teste que vai conferir) e riscos.
@@ -128,7 +129,7 @@ Não implemente nada ainda. Não altere nenhum outro arquivo.</pre></div>
 </div>
 <details class="complementar">
   <summary>Material complementar · De onde vem o plan-v1.md<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O pedido do kit Use Both</h3><p>O primeiro fluxo do kit Use Both, "planejar e depois desafiar", começa assim: criar plan-v1.md para a tarefa, sem implementar nada, com escopo, suposições, testes de aceite e riscos. O mesmo arquivo segue depois para a crítica do outro modelo, só leitura. O nome com número de versão permite guardar o plano original quando vier a versão revisada.</p>
+  <section class="comp-sec"><h3>O pedido do kit Use Both</h3><p>O primeiro fluxo do kit Use Both, "planejar e depois desafiar", começa assim: criar plan-v1.md para a tarefa, sem implementar nada, com escopo, suposições, critérios de aceite (cada um com o seu teste) e riscos. O mesmo arquivo segue depois para a crítica do outro modelo, só leitura. O nome com número de versão permite guardar o plano original quando vier a versão revisada.</p>
     <p class="comp-fontes">Fontes: <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a> · <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a></p></section>
 </details>
 <nav class="lnav"><a href="#aula-5">← aula anterior</a><a class="next" href="#aula-7">próxima aula →</a></nav>
@@ -136,9 +137,9 @@ Não implemente nada ainda. Não altere nenhum outro arquivo.</pre></div>
 </div>
 <script type="application/json" id="cards-6">
 [
-  {"front":"Você pediu \"planeje o formulário\" e a IA já criou arquivos. O que faltou no pedido?","back":"Pedir o plano num arquivo e dizer \"não implemente nada ainda\"."},
+  {"front":"O plano chegou sem a parte de suposições. O que você pede antes de mandar para a crítica?","back":"Que a IA liste o que deu por certo: formato dos dados, quem recebe, o que já existe. É ali que o revisor acha o erro."},
   {"front":"Qual parte do plano costuma esconder o erro que ninguém viu?","back":"A de suposições: o que a IA deu por certo sem conferir."},
-  {"front":"Por que plano num arquivo, e não só na conversa, ajuda a revisão?","back":"Porque o revisor lê exatamente o mesmo texto, inteiro, sem as perguntas e o código que se misturam na conversa."}
+  {"front":"Enquanto você lia, o assistente começou a criar arquivos. O que você faz?","back":"Interrompe (Esc ou botão de parar), apaga só o que ele criou e pede de novo. No Claude Code, o modo de planejamento impede a edição."}
 ]
 </script>
 </section>

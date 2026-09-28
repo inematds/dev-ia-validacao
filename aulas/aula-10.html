@@ -5,7 +5,7 @@
   <h1>Rota inicial, não ranking, e <em>o plan-v2.md do piloto</em></h1>
   <figure class="cena"><img src="assets/img/aula-10.webp" width="1280" height="720" alt="Um desenvolvedor e uma analista de operações comparam, lado a lado na mesa, um documento cheio de marcas de caneta e a versão nova, limpa."></figure>
   <p class="promise">Você consegue fechar o <code>plan-v2.md</code> do seu piloto, com cada achado respondido e cada critério de aceite ligado a um teste.</p>
-  <p class="why">Receber a crítica é metade do caminho. A outra metade é juntar o que foi aceito numa versão nova, sem perder o plano original e sem esquecer o que ficou em aberto. E sem transformar a rota do kit em verdade absoluta.</p>
+  <p class="why">Receber a crítica é metade do caminho. A outra metade é juntar o que foi aceito numa versão nova. Sem perder o plano original, e sem esquecer o que ficou em aberto. E sem transformar a rota do kit em verdade absoluta.</p>
   <div class="em1min">
     <p class="k">Em 1 minuto</p>
     <ol>
@@ -18,7 +18,7 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>A tabela de rotas é um ponto de partida</h2>
-  <p>O kit Use Both traz uma tabela de quem faz o quê. Para planejar: o Claude escreve, o Codex critica as premissas, e a linha de chegada é um plano com escopo e testes de aceite. São preferências iniciais registradas pelo autor, não um ranking medido de <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelos</span>.</p>
+  <p>O kit Use Both traz uma tabela de quem faz o quê. Para planejar: o Claude escreve e o Codex critica as premissas. A linha de chegada é um plano com escopo e critérios de aceite, cada um com o seu teste. São preferências iniciais registradas pelo autor, não um ranking medido de <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelos</span>.</p>
   <p data-ex="desenvolvedor">Rafael começou pela rota da tabela. No segundo projeto, inverteu os papéis para ver qual crítica achava mais problemas reais na tarefa dele.</p>
   <figure class="largo">
     <div class="janela">
@@ -84,12 +84,12 @@
       <div class="tela-top"><i></i><i></i><i></i><span>Assistente</span></div>
       <div class="tela-body">
         <p class="msg eu"><span class="quem">Rafael</span>Leia briefing.md e plan-v2.md. Liste cada critério de aceite do briefing e o teste do plano que o confere. Aponte critério sem teste. Não altere arquivos.</p>
-        <p class="msg ia ok"><span class="quem">IA</span>Critério 1, mensagem chega na recepção: teste de envio real. Critério 2, telefone recusa letras: teste de digitação. Critério 3, no celular a página não rola para os lados: nenhum teste no plano.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Critério 1, mensagem chega na recepção: teste de envio real. Critério 2, telefone recusa letras: teste de digitação. Critério 3, abre no celular: nenhum teste no plano.</p>
       </div>
       <p class="tela-nota bom">A lacuna apareceu antes da primeira linha de código.</p>
     </div>
   </figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Seu review.md tem achados demais? Leve para o plan-v2.md só os de gravidade alta e média. Os de gravidade baixa ficam listados no review.md, sem resposta por enquanto.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Seu review.md tem achados demais? Leve para o plan-v2.md só os de gravidade alta e média. Os de gravidade baixa recebem a resposta "em aberto (baixa)" e ficam no review.md; não entram no plan-v2.md.</p></div>
 </section>
 
 <section class="practice" data-mode="tarefa">
@@ -104,8 +104,8 @@ aceito, rejeitado ou em aberto). Escreva plan-v2.md, arquivo novo:
 - transforme os em aberto em testes com nome.
 Não altere plan-v1.md nem review.md. Não implemente nada.</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Confira que cada achado do review.md tem a sua resposta (aula 9).</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Envie o molde ao assistente que escreveu o plan-v1.md. No chat comum, cole os três textos antes e salve a resposta como <code>plan-v2.md</code>.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Confira que cada achado do review.md tem a sua resposta. Ainda não respondeu? Faça agora, como no caso da aula 9: aceito, rejeitado com evidência ou em aberto.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Envie o molde ao assistente que escreveu o plan-v1.md (se não lembra qual conversa foi, uma conversa nova dele serve, com os três arquivos). No chat comum, cole os três textos antes e salve a resposta como <code>plan-v2.md</code>.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Numa conversa nova, peça a conferência do passo 4: critério por critério, com o teste.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Se algum critério ficou sem teste, acrescente o teste no plan-v2.md à mão.</span></label></li>
   </ol>
@@ -139,7 +139,7 @@ Não altere plan-v1.md nem review.md. Não implemente nada.</pre></div>
 </div>
 <script type="application/json" id="cards-10">
 [
-  {"front":"Um colega diz que o Claude é o melhor para planejar, então nem precisa de crítica. O que você responde?","back":"Que a rota é só um começo. O que decide é quantas falhas reais, com evidência, a crítica acha na sua tarefa."},
+  {"front":"Um colega diz que o Claude é o melhor para planejar, então nem precisa de crítica. O que você responde?","back":"Que mesmo o modelo mais bem falado precisa de crítica: fama e concordância não são prova. A rota é só um começo; decide a evidência da sua tarefa."},
   {"front":"A IA quer reescrever o plan-v1.md com as correções. Por que pedir um arquivo novo?","back":"Para guardar o original e conseguir comparar o que mudou por causa da crítica."},
   {"front":"O plan-v2.md está pronto, mas um critério do briefing não tem teste. O que fazer antes de construir?","back":"Acrescentar o teste que confere esse critério. Critério sem teste ninguém confere."}
 ]

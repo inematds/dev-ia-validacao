@@ -10,7 +10,7 @@
     <p class="k">Em 1 minuto</p>
     <ol>
       <li>Cada critério ganha uma linha: <b>como confiro</b> e <b>quem confere</b>.</li>
-      <li>Regra que se repete vira teste automático. Aparência e sentido ficam com olhos humanos.</li>
+      <li>Regra que se repete vira teste automático. Aparência e sentido ficam com a conferência manual.</li>
       <li>Teste que nunca falhou não prova nada. Peça para ver ele falhar antes.</li>
     </ol>
   </div>
@@ -32,13 +32,13 @@
     <ol class="passos">
       <li><span class="pin">1</span><span>Conferência manual, feita por Rafael.</span></li>
       <li><span class="pin">2</span><span>Uma regra que se repete: o computador confere.</span></li>
-      <li><span class="pin">3</span><span>Aparência: olhos humanos.</span></li>
+      <li><span class="pin">3</span><span>Aparência: conferência manual.</span></li>
     </ol>
   </figure>
 </section>
 
 <section class="step" data-kind="fundamento">
-  <h2><span class="n">2</span>Automático para regra, olho humano para sentido</h2>
+  <h2><span class="n">2</span>Automático para regra, conferência manual para sentido</h2>
   <p>Um <span class="gterm" data-gl="teste-automatico" data-def="Verificação que o computador roda sozinho e responde 'passou' ou 'falhou', sempre do mesmo jeito. A IA pode escrever o teste para você.">teste automático</span> confere uma regra do mesmo jeito, quantas vezes você quiser. Ele é ótimo para "recusa letras" ou "o total bate". Ele é fraco para "o texto faz sentido" ou "a página está bonita".</p>
   <p data-ex="analista">Carla pôs uma célula de conferência na planilha: ela compara o total do relatório com a soma das planilhas e mostra "confere" ou "não confere". Já a lista de cidades ela lê com os próprios olhos.</p>
   <figure class="largo">
@@ -51,7 +51,7 @@
   <details class="mais"><summary>Como Carla fez a célula de conferência</summary>
     <p>Numa célula vazia da planilha do relatório, ela escreveu uma fórmula que compara o total com a soma das planilhas. Por exemplo: <code>=SE(B2=SOMA(C2:C8);"confere";"não confere")</code>, com B2 sendo o total do relatório e C2 a C8 os totais de cada planilha. Troque as células pelas suas. Não sabe montar? Peça à IA a fórmula, dizendo quais células comparar.</p>
   </details>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe se um critério dá teste automático? Pergunte: a resposta muda se outra pessoa conferir? Se não muda, dá. Se muda, é conferência manual.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Não sabe se um critério dá teste automático? Pergunte: dá para escrever a regra como conta ou formato (soma, só números, campo preenchido)? Então é automático. Depende de olhar, ler ou usar? Conferência manual.</p></div>
 </section>
 
 <section class="step" data-kind="ferramenta">
@@ -70,7 +70,7 @@
       </div>
       <div class="tela-caso" data-rotulo="Um teste por critério">
         <div class="tela-body">
-          <p class="msg eu"><span class="quem">Rafael</span>Crie um teste para o critério 2 do briefing.md: o telefone recusa letras. Rode antes de corrigir e me mostre a saída. Depois corrija e rode de novo.</p>
+          <p class="msg eu"><span class="quem">Rafael</span>Crie um teste para o critério 2 do briefing.md: o telefone recusa letras. Teste com o texto "abc". Rode antes de corrigir e me mostre a saída. Depois corrija e rode de novo.</p>
           <p class="msg ia ok"><span class="quem">IA</span>Antes da correção: FALHOU — o campo aceitou "abc".
 Depois da correção: PASSOU — o campo recusou "abc".</p>
         </div>
@@ -84,11 +84,11 @@ Depois da correção: PASSOU — o campo recusou "abc".</p>
 <section class="step" data-kind="fundamento">
   <h2><span class="n">4</span>Teste que nunca falhou não prova nada</h2>
   <p>Um teste mal escrito pode passar sempre, com o erro ou sem ele. Por isso vale ver o teste falhar uma vez, quando o erro ainda existe. Se ele nunca falhou, você não sabe se ele olha para a coisa certa.</p>
-  <p data-ex="analista">A célula de conferência de Carla dizia "confere" até com uma planilha faltando. Ela apagou uma planilha de propósito, numa cópia, e a célula continuou dizendo "confere". A fórmula olhava para a coluna errada.</p>
+  <p data-ex="analista">Numa cópia, Carla mudou de propósito um valor da última planilha, e a célula continuou dizendo "confere". A fórmula somava C2 a C7 e deixava a última planilha de fora.</p>
   <figure class="largo">
     <div class="lado">
-      <div class="antes"><span class="rot">Sempre passou</span><p>"Confere" com todas as planilhas e também com uma faltando.</p><p><b>O que prova:</b> nada.</p></div>
-      <div class="depois"><span class="rot">Já falhou uma vez</span><p>"Não confere" com uma planilha faltando; "confere" com todas.</p><p><b>O que prova:</b> que ele enxerga o erro.</p></div>
+      <div class="antes"><span class="rot">Sempre passou</span><p>"Confere" com os valores certos e também com um valor mudado de propósito.</p><p><b>O que prova:</b> nada.</p></div>
+      <div class="depois"><span class="rot">Já falhou uma vez</span><p>Com a fórmula somando C2 a C8: "não confere" com o valor mudado; "confere" com os certos.</p><p><b>O que prova:</b> que ele enxerga o erro.</p></div>
     </div>
   </figure>
   <div class="quiz" data-answer="b">
@@ -107,18 +107,18 @@ Depois da correção: PASSOU — o campo recusou "abc".</p>
   <p class="pgoal">Pronto quando cada critério do seu briefing tiver uma linha "como confiro" e "quem confere". Cerca de 10 minutos, no computador.</p>
   <p class="psafe">Você só escreve no seu arquivo; nada roda ainda. Não tem o briefing.md da aula 5 (na pasta do piloto)? Use três critérios de qualquer tarefa sua.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">## Como confiro
-1. &lt;critério 1&gt; → &lt;como confiro&gt; · &lt;teste automático ou manual&gt;
-2. &lt;critério 2&gt; → &lt;como confiro&gt; · &lt;teste automático ou manual&gt;
-3. &lt;critério 3&gt; → &lt;como confiro&gt; · &lt;teste automático ou manual&gt;
+1. &lt;critério 1&gt; → &lt;como confiro&gt; · &lt;automático ou manual&gt; · quem: &lt;nome&gt;
+2. &lt;critério 2&gt; → &lt;como confiro&gt; · &lt;automático ou manual&gt; · quem: &lt;nome&gt;
+3. &lt;critério 3&gt; → &lt;como confiro&gt; · &lt;automático ou manual&gt; · quem: &lt;nome&gt;
 
 Exemplo da Carla:
-1. Total igual à soma das planilhas → célula de conferência · automático
-2. Cada cidade uma vez → ler a lista · manual
-3. Origem embaixo de cada tabela → olhar cada tabela · manual</pre></div>
+1. Total igual à soma das planilhas → célula de conferência · automático · quem: Carla
+2. Cada cidade uma vez → ler a lista · manual · quem: Carla
+3. Origem embaixo de cada tabela → olhar cada tabela · manual · quem: colega da diretoria</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Abra o briefing.md do seu piloto e cole o molde no fim.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Para cada critério, escreva como vai conferir e se é automático ou manual.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Marque um critério automático para pedir o teste à IA, com a saída antes e depois.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Para cada critério, escreva como vai conferir, se é automático ou manual, e quem confere.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Marque um critério automático. Para Carla, o "teste" é a célula de conferência; para Rafael, um teste que a IA escreve. Anote como vai vê-lo falhar uma vez.</span></label></li>
   </ol>
   <p class="pdone">Você já sabe como cada critério do seu piloto vai ser conferido.</p>
 </section>
@@ -146,8 +146,8 @@ Exemplo da Carla:
 <script type="application/json" id="cards-16">
 [
   {"front":"\"A página fica bonita no celular.\" Isso dá teste automático ou conferência manual?","back":"Manual. Aparência depende de quem olha; alguém precisa abrir no celular e ver."},
-  {"front":"A IA disse \"criei os testes, todos passam\". O que você pede para confiar nisso?","back":"Um teste por critério e a saída de cada um, antes e depois da correção."},
-  {"front":"Como saber se uma célula de conferência da planilha enxerga o erro?","back":"Numa cópia, cause o erro de propósito, como apagar uma planilha, e veja se ela passa a dizer \"não confere\"."}
+  {"front":"Seu critério é \"o CEP tem 8 números\". Automático ou manual, e por quê?","back":"Automático: é uma regra de formato, que o computador confere igual toda vez."},
+  {"front":"Sua célula de conferência sempre mostrou \"confere\". Como descobrir se ela enxerga erro?","back":"Numa cópia, mude um valor de propósito e veja se ela passa a mostrar \"não confere\"."}
 ]
 </script>
 </section>

@@ -18,14 +18,14 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>O revisor só lê</h2>
-  <p>Na crítica, você quer achados, não um plano novo escrito por cima do seu. Por isso o pedido diz: leia, aponte, não altere arquivos.</p>
+  <p>Na crítica, você quer achados, não um plano novo escrito por cima do seu. Por isso o pedido diz: leia, aponte, não altere arquivos. Essa frase ainda é um pedido; a trava de verdade, que impede alterar, vem na aula 8.</p>
   <p>O revisor pode ser outro <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> ou uma conversa nova do mesmo assistente. É a <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span> da aula 2 aplicada ao plano.</p>
   <p data-ex="desenvolvedor">Rafael mandou o plan-v1.md do formulário ao Codex, com o pedido de crítica só leitura. Recebeu três achados e nenhum arquivo mudado.</p>
   <figure class="largo">
     <div class="tela">
       <div class="tela-top"><i></i><i></i><i></i><span>Revisor</span></div>
       <div class="tela-body">
-        <p class="msg eu"><span class="quem">Rafael</span>Leia briefing.md e plan-v1.md. Aponte falhas do plano. Para cada uma: falha, trecho do plano, impacto e a menor correção. Não altere arquivos.</p>
+        <p class="msg eu"><span class="quem">Rafael</span>Leia briefing.md e plan-v1.md. Liste os achados do plano. Para cada achado: falha, trecho do plano, impacto e a menor correção. Não altere arquivos.</p>
         <p class="msg ia ok"><span class="quem">Codex</span>Achado 1. Falha: o plano não diz o que acontece se o envio falhar. Trecho: "enviar para o e-mail da recepção". Impacto: o paciente vê "enviado" e a mensagem se perde. Menor correção: mostrar um aviso de erro e registrar a falha.</p>
       </div>
       <p class="tela-nota bom">Um achado que Rafael consegue conferir e corrigir sem perguntar nada.</p>
@@ -43,7 +43,7 @@
       <div class="tela-top"><i></i><i></i><i></i><span>review.md · achado 1 do plano de Carla</span></div>
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> Falha: nada trata planilha com colunas em outra ordem</div>
-        <div class="item doc"><span class="pin">2</span> Evidência: "juntar pela ordem das colunas"</div>
+        <div class="item doc"><span class="pin">2</span> Evidência: "juntar as planilhas pela ordem das colunas"</div>
         <div class="item doc"><span class="pin">3</span> Impacto: totais de uma cidade somados na coluna errada</div>
         <div class="item doc"><span class="pin">4</span> Menor correção: juntar pelo nome da coluna</div>
       </div>
@@ -89,7 +89,7 @@
   <p class="pgoal">Pronto quando você tiver um <code>review.md</code> com pelo menos dois achados nos quatro campos. Cerca de 10 minutos, no computador.</p>
   <p class="psafe">O pedido é só leitura: nenhum arquivo muda. Use outro assistente ou uma conversa nova do mesmo. Não fez a aula 6? Peça a crítica de qualquer plano que você tenha em texto.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia briefing.md e plan-v1.md. Critique o plano, só lendo.
-Para cada falha, escreva:
+Liste os achados. Para cada achado, escreva:
 - Falha:
 - Evidência (o trecho exato do plano):
 - Impacto (o que acontece se ninguém corrigir):

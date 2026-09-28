@@ -4,12 +4,12 @@
   <p class="kicker">Módulo 6 · Aula 3 de 5</p>
   <h1>Custo sem resultado <em>não diz nada</em></h1>
   <figure class="cena"><img src="assets/img/aula-28.webp" width="1280" height="720" alt="Um desenvolvedor anota numa caderneta o tempo e o consumo de uma etapa, com um cronômetro de mesa ao lado do notebook."></figure>
-  <p class="promise">Você consegue preencher, para cada etapa do seu piloto, o tempo, o consumo e os problemas que foram achados.</p>
+  <p class="promise">Você consegue preencher, para cada etapa do seu piloto, o tempo, o uso da conta e os problemas que foram achados.</p>
   <p class="why">"Ficou caro" e "valeu a pena" costumam ser impressão. Sem uma medida simples, a decisão da aula 30 vira opinião. Medir é anotar três números por etapa, na hora.</p>
   <div class="em1min">
     <p class="k">Em 1 minuto</p>
     <ol>
-      <li>Por etapa, anote: tempo seu, consumo da conta e problemas achados.</li>
+      <li>Por etapa, anote: tempo seu, uso da conta e problemas achados.</li>
       <li>O seu tempo conta, inclusive o de conferir.</li>
       <li>Problema achado antes da entrega é o resultado que o custo comprou.</li>
     </ol>
@@ -18,25 +18,31 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>Uma linha por etapa</h2>
-  <p>A medida cabe numa planilha de seis colunas. Uma linha por etapa do ciclo, preenchida logo que a etapa termina. Depois de uma semana, ninguém lembra quanto tempo levou.</p>
+  <p>A medida cabe numa planilha de oito colunas. Uma linha por etapa do ciclo, preenchida logo que a etapa termina. Depois de uma semana, ninguém lembra quanto tempo levou.</p>
   <p data-ex="desenvolvedor">Rafael abriu a planilha <code>piloto-custos</code> na pasta do piloto e preencheu a linha do plano assim que a crítica terminou.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>piloto-custos · colunas</span></div>
       <div class="janela-body">
-        <div class="item doc"><span class="pin">1</span> Etapa · modelo e esforço</div>
-        <div class="item doc"><span class="pin">2</span> Tempo seu, em minutos</div>
-        <div class="item doc"><span class="pin">3</span> Consumo: uso da conta antes e depois</div>
-        <div class="item doc"><span class="pin">4</span> Problemas achados, e por quem</div>
-        <div class="item doc"><span class="pin">5</span> Critérios que passaram</div>
+        <div class="item doc"><span class="pin">1</span> Etapa</div>
+        <div class="item doc"><span class="pin">2</span> Modelo e esforço</div>
+        <div class="item doc"><span class="pin">3</span> Tempo seu (min)</div>
+        <div class="item doc"><span class="pin">4</span> Jeito antigo (min)</div>
+        <div class="item doc"><span class="pin">5</span> Uso antes</div>
+        <div class="item doc"><span class="pin">6</span> Uso depois</div>
+        <div class="item doc"><span class="pin">7</span> Problemas achados (por quem)</div>
+        <div class="item doc"><span class="pin">8</span> Critérios que passaram</div>
       </div>
     </div>
     <ol class="passos">
-      <li><span class="pin">1</span><span>Qual passo e com que configuração.</span></li>
-      <li><span class="pin">2</span><span>Pedir, esperar, ler e conferir.</span></li>
-      <li><span class="pin">3</span><span>A diferença na página de uso.</span></li>
-      <li><span class="pin">4</span><span>Revisão, teste ou você.</span></li>
-      <li><span class="pin">5</span><span>Quantos de quantos.</span></li>
+      <li><span class="pin">1</span><span>Qual passo do ciclo.</span></li>
+      <li><span class="pin">2</span><span>Com que configuração.</span></li>
+      <li><span class="pin">3</span><span>Pedir, esperar, ler e conferir.</span></li>
+      <li><span class="pin">4</span><span>Quanto levaria sem IA; estimativa vale, marcada "estimado".</span></li>
+      <li><span class="pin">5</span><span>O que a página de uso mostra antes.</span></li>
+      <li><span class="pin">6</span><span>E depois da etapa.</span></li>
+      <li><span class="pin">7</span><span>Revisão, teste ou você.</span></li>
+      <li><span class="pin">8</span><span>Quantos de quantos.</span></li>
     </ol>
   </figure>
 </section>
@@ -49,15 +55,15 @@
     <div class="lado">
       <div class="antes"><span class="rot">Só a espera</span><p><b>Anotado:</b> 3 minutos.</p><p><b>Conclusão:</b> "a IA faz o relatório em três minutos".</p></div>
       <div class="depois"><span class="rot">Do pedido à conferência</span><p><b>Anotado:</b> 25 minutos, com 15 de conferência.</p><p><b>Conclusão:</b> ainda menos que as duas horas à mão.</p></div>
-      <p class="saldo"><b>Saldo:</b> a comparação honesta é com o jeito antigo, conferência incluída.</p>
+      <p class="saldo"><b>Saldo:</b> a comparação honesta é com o jeito antigo, conferência incluída. Por isso a planilha tem a coluna "Jeito antigo".</p>
     </div>
   </figure>
 </section>
 
 <section class="step" data-kind="ferramenta">
-  <h2><span class="n">3</span>Consumo: a página de uso antes e depois</h2>
+  <h2><span class="n">3</span>Uso da conta: a página de uso antes e depois</h2>
   <p>O uso de IA é medido em <span class="gterm" data-gl="token" data-def="Pedaço de texto que o modelo lê ou escreve. O uso de IA é medido e cobrado em tokens.">tokens</span>. Você não precisa contá-los: basta abrir a página de uso da conta antes e depois da etapa e anotar a diferença, na unidade que ela mostra.</p>
-  <p>A página de uso fica nas configurações da conta, no site do serviço (em inglês, "Usage"). A aula 4 mostrou onde procurar.</p>
+  <p>A página de uso fica nas configurações da conta, no site do serviço (em inglês, "Usage"). A aula 4 mostrou onde procurar. Conta da empresa? Peça a página de uso a quem administra.</p>
   <p data-ex="desenvolvedor">Rafael anotou o percentual do limite semanal da assinatura antes e depois da crítica do plano. A crítica em esforço alto usou bem mais que a troca de textos.</p>
   <figure class="largo">
     <div class="tela">
@@ -70,7 +76,7 @@
       <p class="tela-nota bom">O número exato importa menos que comparar etapas entre si.</p>
     </div>
   </figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A sua página de uso não mostra número por tarefa? Anote o que ela mostra, antes e depois. Se nem isso aparecer, fique só com o tempo: já dá para comparar.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>A sua página de uso não mostra número por tarefa? Anote o que ela mostra, antes e depois. Se nem isso aparecer, fique só com o tempo: já dá para comparar. Conta usada por outras pessoas ao mesmo tempo distorce o antes e depois: anote "conta compartilhada" ao lado.</p></div>
 </section>
 
 <section class="step" data-kind="ferramenta">
@@ -84,6 +90,14 @@
     </div>
     <figcaption>Uma etapa cara que achou dois erros pode valer mais que uma barata que não achou nada.</figcaption>
   </figure>
+  <div class="quiz" data-answer="a">
+    <p class="qk">Teste-se</p>
+    <p class="q">A etapa de revisão foi a que mais gastou da conta. O que você olha antes de cortá-la?</p>
+    <button class="opt" data-k="a" data-fb="Isso. Custo só se julga junto com o que ele evitou.">Os problemas que ela achou</button>
+    <button class="opt" data-k="b" data-fb="O preço do plano não diz se a etapa valeu.">O preço do plano da conta</button>
+    <button class="opt" data-k="c" data-fb="Esforço explica o gasto, mas não o resultado.">O esforço que estava ligado</button>
+    <p class="qfb" aria-live="polite"></p>
+  </div>
 </section>
 
 <section class="practice" data-mode="tarefa">
@@ -92,12 +106,12 @@
   <p class="pgoal">Pronto quando a planilha tiver as colunas e pelo menos duas linhas preenchidas. Cerca de 10 minutos, no computador.</p>
   <p class="psafe">É uma planilha sua; nada é enviado. Não lembra o tempo de uma etapa antiga? Escreva uma estimativa e marque "estimado": a partir de agora, anote na hora.</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Colunas (uma por célula, na primeira linha):
-Etapa | Modelo e esforço | Tempo seu (min) | Uso antes | Uso depois | Problemas achados (por quem) | Critérios que passaram
+Etapa | Modelo e esforço | Tempo seu (min) | Jeito antigo (min) | Uso antes | Uso depois | Problemas achados (por quem) | Critérios que passaram
 
 Exemplo da Carla:
-Relatório semanal | Codex, médio | 25 | 40% | 42% | cidade repetida (revisão), total errado (teste) | 3 de 3</pre></div>
+Relatório semanal | Codex, médio | 25 | 120 | 40% | 42% | cidade repetida (revisão), total errado (teste) | 3 de 3</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Crie a planilha <code>piloto-custos</code> na pasta do piloto (Excel, Google Planilhas ou o que você usa). Na primeira linha, digite os sete nomes de coluna do molde, um em cada célula.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Crie a planilha <code>piloto-custos</code> na pasta do piloto (Excel, Google Planilhas ou o que você usa). Na primeira linha, digite os oito nomes de coluna do molde, um em cada célula.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Preencha uma linha para cada etapa que você já fez no piloto.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Na coluna de problemas, escreva quem achou cada um: revisão, teste ou você.</span></label></li>
   </ol>

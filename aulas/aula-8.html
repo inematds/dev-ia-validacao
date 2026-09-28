@@ -2,28 +2,28 @@
 <div class="aula">
 <header class="a-hero">
   <p class="kicker">Módulo 2 · Aula 3 de 5</p>
-  <h1>Ligar Claude e Codex: <em>três caminhos</em></h1>
+  <h1>Ligar Claude e Codex: <em>três caminhos e o manual</em></h1>
   <figure class="cena"><img src="assets/img/aula-8.webp" width="1280" height="720" alt="Um desenvolvedor, sentado entre um notebook e um monitor maior, passa uma folha impressa de um lado da mesa para o outro."></figure>
   <p class="promise">Você consegue pedir a crítica do plano a outro assistente com um comando, ou pelo caminho manual, e abrir o <code>review.md</code> que volta.</p>
   <p class="why">Copiar o plano de uma janela e colar na outra funciona, mas cansa e erra: falta um trecho, sobra outro. Existem caminhos em que um assistente chama o outro e a resposta cai direto num arquivo.</p>
   <div class="em1min">
     <p class="k">Em 1 minuto</p>
     <ol>
-      <li>Três caminhos: o complemento oficial, um comando chamando o outro, e a revisão de mudança publicada.</li>
-      <li>No comando, o revisor roda em modo só leitura e a resposta vai para um arquivo.</li>
+      <li>Três caminhos automáticos: o complemento oficial, um comando chamando o outro, e a revisão de mudança publicada. E o manual.</li>
+      <li>No comando, o revisor roda travado em só leitura e a resposta vai para um arquivo.</li>
       <li>Sem terminal? Copiar e colar numa conversa nova continua valendo.</li>
     </ol>
   </div>
 </header>
 
 <section class="step" data-kind="fundamento">
-  <h2><span class="n">1</span>Três formas de ligar os dois</h2>
-  <p>O <span class="gterm" data-gl="claude-code" data-def="Assistente de programação da Anthropic que lê e altera arquivos numa pasta do seu computador.">Claude Code</span> e o <span class="gterm" data-gl="codex" data-def="Assistente de programação da OpenAI que lê e altera arquivos numa pasta do seu computador.">Codex</span> podem conversar de três jeitos. O primeiro é um <span class="gterm" data-gl="plugin" data-def="Complemento que se acrescenta a um programa para dar a ele uma função nova.">plugin</span> oficial do Codex para o Claude Code. O segundo é um comando que chama o outro assistente e grava a resposta num arquivo.</p>
-  <p>O terceiro é a revisão de uma mudança publicada, que aparece no módulo 3. Os três seguem a regra do módulo: o revisor recebe o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o arquivo real.</p>
+  <h2><span class="n">1</span>Três formas de ligar os dois, mais a manual</h2>
+  <p>O <span class="gterm" data-gl="claude-code" data-def="Assistente de programação da Anthropic que lê e altera arquivos numa pasta do seu computador.">Claude Code</span> e o <span class="gterm" data-gl="codex" data-def="Assistente de programação da OpenAI que lê e altera arquivos numa pasta do seu computador.">Codex</span> podem conversar de três jeitos automáticos. O primeiro é um <span class="gterm" data-gl="plugin" data-def="Complemento que se acrescenta a um programa para dar a ele uma função nova.">plugin</span> oficial do Codex para o Claude Code. O segundo é um comando que chama o outro assistente e grava a resposta num arquivo.</p>
+  <p>O terceiro é a revisão de uma mudança publicada, que aparece no módulo 3. Todos, inclusive o manual, seguem a regra do módulo: o revisor recebe o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o arquivo real.</p>
   <p data-ex="desenvolvedor">Rafael usa o segundo caminho: um comando só, rodado na pasta do piloto.</p>
   <figure class="largo">
     <div class="janela">
-      <div class="tela-top"><i></i><i></i><i></i><span>Três caminhos</span></div>
+      <div class="tela-top"><i></i><i></i><i></i><span>Três caminhos e o manual</span></div>
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> Plugin oficial: openai/codex-plugin-cc</div>
         <div class="item doc"><span class="pin">2</span> Um comando chama o outro; resposta em review.md</div>
@@ -33,7 +33,7 @@
     </div>
     <ol class="passos">
       <li><span class="pin">1</span><span>Entra como complemento no Claude Code.</span></li>
-      <li><span class="pin">2</span><span>Roda no terminal, sem acrescentar nada.</span></li>
+      <li><span class="pin">2</span><span>Roda no terminal. Exige a CLI do outro assistente, conectada à sua conta.</span></li>
       <li><span class="pin">3</span><span>Serve quando já existe código mudado.</span></li>
       <li><span class="pin">4</span><span>Funciona com qualquer chat.</span></li>
     </ol>
@@ -46,7 +46,7 @@
   <p>A opção <code>--sandbox read-only</code> põe o Codex numa <span class="gterm" data-gl="sandbox" data-def="Área protegida em que o assistente trabalha com permissões limitadas. No modo só leitura, ele lê os arquivos mas não consegue alterar nada.">sandbox</span> só leitura. A opção <code>-o</code> grava a última resposta em <code>review.md</code>.</p>
   <p data-ex="desenvolvedor">A pasta do piloto de Rafael ainda não usa o <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span>. Por isso ele acrescenta <code>--skip-git-repo-check</code>, que o Codex pede fora dele.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do piloto</span></div>
-<pre><code><span class="pr">$</span> codex exec --skip-git-repo-check --sandbox read-only -c model_reasoning_effort=medium -o review.md 'Leia briefing.md e plan-v1.md. Aponte falhas com evidência, impacto e a menor correção. Não altere arquivos.'
+<pre><code><span class="pr">$</span> codex exec --skip-git-repo-check --sandbox read-only -c model_reasoning_effort=medium -o review.md 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.'
 <span class="out">...</span>
 <span class="pr">$</span> ls
 <span class="out">briefing.md  plan-v1.md  review.md</span></code></pre>
@@ -57,12 +57,13 @@
 <section class="step" data-kind="fundamento">
   <h2><span class="n">3</span>O caminho inverso: o Claude critica</h2>
   <p>Se quem escreveu o plano foi o Codex, o revisor pode ser o Claude. O comando <code>claude -p</code> faz um pedido, imprime a resposta e sai. O sinal <code>&gt;</code> grava essa resposta num arquivo.</p>
+  <p>A trava fica na opção <code>--permission-mode plan</code>: é o modo de planejamento, em que o Claude lê os arquivos mas não altera nenhum. Sem ela, "não altere arquivos" seria só um pedido.</p>
   <p data-ex="desenvolvedor">Rafael inverteu os papéis num segundo projeto: o Codex planejou e o Claude revisou.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do piloto</span></div>
-<pre><code><span class="pr">$</span> claude -p --model opus --effort medium 'Leia briefing.md e plan-v1.md e revise só lendo: falhas, suposições e testes faltando. Não altere arquivos.' &gt; review-claude.md</code></pre>
+<pre><code><span class="pr">$</span> claude -p --permission-mode plan 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.' &gt; review-claude.md</code></pre>
 <p class="tela-nota">Nada aparece na tela: a resposta foi toda para review-claude.md.</p></div>
-  <figcaption>Os nomes de modelo e de esforço dependem da sua conta. Se o comando recusar um nome, rode sem as duas opções.</figcaption></figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Nunca usou terminal? Faça pelo caminho 4: abra uma conversa nova, cole o briefing, o plano e o pedido de crítica da aula 7, e salve a resposta como review.md. O resultado é o mesmo.</p></div>
+  <figcaption>Para escolher modelo e esforço, acrescente <code>--model</code> e <code>--effort</code>; os nomes dependem da sua conta. O módulo 6 volta nisso.</figcaption></figure>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Nunca usou terminal? Faça pelo caminho manual, o item 4 do quadro: abra uma conversa nova, cole o briefing, o plano e o pedido de crítica da aula 7, e salve a resposta como review.md. O resultado é o mesmo.</p></div>
 </section>
 
 <section class="step" data-kind="fundamento">
@@ -82,11 +83,13 @@
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Receba a crítica do plano num arquivo</h3>
   <p class="pgoal">Pronto quando existir um <code>review.md</code> ao lado do <code>plan-v1.md</code> e o plano estiver igual ao de antes. Cerca de 12 minutos, no computador.</p>
-  <p class="psafe">O revisor roda só leitura. Se o comando der erro, confira se está na pasta do piloto e se o assistente está conectado à sua conta; se não resolver, use o caminho manual. Não fez as aulas 5 e 6? Use qualquer plano em texto.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">codex exec --skip-git-repo-check --sandbox read-only -o review.md 'Leia briefing.md e plan-v1.md. Aponte falhas com evidência, impacto e a menor correção. Não altere arquivos.'</pre></div>
+  <p class="psafe">O revisor roda só leitura. Se o comando der erro, confira se está na pasta do piloto e se o assistente está conectado à sua conta; se não resolver, use o caminho manual. Para abrir o terminal na pasta: no Windows 11, botão direito na pasta › Abrir no Terminal; no Mac, digite <code>cd</code> e um espaço e arraste a pasta para a janela. No Windows, use o PowerShell: as aspas simples não funcionam no Prompt de Comando. Não fez as aulas 5 e 6? Use qualquer plano em texto.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">codex exec --skip-git-repo-check --sandbox read-only -o review.md 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.'</pre></div>
+  <p>Só tem o Claude Code? Use este:</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">claude -p --permission-mode plan 'Leia briefing.md e plan-v1.md. Liste os achados do plano, cada um com falha, evidência, impacto e a menor correção. Não altere arquivos.' &gt; review.md</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Abra o terminal na pasta do piloto. Sem terminal, abra uma conversa nova no seu chat.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Rode o comando do molde. Só tem o Claude Code? Use o comando <code>claude -p</code> do passo 3. No caminho manual, cole briefing, plano e o pedido da aula 7, e salve a resposta como <code>review.md</code>.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Rode um dos dois moldes: o do Codex ou o do Claude Code. No caminho manual, cole briefing, plano e o pedido da aula 7, e salve a resposta como <code>review.md</code>.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Abra a pasta no modo Detalhes (no Mac, Lista): o <code>plan-v1.md</code> não pode ter horário de modificação novo.</span></label></li>
   </ol>
   <p class="pdone">Você já recebe a crítica de outro assistente sem mexer no plano.</p>
@@ -98,7 +101,7 @@
     <h3>Ligar os dois</h3>
     <ol>
       <li><span><b>codex exec</b>com --sandbox read-only e -o review.md.</span></li>
-      <li><span><b>claude -p</b>com &gt; review-claude.md, para o caminho inverso.</span></li>
+      <li><span><b>claude -p</b>com --permission-mode plan e &gt; review-claude.md.</span></li>
       <li><span><b>Manual</b>conversa nova, cola tudo, salva a resposta.</span></li>
     </ol>
   </div>
@@ -111,7 +114,7 @@
 </div>
 <details class="complementar">
   <summary>Material complementar · Os comandos e o plugin<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que as fontes registram</h3><p>A área Codex + Claude do Eventos INEMA lista três formas de ligar os dois: o plugin oficial do Codex para o Claude Code (openai/codex-plugin-cc), uma CLI chamando a outra com a resposta salva num .md, e um pull request que o outro modelo revisa. Os dois comandos desta aula foram conferidos no ambiente do INEMA; as opções mudam com as versões, então rode <code>codex exec --help</code> e <code>claude --help</code> para ver as da sua máquina.</p><h3>Por que --skip-git-repo-check</h3><p>Por padrão, o <code>codex exec</code> só roda dentro de uma pasta com controle de versões. Fora dela, a opção libera a execução. No módulo 3, a pasta do piloto passa a ter esse controle e a opção deixa de ser necessária.</p>
+  <section class="comp-sec"><h3>O que as fontes registram</h3><p>A área Codex + Claude do Eventos INEMA lista três formas de ligar os dois: o plugin oficial do Codex para o Claude Code (openai/codex-plugin-cc), uma CLI chamando a outra com a resposta salva num .md, e um pull request (a revisão de uma mudança publicada) que o outro modelo revisa. Os dois comandos desta aula foram conferidos no ambiente do INEMA; as opções mudam com as versões, então rode <code>codex exec --help</code> e <code>claude --help</code> para ver as da sua máquina.</p><h3>Por que --skip-git-repo-check</h3><p>Por padrão, o <code>codex exec</code> só roda dentro de uma pasta com controle de versões. Fora dela, a opção libera a execução. No módulo 3, a pasta do piloto passa a ter esse controle e a opção deixa de ser necessária.</p>
     <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a></p></section>
 </details>
 <nav class="lnav"><a href="#aula-7">← aula anterior</a><a class="next" href="#aula-9">próxima aula →</a></nav>
@@ -119,7 +122,7 @@
 </div>
 <script type="application/json" id="cards-8">
 [
-  {"front":"Você quer que o Codex critique o plano sem mudar nada na pasta. Que opção do comando garante isso?","back":"--sandbox read-only, que deixa o Codex ler os arquivos mas não alterar."},
+  {"front":"Depois da crítica, o plan-v1.md aparece com horário de modificação novo. O que aconteceu e o que fazer?","back":"O revisor alterou o plano: faltou a trava. Recupere o plano original e rode de novo com --sandbox read-only (Codex) ou --permission-mode plan (Claude)."},
   {"front":"O codex exec recusou rodar na pasta do piloto. Qual a causa provável?","back":"A pasta ainda não tem controle de versões. A opção --skip-git-repo-check libera a execução."},
   {"front":"Você só tem um chat de IA, sem terminal. Como fazer a mesma revisão?","back":"Numa conversa nova, cole briefing, plano e o pedido de crítica, e salve a resposta como review.md."},
   {"front":"Depois do comando, como conferir que o plano não foi alterado?","back":"Olhando a pasta: só o review.md deve ser novo, e o plan-v1.md não pode ter horário de modificação recente."}

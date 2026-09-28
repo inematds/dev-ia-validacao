@@ -18,12 +18,12 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">1</span>Assinatura e pagamento por uso</h2>
-  <p>Na assinatura, você paga um valor fixo e tem um limite de uso por período. Quando o limite acaba, espera o período virar. No pagamento por uso, cada <span class="gterm" data-gl="token" data-def="Pedaço de texto que o modelo lê ou escreve. O uso de IA é medido e cobrado em tokens.">token</span> consumido entra na conta, e o teto de gasto, quando existe, é você que define.</p>
+  <p>Na assinatura, você paga um valor fixo e tem um limite de uso por período. Quando o limite acaba, espera o período virar ou, se o plano oferecer, compra uso extra. No pagamento por uso, cada <span class="gterm" data-gl="token" data-def="Pedaço de texto que o modelo lê ou escreve. O uso de IA é medido e cobrado em tokens.">token</span> consumido entra na conta, e o teto de gasto, quando existe, é você que define.</p>
   <p>O pagamento por uso costuma vir por uma <span class="gterm" data-gl="api" data-def="Porta de acesso para um programa usar o serviço de IA diretamente, cobrada por consumo e aberta com uma chave secreta.">API</span>, com uma chave secreta.</p>
-  <p data-ex="desenvolvedor">Rafael usa o Claude Code pela assinatura. Um cliente pediu uma automação que chama a IA sozinha toda noite: essa vai por uso, com chave e teto de gasto na conta do cliente.</p>
+  <p data-ex="desenvolvedor">Rafael usa o Claude Code pela assinatura. Um cliente pediu uma automação que chama a IA sozinha toda noite: essa vai por uso, com chave e teto de gasto na conta do cliente. Assim o gasto fica com quem usa, e a assinatura pessoal dele não entra no trabalho do cliente.</p>
   <figure class="largo">
     <div class="lado">
-      <div class="neutro"><span class="rot">Assinatura</span><p><b>Paga:</b> valor fixo por mês.</p><p><b>Limite:</b> uso por período; acabou, espera.</p></div>
+      <div class="neutro"><span class="rot">Assinatura</span><p><b>Paga:</b> valor fixo por mês.</p><p><b>Limite:</b> uso por período; acabou, espera ou compra extra, se o plano oferecer.</p></div>
       <div class="neutro"><span class="rot">Por uso</span><p><b>Paga:</b> pelo que consome.</p><p><b>Limite:</b> o teto de gasto, se você definir.</p></div>
     </div>
     <figcaption>Nenhum dos dois é melhor em geral. Depende do volume e de quem usa.</figcaption>
@@ -40,7 +40,7 @@
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> Serviço: Codex, pela conta da empresa</div>
         <div class="item doc"><span class="pin">2</span> Tipo: assinatura</div>
-        <div class="item doc"><span class="pin">3</span> Limite: o que a página de uso mostra</div>
+        <div class="item doc"><span class="pin">3</span> Limite: "40% da semana usados, renova segunda"</div>
         <div class="item doc"><span class="pin">4</span> Onde vi: configurações da conta › Uso · 28/09/2026</div>
         <div class="item doc"><span class="pin">5</span> Senha e chave: nunca aqui</div>
       </div>
@@ -48,7 +48,7 @@
     <ol class="passos">
       <li><span class="pin">1</span><span>Qual serviço e de quem é a conta.</span></li>
       <li><span class="pin">2</span><span>Assinatura ou por uso.</span></li>
-      <li><span class="pin">3</span><span>Copie o que está escrito lá, sem interpretar.</span></li>
+      <li><span class="pin">3</span><span>Copie o que está escrito lá, sem interpretar. Se só aparece percentual, anote assim.</span></li>
       <li><span class="pin">4</span><span>Onde e quando você conferiu.</span></li>
       <li><span class="pin">5</span><span>Credencial fica no gerenciador de senhas.</span></li>
     </ol>
@@ -98,12 +98,12 @@
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># Conta de IA
 Serviço: &lt;qual, e de quem é a conta&gt;
 Tipo: &lt;assinatura ou por uso&gt;
-Limite: &lt;o que a página de uso mostra&gt;
+Limite: &lt;o que a página mostra; se só percentual, anote o percentual&gt;
 Teto de gasto: &lt;definido? quanto?&gt;
 Onde vi: &lt;caminho no site&gt; · &lt;data&gt;
 Senha e chave: nunca aqui</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Entre no site onde você assinou, abra as configurações da conta e procure "Uso" ou "Usage".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Entre no site onde você assinou, abra as configurações da conta e procure "Uso" ou "Usage". Conta da empresa? Peça a página de uso a quem administra, ou anote "administrada por &lt;nome&gt;".</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Crie <code>conta-ia.md</code> na pasta do piloto (mesmo jeito do <code>briefing.md</code> da aula 5) e cole o molde.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Preencha com o que a página mostra hoje, com a data.</span></label></li>
   </ol>
@@ -137,7 +137,7 @@ Senha e chave: nunca aqui</pre></div>
 </div>
 <script type="application/json" id="cards-29">
 [
-  {"front":"Um cliente quer uma automação que chama a IA sozinha toda noite. Assinatura pessoal ou pagamento por uso?","back":"Pagamento por uso, na conta do cliente, com chave própria e teto de gasto definido."},
+  {"front":"Um cliente quer uma automação que chama a IA sozinha toda noite. Assinatura pessoal ou pagamento por uso?","back":"Pagamento por uso, na conta do cliente, com chave própria e teto de gasto. O gasto fica com quem usa, fora da sua assinatura pessoal."},
   {"front":"Você achou um modelo aberto mais barato. O que confere antes de mandar as planilhas de clientes?","back":"Preço do dia, qualidade na sua tarefa pela régua, e para onde vão os dados. Teste primeiro com dados inventados."},
   {"front":"Por que escrever a data na ficha da conta?","back":"Porque preço e limite mudam. A data mostra quando a informação foi conferida e quando está velha."}
 ]

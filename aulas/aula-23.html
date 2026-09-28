@@ -11,7 +11,7 @@
     <ol>
       <li>O que é seu vive em arquivos de texto na pasta do projeto.</li>
       <li>O <b>AGENTS.md</b> diz as regras e a ordem de leitura.</li>
-      <li>Os nomes das pastas são combinados; quem manda ler é o AGENTS.md.</li>
+      <li>Os nomes das pastas são combinados; quem pede a leitura é o AGENTS.md.</li>
     </ol>
   </div>
 </header>
@@ -19,8 +19,8 @@
 <section class="step" data-kind="fundamento">
   <h2><span class="n">1</span>Memória da ferramenta × arquivos do projeto</h2>
   <p>Cada assistente guarda coisas do seu jeito: memória própria, histórico de conversas, arquivo de instruções. Isso funciona enquanto você usa só aquele assistente.</p>
-  <p>Quando o conhecimento vive em arquivos de texto dentro da pasta do projeto, o assistente vira só quem executa. Trocar de <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> deixa de custar o seu trabalho.</p>
-  <p data-ex="desenvolvedor">Rafael tinha as regras do site da clínica só na memória do Claude Code. Quando testou o Codex, teve de explicar tudo de novo, e esqueceu duas regras.</p>
+  <p>Quando o conhecimento vive em arquivos de texto dentro da pasta do projeto, o assistente vira só quem executa. Trocar de assistente, ou de <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span>, deixa de custar o seu trabalho.</p>
+  <p data-ex="desenvolvedor">Rafael tinha as regras do site da clínica só no CLAUDE.md e na memória do Claude Code, que o Codex não procura. Quando testou o Codex, teve de explicar tudo de novo, e esqueceu duas regras.</p>
   <figure class="largo">
     <div class="lado">
       <div class="antes"><span class="rot">Preso à ferramenta</span><p>Regras na memória de um assistente. Decisões espalhadas em conversas antigas.</p><p><b>Na troca:</b> explicar tudo de novo.</p></div>
@@ -32,7 +32,7 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>Os arquivos mínimos</h2>
   <p>Você não precisa de muita coisa. Cinco arquivos cobrem o piloto: regras, objetivo, tarefa, contexto e passagem de plantão.</p>
-  <p data-ex="analista">Carla montou a pasta do relatório assim em quinze minutos. Metade dos arquivos ela já tinha: o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span>.</p>
+  <p data-ex="analista">Carla montou a pasta do relatório assim em quinze minutos. Dois deles ela já tinha: o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> e o <span class="gterm" data-gl="handoff" data-def="Arquivo curto que registra decisões, pendências e a próxima ação, para outra conversa ou outro modelo continuar de onde parou.">handoff</span>.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>Pasta do piloto de Carla</span></div>
@@ -58,8 +58,8 @@
 </section>
 
 <section class="step" data-kind="ferramenta">
-  <h2><span class="n">3</span>Quem manda ler é o AGENTS.md</h2>
-  <p>Os nomes das pastas são só um combinado. Nenhum assistente abre "tasks" sozinho. Quem manda ler é o <span class="gterm" data-gl="agents-md" data-def="Arquivo de texto na raiz do projeto com as regras e a ordem de leitura. O Codex lê sozinho ao começar; outros assistentes leem quando alguém manda.">AGENTS.md</span>, com a ordem de leitura logo no topo.</p>
+  <h2><span class="n">3</span>Quem pede a leitura é o AGENTS.md</h2>
+  <p>Os nomes das pastas são só um combinado. Nenhum assistente abre "tasks" sozinho. Quem pede a leitura é o <span class="gterm" data-gl="agents-md" data-def="Arquivo de texto na raiz do projeto com as regras e a ordem de leitura. O Codex lê sozinho ao começar; outros assistentes leem quando alguém manda.">AGENTS.md</span>, com a ordem de leitura logo no topo. O assistente costuma seguir; o <span class="gterm" data-gl="prime" data-def="Primeiro pedido de uma sessão: o assistente lê os arquivos do projeto e o handoff, sem mexer em nada, e devolve um resumo com as fontes.">prime</span> da aula 22 confere se seguiu.</p>
   <p>O Codex lê o AGENTS.md sozinho ao começar. O Claude Code lê o CLAUDE.md. Para ele seguir as mesmas regras, ponha no CLAUDE.md a linha <code>@AGENTS.md</code>.</p>
   <p data-ex="desenvolvedor">Rafael escreveu as regras uma vez só, no AGENTS.md. O CLAUDE.md dele tem uma linha, e os dois assistentes seguem as mesmas regras.</p>
   <figure class="largo">
@@ -79,7 +79,7 @@
       <li><span class="pin">4</span><span>Assim o Claude Code lê o mesmo arquivo.</span></li>
     </ol>
   </figure>
-  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Seu assistente não é nenhum dos dois? Tudo bem. No primeiro pedido, escreva "leia o AGENTS.md antes de tudo". Num chat comum, cole o texto dele.</p></div>
+  <div class="calma"><p><span class="k">Se travou aqui, é normal</span>Seu assistente não é nenhum dos dois? Tudo bem. No primeiro pedido, escreva "leia o AGENTS.md antes de tudo". Num chat comum, que não abre a pasta, cole o AGENTS.md e depois cada arquivo da ordem de leitura, um abaixo do outro, com o nome do arquivo em cima.</p></div>
 </section>
 
 <section class="step" data-kind="ferramenta">
@@ -98,7 +98,7 @@
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/3</span></p>
   <h3 class="ph">Monte o núcleo do seu piloto</h3>
-  <p class="pgoal">Pronto quando a pasta do piloto tiver AGENTS.md com a ordem de leitura, tasks/current.md e handoffs/latest.md. Cerca de 12 minutos, no computador.</p>
+  <p class="pgoal">Pronto quando a pasta do piloto tiver AGENTS.md com a ordem de leitura, tasks/current.md e handoffs/latest.md. Cerca de 12 minutos, no computador: este módulo pede o computador. Comece pelos três; o context/overview.md entra quando houver fatos conferidos a registrar.</p>
   <p class="psafe">São arquivos de texto seus; nada é apagado. Pasta nova no Windows: botão direito › Novo › Pasta. Arquivo novo: como o briefing.md da aula 5. Não tem o handoff da aula 21? Crie o arquivo com a frase "primeira sessão".</p>
   <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode"># AGENTS.md — &lt;nome do piloto&gt;
 
@@ -148,7 +148,7 @@ Leia antes de agir. Nada é enviado ou publicado sem a minha aprovação.
 [
   {"front":"Você quer testar outro assistente no piloto. O que precisa existir na pasta para não explicar tudo de novo?","back":"AGENTS.md com regras e ordem de leitura, o briefing, a tarefa atual e o handoff, em arquivos de texto."},
   {"front":"Você criou a pasta tasks, mas o assistente nunca lê o que está nela. Por quê?","back":"Nomes de pasta são só combinado. Falta a ordem de leitura no AGENTS.md mandando ler tasks/current.md."},
-  {"front":"Usa o Claude Code e escreveu as regras no AGENTS.md. Como fazer o Claude Code seguir essas regras?","back":"Pondo no CLAUDE.md a linha @AGENTS.md. Assim as regras ficam num arquivo só."},
+  {"front":"O prime da sessão nova não citou nenhuma regra do AGENTS.md. O que você confere primeiro?","back":"Se o AGENTS.md está na raiz da pasta e se a ordem de leitura está no topo dele. No Claude Code, se o CLAUDE.md aponta para ele."},
   {"front":"A IA sugeriu mudar uma regra do AGENTS.md. Quem aprova?","back":"Você. Regras e decisões são suas; a IA pode propor, não mudar sozinha."}
 ]
 </script>

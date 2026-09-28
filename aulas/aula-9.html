@@ -5,7 +5,7 @@
   <h1>Duas rodadas de revisão <em>e ponto</em></h1>
   <figure class="cena"><img src="assets/img/aula-9.webp" width="1280" height="720" alt="Uma analista de operações fecha uma pasta de documentos com duas notas adesivas coladas na capa, com gesto de quem decidiu encerrar a discussão."></figure>
   <p class="promise">Você consegue responder cada achado da crítica, decidir quando parar o debate e saber quando vale automatizá-lo.</p>
-  <p class="why">Plano e crítica podem ir e voltar para sempre. Cada volta gasta tempo e uso da conta, e a partir de certo ponto os dois só concordam por cansaço. Quem decide o que fica em aberto são os testes, não mais uma rodada.</p>
+  <p class="why">Plano e crítica podem ir e voltar para sempre. Cada rodada gasta tempo e uso da conta, e a partir de certo ponto os dois só concordam por cansaço. Quem decide o que fica em aberto são os testes, não mais uma rodada.</p>
   <div class="em1min">
     <p class="k">Em 1 minuto</p>
     <ol>
@@ -39,7 +39,7 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">2</span>Por que parar em duas rodadas</h2>
-  <p>A primeira rodada acha a maior parte das falhas. A segunda confere se as correções ficaram boas. Depois disso, cada volta acha menos e custa o mesmo. E os dois modelos começam a concordar, o que a aula 2 mostrou que não é prova.</p>
+  <p>A primeira rodada acha a maior parte das falhas. A segunda confere se as correções ficaram boas. Depois disso, cada rodada acha menos e custa o mesmo. E os dois modelos começam a concordar, o que a aula 2 mostrou que não é prova.</p>
   <p data-ex="desenvolvedor">Rafael deixou o debate do formulário ir até a quinta rodada. As três últimas só trocaram palavras de lugar.</p>
   <figure class="largo">
     <div class="lado">
@@ -75,12 +75,12 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">4</span>Plano grande: o claudex automatiza o debate</h2>
-  <p>Para plano pequeno, duas rodadas feitas à mão bastam. Para plano grande, existe o claudex, um <span class="gterm" data-gl="plugin" data-def="Complemento que se acrescenta a um programa para dar a ele uma função nova.">plugin</span> do Claude Code. No comando <code>claudex:plan</code>, o Claude escreve o PLAN.md e o Codex critica de três ângulos. O ciclo repete até a aprovação ou até o número de rodadas que você fixar.</p>
+  <p>Para plano pequeno, duas rodadas feitas à mão bastam. Para plano grande, existe o claudex, um <span class="gterm" data-gl="plugin" data-def="Complemento que se acrescenta a um programa para dar a ele uma função nova.">plugin</span> do Claude Code. No comando <code>/claudex:plan --rounds 2 &lt;tema&gt;</code>, o Claude escreve o PLAN.md e o Codex critica, com um revisor diferente a cada rodada. O ciclo repete até a aprovação ou até o número de rodadas. O padrão é 3; fixe 2 para seguir a regra desta aula.</p>
   <p data-ex="desenvolvedor">Rafael usa as duas rodadas manuais no formulário. Guardou o claudex para o sistema de agendamento da clínica, bem maior.</p>
   <figure class="largo">
     <div class="lado">
       <div class="bom"><span class="rot">Tarefa pequena</span><p>Duas rodadas à mão. Você lê cada achado e responde.</p></div>
-      <div class="neutro"><span class="rot">Plano grande</span><p><code>claudex:plan</code>, com o número de rodadas fixado. No fim, você ainda lê o plano e nomeia os testes.</p></div>
+      <div class="neutro"><span class="rot">Plano grande</span><p><code>/claudex:plan --rounds 2</code>, com o número de rodadas fixado. No fim, você ainda lê o plano e nomeia os testes.</p></div>
     </div>
     <figcaption>Automatizar o debate não automatiza a decisão.</figcaption>
   </figure>
@@ -92,14 +92,14 @@
   <h3 class="ph">Responda os achados</h3>
   <p class="pgoal">Pronto quando cada achado do caso tiver uma resposta e o em aberto tiver virado teste. Cerca de 8 minutos, no papel ou no bloco de notas.</p>
   <p class="psafe">É um caso para treinar. Se um achado parecer tanto aceito quanto rejeitado, marque em aberto e escreva o teste que decidiria.</p>
-  <p><b>O caso.</b> O <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> de Rafael pede um formulário de contato para a clínica, só na página de contato. A crítica trouxe três achados. A: "o plano não limita o tamanho da mensagem". B: "refazer o menu do site para destacar o contato". C: "não está claro se a recepção quer cópia das mensagens no celular".</p>
+  <p><b>O caso.</b> O <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span> de Rafael pede um formulário de contato para a clínica, só na página de contato. A crítica trouxe três achados. A: "o plano não limita o tamanho da mensagem". B: "trocar as cores da página inicial para destacar o contato". C: "não está claro se a recepção quer cópia das mensagens no celular".</p>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Responda A, B e C com aceito, rejeitado com evidência ou em aberto.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Para o rejeitado, escreva a evidência em uma linha.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Transforme o em aberto num teste ou numa pergunta com nome de quem responde.</span></label></li>
   </ol>
   <details class="gabarito"><summary>Ver gabarito</summary>
-    <p>A: aceito, limite de tamanho entra no plano. B: rejeitado, o briefing põe o menu no "Fora". C: em aberto; vira a pergunta "a recepção quer cópia no celular?", para a clínica responder antes de construir.</p>
+    <p>A: aceito, limite de tamanho entra no plano. B: rejeitado, o briefing põe a página inicial e as cores no "Fora". C: em aberto; vira a pergunta "a recepção quer cópia no celular?", para a clínica responder antes de construir.</p>
   </details>
   <p class="pdone">Você já encerra o debate com cada achado respondido e a dúvida guardada num teste.</p>
 </section>
@@ -123,7 +123,7 @@
 </div>
 <details class="complementar">
   <summary>Material complementar · Reconciliar e parar<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>O que o kit Use Both pede</h3><p>No fluxo "planejar e depois desafiar", o kit pede para reconciliar os achados como aceitos, rejeitados com evidência ou não resolvidos, salvar plan-v2.md e review.md, e limitar a duas rodadas de revisão. E lembra: concordância não é prova; nomeie os testes ou a evidência necessários antes de implementar.</p><h3>claudex × Use Both</h3><p>Segundo a área Codex + Claude do Eventos INEMA, os dois são complementares. O claudex é software que automatiza o debate de um plano grande. O Use Both é método para todo o resto: revisar mudança, meta com condição de parada, trocar de sessão.</p>
+  <section class="comp-sec"><h3>O que o kit Use Both pede</h3><p>No fluxo "planejar e depois desafiar", o kit pede para reconciliar os achados como aceitos, rejeitados com evidência ou em aberto (o kit diz "não resolvidos"), salvar plan-v2.md e review.md, e limitar a duas rodadas de revisão. E lembra: concordância não é prova; nomeie os testes ou a evidência necessários antes de implementar.</p><h3>claudex × Use Both</h3><p>Segundo a área Codex + Claude do Eventos INEMA, os dois são complementares. O claudex é software que automatiza o debate de um plano grande. O Use Both é método para todo o resto: revisar mudança, meta com condição de parada, trocar de sessão.</p>
     <p class="comp-fontes">Fontes: <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a> · <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a></p></section>
 </details>
 <nav class="lnav"><a href="#aula-8">← aula anterior</a><a class="next" href="#aula-10">próxima aula →</a></nav>
@@ -132,7 +132,7 @@
 <script type="application/json" id="cards-9">
 [
   {"front":"O revisor sugeriu algo que o briefing põe no \"Fora\". Como você responde esse achado?","back":"Rejeitado, com a evidência: a linha do briefing que deixa aquilo fora do escopo."},
-  {"front":"Na quarta volta do debate, os assistentes só trocam palavras de lugar. O que fazer?","back":"Parar. Registrar o que ficou em aberto como teste e seguir para a construção."},
+  {"front":"Na quarta rodada do debate, os assistentes só trocam palavras de lugar. O que fazer?","back":"Parar. Registrar o que ficou em aberto como teste e seguir para a construção."},
   {"front":"Ninguém sabe se um achado procede. Como tirá-lo da discussão sem esquecê-lo?","back":"Transformando em teste ou pergunta com nome, escrito no plano, para decidir quando houver o que conferir."}
 ]
 </script>

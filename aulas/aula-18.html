@@ -31,7 +31,7 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>O pedido de correção tem três partes</h2>
   <p>O que falhou, com a evidência. O que corrigir, e só isso. O que a IA deve contar no fim: o que mudou e o que ficou igual.</p>
-  <p data-ex="analista">A fórmula de Carla somava a data errada. Ela pediu a correção só da fórmula, com a planilha de exemplo que mostrava o erro.</p>
+  <p data-ex="analista">A fórmula de Carla contava o prazo a partir da data errada. Ela pediu a correção só da fórmula, com a planilha de exemplo que mostrava o erro.</p>
   <figure class="largo">
     <div class="tela">
       <div class="tela-top"><i></i><i></i><i></i><span>Assistente de código</span></div>
@@ -48,8 +48,8 @@ No fim, diga o que mudou e o que ficou igual.</p>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>Uma linha no FALHAS.md</h2>
-  <p>Corrigiu? Antes de seguir, escreva uma linha num arquivo chamado FALHAS.md, na pasta do piloto. Quatro campos: data, o que quebrou, a menor correção, e se foi prompt ou infra. Sem história longa.</p>
-  <p data-ex="desenvolvedor">Rafael cria o FALHAS.md do mesmo jeito que criou o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>.md na aula 5. A linha mais recente fica em cima.</p>
+  <p>Corrigiu? Antes de seguir, escreva uma linha num arquivo chamado FALHAS.md, na pasta do piloto. Quatro campos: data, o que quebrou, a menor correção, e se foi prompt (o seu pedido) ou infra (algo fora do pedido). Sem história longa.</p>
+  <p data-ex="desenvolvedor">Rafael cria o FALHAS.md do mesmo jeito que criou o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>.md na aula 5. Também dá para pedir ao assistente: "crie FALHAS.md na pasta do piloto com este cabeçalho". A linha mais recente fica em cima.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>FALHAS.md · pasta do piloto</span></div>
@@ -69,7 +69,7 @@ No fim, diga o que mudou e o que ficou igual.</p>
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">4</span>Prompt ou infra: de onde veio o erro</h2>
-  <p>Prompt é quando o pedido induziu o erro, ou a IA entendeu errado. Infra é quando o problema está fora do pedido: máquina, rede, serviço fora do ar, conta, endereço. Quando for os dois, marque os dois.</p>
+  <p>Prompt, aqui, é o seu pedido: marque "prompt" quando o pedido induziu o erro, ou a IA entendeu errado. Infra é quando o problema está fora do pedido: máquina, rede, serviço fora do ar, conta, endereço. Quando for os dois, marque os dois.</p>
   <p data-ex="analista">Depois de dez linhas, Carla viu que seis eram "prompt" e todas falavam de coluna. Passou a colar o nome das colunas em todo pedido.</p>
   <figure class="largo">
     <div class="lado">
@@ -98,7 +98,7 @@ No fim, diga o que mudou e o que ficou igual.</p>
 |---|---|---|---|
 | &lt;dd/mm&gt; | &lt;o que quebrou, em poucas palavras&gt; | &lt;a mudança mínima que resolveu&gt; | &lt;prompt, infra ou os dois&gt; |</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta do piloto, crie o arquivo FALHAS.md do mesmo jeito que criou o briefing.md na aula 5.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Na pasta do piloto, crie o arquivo FALHAS.md do mesmo jeito que criou o briefing.md na aula 5, ou peça ao assistente que crie. No Windows, confira que o nome não virou FALHAS.md.txt.</span></label></li>
     <li><label><input type="checkbox" data-ptask="2"> <span>Cole o molde e troque o que está entre &lt; &gt; pela sua falha.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Releia a coluna "menor correção": ela é mesmo a menor? Se diz "refazer", corte.</span></label></li>
   </ol>

@@ -18,7 +18,7 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>O relatório cabe numa página</h2>
-  <p>Tudo o que você produziu no curso vira seis linhas. A tarefa do <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>, os <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critérios de aceite</span> que passaram, os problemas achados e por quem, o custo da planilha da aula 28 e a decisão.</p>
+  <p>Tudo o que você produziu no curso vira seis linhas. Elas trazem a tarefa do <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>, os <span class="gterm" data-gl="criterio-de-aceite" data-def="Frase escrita antes do trabalho que diz como você vai conferir que ficou pronto. Ex.: 'a mensagem de teste chega na caixa da recepção'.">critérios de aceite</span> que passaram, os problemas achados e por quem. Depois, o custo e a comparação da planilha da aula 28, e a decisão.</p>
   <p data-ex="desenvolvedor">Rafael montou o relatório do formulário da clínica em quinze minutos, copiando dos arquivos da pasta do piloto.</p>
   <figure class="largo">
     <div class="janela">
@@ -37,7 +37,7 @@
       <li><span class="pin">2</span><span>Do aceite do módulo 4.</span></li>
       <li><span class="pin">3</span><span>Da planilha, coluna de problemas.</span></li>
       <li><span class="pin">4</span><span>Da planilha da aula 28.</span></li>
-      <li><span class="pin">5</span><span>O que você lembra ou mediu antes.</span></li>
+      <li><span class="pin">5</span><span>Da coluna "Jeito antigo (min)" da planilha; estimativa vale, marcada "estimado".</span></li>
       <li><span class="pin">6</span><span>O que esta aula ensina a escrever.</span></li>
     </ol>
   </figure>
@@ -81,13 +81,14 @@
   <h2><span class="n">4</span>Para onde ir depois</h2>
   <p>O ciclo do curso é o começo. Três caminhos do INEMA, todos abertos, continuam daqui.</p>
   <p>O guia do <a href="https://inematds.github.io/use-both-claude-codex/guia/">Use Both</a> traz os seis níveis de uso conjunto e prompts prontos. O <a href="https://github.com/inematds/claudex">claudex</a> automatiza o debate de um plano grande entre Claude e Codex. E o curso <a href="https://inematds.github.io/curso-claude-codex/">Claude → Codex</a> ensina a guardar o contexto do projeto em arquivos que qualquer assistente lê.</p>
-  <p data-ex="desenvolvedor">Rafael foi para o Use Both, para usar o nível de meta com condição de parada. Carla foi para o curso Claude → Codex: a equipe dela usa assistentes diferentes.</p>
+  <p>O claudex roda no <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span>, com o Claude Code e o Codex prontos para uso. Os outros dois servem para quem usa o app.</p>
+  <p data-ex="desenvolvedor">Rafael foi para o Use Both. Quer dar ao assistente uma meta com teste de sucesso e limite de parada, como na aula 19. Carla foi para o curso Claude → Codex: a equipe dela usa assistentes diferentes.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>Próximos caminhos</span></div>
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> Use Both: seis níveis e prompts prontos</div>
-        <div class="item doc"><span class="pin">2</span> claudex: debate automático de um plano grande</div>
+        <div class="item doc"><span class="pin">2</span> claudex: debate automático de um plano grande (terminal)</div>
         <div class="item doc"><span class="pin">3</span> Claude → Codex: contexto portátil em arquivos</div>
       </div>
     </div>
@@ -109,7 +110,7 @@ Tarefa: &lt;do briefing.md&gt;
 Critérios: &lt;quantos de quantos passaram&gt;
 Problemas achados: &lt;quantos, e por quem: revisão, teste, você&gt;
 Custo: &lt;tempo seu e uso da conta, da planilha&gt;
-Comparação: &lt;o mesmo tipo de tarefa do jeito antigo&gt;
+Comparação: &lt;coluna "Jeito antigo (min)" da planilha; se for estimativa, escreva "estimado"&gt;
 Decisão: &lt;ampliar, ajustar ou parar&gt; · Motivo: &lt; &gt; · Revisar em: &lt;data&gt;</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Crie <code>relatorio-piloto.md</code> na pasta do piloto e cole o molde.</span></label></li>

@@ -1,5 +1,12 @@
 # Changelog — Dev com IA v6.2
 
+## 1.1.0 — 2026-09-28
+
+- Curso completo: módulos 2 a 6 (aulas 6–30) — planejar e criticar, construir e revisar o diff, comprovar e decidir,
+  handoff e prime, modelos/esforço/orçamento. Glossário com 22 termos.
+- Portão: auditor 30/30 em 10/10, motor 26/26, leitor simulado independente por módulo com correções
+  (`context/leitor-simulado.md`). Roteiros de vídeo m1–m6 preparados fora do repo.
+
 ## 1.0.0 — 2026-09-28
 
 - Módulo 1 · Validar é o trabalho: 5 aulas (conferir o real, concordar não é prova, critério de aceite, limites de

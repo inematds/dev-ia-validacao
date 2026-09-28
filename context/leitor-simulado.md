@@ -21,3 +21,15 @@ operações, Windows, planilha + chat de IA + Codex, nunca abriu terminal.
 | 5 | 7,5 | passo a passo de Windows (com Windows 10 e "Abrir com") e Mac tirados do bloco opcional e postos antes dos passos; `.txt` como saída; piloto = 1–2 h do seu trabalho, alarme por vez que a IA trabalha |
 
 Pendente de confirmação humana: se o `@` para citar arquivo aparece igual no app/extensão do Codex; caminho exato da página de uso em cada conta (o texto ficou genérico: configurações › Uso).
+
+## Módulos 2–6 (28/09/2026)
+
+Escritos por um agente por módulo (com leitura própria), depois um leitor simulado independente por módulo
+(Marcos + Regina) e um corretor por módulo. Notas da leitura independente, antes das correções: M2 5–8, M3 4–8,
+M4 6–8, M5 4–7, M6 5–7. Erros técnicos pegos e corrigidos:
+- M3: commit antes do diff deixava `mudanca.diff` vazio → fluxo `git status` → `git add -A` → `git diff --staged --output` → revisão → commit; `git diff` não mostra arquivo novo; `pattern` do telefone inválido com a flag `v` (aceitava letras); `.xlsx` sai como binário no diff.
+- M2/M3/M5: `claude -p` sem trava → `--permission-mode plan`; `/claudex:plan --rounds 2` (padrão é 3); evidências da IA citando trechos que não estavam no plano mostrado.
+- M4: caso da fórmula que não fechava (planilha apagada daria `#REF!`); `timeout` no Windows só pausa; limite × trava.
+- M5: pedir handoff a um assistente sem limite (impossível); `/advisor` conferido no binário (existe no Claude Code, cobra à parte); `codex exec` fora de Git exige `--skip-git-repo-check`.
+- M6: comparação de ferramentas tratada como de modelos; colunas da planilha inconsistentes; conta da empresa sem acesso à página de uso.
+Depois das correções: auditor 30/30 em 10/10, motor 26/26.

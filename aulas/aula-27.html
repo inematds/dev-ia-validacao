@@ -57,7 +57,7 @@
 
 <section class="step" data-kind="fundamento">
   <h2><span class="n">3</span>Onde baixar, e onde o esforço não ajuda</h2>
-  <p>Tarefa de rotina, como renomear, formatar ou trocar um texto, sai igual com menos esforço, mais rápido e gastando menos. Mas "o mínimo para tudo" não é regra segura: a parte difícil sai pior.</p>
+  <p>Tarefa de rotina, como renomear, formatar ou trocar um texto, costuma sair igual com menos esforço, mais rápido e gastando menos. Confira pelos critérios. Mas "o mínimo para tudo" não é regra segura: a parte difícil sai pior.</p>
   <p>E há um limite: se faltou a planilha ou o critério, nenhum esforço resolve. Primeiro o material, depois o esforço.</p>
   <p data-ex="analista">Carla subiu o esforço para o máximo quando o relatório saiu errado. Continuou errado: faltava a planilha de quinta-feira na pasta.</p>
   <figure class="largo">
@@ -72,12 +72,28 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">4</span>Onde se escolhe o esforço</h2>
-  <p>No app ou na extensão, quando a ferramenta oferece, a escolha fica perto do nome do modelo. No <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span>, vai no próprio comando.</p>
+  <p>Cada ferramenta mostra esse controle de um jeito, e nem todas mostram. No app ou na extensão, quando existe, fica perto do nome do modelo. No chat, pode aparecer como "raciocínio", "pensar mais" ou "pensamento estendido", às vezes só liga ou desliga. No <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span>, vai no próprio comando.</p>
   <p data-ex="desenvolvedor">Rafael pede a crítica do plano em esforço alto e a lista dos textos de botão em baixo, cada uma no seu comando.</p>
+  <figure class="largo">
+    <div class="janela">
+      <div class="tela-top"><i></i><i></i><i></i><span>Onde fica o controle</span></div>
+      <div class="janela-body">
+        <div class="item doc"><span class="pin">1</span> App ou extensão: perto do nome do modelo, quando existe</div>
+        <div class="item doc"><span class="pin">2</span> Chat: "raciocínio", "pensar mais" ou "pensamento estendido"</div>
+        <div class="item doc"><span class="pin">3</span> Terminal: no próprio comando, como no quadro abaixo</div>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><span class="pin">1</span><span>Às vezes são níveis; às vezes, um menu.</span></li>
+      <li><span class="pin">2</span><span>Muitas vezes é só liga ou desliga.</span></li>
+      <li><span class="pin">3</span><span>O nível vai escrito junto com o pedido.</span></li>
+    </ol>
+    <figcaption>Não achou o controle? A ferramenta decide sozinha. Vale o resto da aula: material antes, régua depois.</figcaption>
+  </figure>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal</span></div>
 <pre><code><span class="pr">$</span> codex exec -c model_reasoning_effort=high "Leia plan-v1.md e aponte falhas com evidência."
 <span class="pr">$</span> claude -p --effort low "Liste os textos de botão que aparecem em contato.html."</code></pre>
-<p class="tela-nota">No Codex, o esforço vai em <code>-c model_reasoning_effort=</code> (low, medium, high). No Claude Code, em <code>--effort</code> (low, medium, high e níveis acima).</p></div>
+<p class="tela-nota">No Codex, o esforço é o <code>model_reasoning_effort</code> (de minimal a high; alguns modelos aceitam mais), escrito no <code>config.toml</code> do Codex ou no comando com <code>-c</code>. No Claude Code, é o <code>--effort</code> (low, medium, high, xhigh ou max).</p></div>
   <figcaption>O mesmo modelo, dois esforços, cada um na etapa que pede.</figcaption></figure>
   <div class="quiz" data-answer="c">
     <p class="qk">Teste-se</p>

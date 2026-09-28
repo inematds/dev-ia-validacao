@@ -10,8 +10,8 @@
     <p class="k">Em 1 minuto</p>
     <ol>
       <li>Conversa nova + prime + "aponte falhas" = segunda opinião no mesmo assistente.</li>
-      <li>Comandos de segunda opinião que você ouviu falar: confira se existem na sua ferramenta.</li>
-      <li>O ciclo diário: sessão, handoff, prime, sessão nova.</li>
+      <li>No Claude Code há o <code>/advisor</code>, que cobra à parte. Confira antes de usar.</li>
+      <li>O ciclo diário: sessão, handoff, prime, conferir.</li>
     </ol>
   </div>
 </header>
@@ -20,30 +20,30 @@
   <h2><span class="n">1</span>Segunda opinião dentro do mesmo assistente</h2>
   <p>Uma conversa nova não carrega o apego da anterior. Com o prime, ela lê o <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>, o handoff e o trabalho real. Aí você pede a crítica: falhas, com o trecho que mostra cada uma.</p>
   <p>É a <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span> do módulo 1, feita com o que você já tem. Outro <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> olha com ainda menos apego, quando você tiver acesso.</p>
-  <p data-ex="analista">Carla só tem o Codex para trabalhar nas planilhas. Para revisar o relatório, abre uma conversa nova dele, faz o prime e pede a crítica.</p>
+  <p data-ex="analista">Carla tem o Codex e um chat de IA. Desta vez, revisou sem sair do Codex: abriu uma conversa nova dele, fez o prime e pediu a crítica.</p>
   <figure class="largo">
     <div class="tela">
       <div class="tela-top"><i></i><i></i><i></i><span>Conversa nova, depois do prime</span></div>
       <div class="tela-body">
         <p class="msg eu"><span class="quem">Carla</span>Agora leia relatorios/semana.md e aponte falhas contra os critérios de aceite do briefing.md, com o trecho que mostra cada uma. Não altere nada.</p>
-        <p class="msg ia ok"><span class="quem">Codex</span>Falha 1: o critério 2 pede cada cidade uma vez, e uma das cidades aparece em duas linhas da tabela de totais. Trecho: as duas linhas com o mesmo nome, na tabela de totais.</p>
+        <p class="msg ia ok"><span class="quem">IA</span>Falha 1: o critério 2 do briefing.md diz "Cada cidade aparece uma vez, com o seu total". Na tabela de totais de relatorios/semana.md, a cidade Pelotas aparece em duas linhas.</p>
       </div>
-      <p class="tela-nota bom">A conversa nova achou um erro que a sessão que fez o relatório não viu.</p>
+      <p class="tela-nota bom">O critério vem do briefing de Carla, desde a aula 3. Ela abriu o relatório e conferiu: eram mesmo duas linhas.</p>
     </div>
   </figure>
 </section>
 
 <section class="step" data-kind="fundamento">
-  <h2><span class="n">2</span>Comando novo de que ouviu falar: confira antes</h2>
-  <p>Circulam dicas de comandos para pedir uma segunda opinião de dentro do assistente, como um <code>/advisor</code> no Claude. Ferramentas mudam rápido, e o que existe numa conta pode não existir na outra.</p>
-  <p>Antes de montar a rotina em cima de um comando, confira: digite <code>/</code> no assistente e veja se ele aparece na lista. A conversa nova com prime funciona em qualquer um.</p>
-  <p data-ex="desenvolvedor">Rafael leu sobre um comando assim num grupo. Digitou <code>/</code> no Claude Code, procurou na lista e anotou no AGENTS.md o que achou, com a data.</p>
+  <h2><span class="n">2</span>O /advisor do Claude Code: saiba o que ele faz antes</h2>
+  <p>No Claude Code existe o comando <code>/advisor</code>, seguido do nome de um modelo. Ele liga um modelo mais forte, que o modelo principal consulta durante a sessão. O mesmo comando troca ou desliga o conselheiro.</p>
+  <p>Dois cuidados. O próprio Claude Code avisa que o conselheiro cobra créditos de uso à parte. E o Codex não tem esse comando. A conversa nova com prime funciona em qualquer assistente, sem custo extra.</p>
+  <p data-ex="desenvolvedor">Rafael digitou <code>/advisor</code> no Claude Code e leu o aviso de cobrança. Para o piloto, ficou com a conversa nova; o conselheiro fica para um erro difícil.</p>
   <figure class="largo">
     <div class="lado">
       <div class="bom"><span class="rot">Funciona em qualquer um</span><p>Conversa nova, prime com os arquivos, pedido de falhas com evidência.</p></div>
-      <div class="neutro"><span class="rot">Conferir no seu ambiente</span><p>Comandos prontos de segunda opinião. Veja se aparecem ao digitar <code>/</code> e o que fazem.</p></div>
+      <div class="neutro"><span class="rot">Só no Claude Code, com custo</span><p>O <code>/advisor</code>: um modelo mais forte consultado durante a sessão, cobrado à parte. Confira o custo antes.</p></div>
     </div>
-    <figcaption>Comece pelo cartão "Funciona em qualquer um". O outro entra quando você conferir.</figcaption>
+    <figcaption>Comece pelo cartão "Funciona em qualquer um". O outro entra quando o custo valer a pena.</figcaption>
   </figure>
 </section>
 
@@ -87,12 +87,22 @@
 <section class="practice" data-mode="tarefa">
   <p class="pk">Pratique agora <span class="pcount">0/4</span></p>
   <h3 class="ph">Laboratório: feche o ciclo no piloto</h3>
-  <p class="pgoal">Pronto quando uma conversa nova tiver acertado as cinco perguntas e apontado ao menos uma falha no trabalho do piloto. Cerca de 12 minutos, no computador.</p>
+  <p class="pgoal">Pronto quando uma conversa nova tiver acertado as cinco perguntas e conferido cada critério de aceite com o trecho, marcando falha ou "ok". Nenhuma falha também é resultado. Cerca de 12 minutos, no computador: este módulo pede o computador.</p>
   <p class="psafe">Tudo é leitura, menos o handoff, que é um arquivo seu. Não fez as aulas anteriores? Use o briefing.md da aula 5 e um handoff de uma linha. Se a IA começar a alterar algo, clique no botão de parar.</p>
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia AGENTS.md e siga a ordem de leitura dele.
+Não altere nenhum arquivo e não execute nada.
+Responda, citando o arquivo de cada resposta:
+1. Qual é o objetivo e o critério de aceite?
+2. Cite uma regra e o arquivo de onde ela vem.
+3. Qual foi a última decisão?
+4. Qual é a próxima ação exata?
+5. Há conflito entre os arquivos?
+Depois, para cada critério de aceite do briefing.md,
+diga "ok" ou "falha", com o trecho do trabalho que mostra isso.</pre></div>
   <ol class="psteps">
     <li><label><input type="checkbox" data-ptask="1"> <span>Na sessão atual, peça o handoff do piloto e confira cada linha (aula 21).</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Abra uma conversa nova e cole o pedido das cinco perguntas (aula 24).</span></label></li>
-    <li><label><input type="checkbox" data-ptask="3"> <span>Com as cinco certas, peça: "aponte falhas contra os critérios de aceite, com o trecho de cada uma, sem alterar nada".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Abra uma conversa nova e cole o pedido do quadro. Sem o AGENTS.md, troque a primeira linha por "leia briefing.md e handoffs/latest.md".</span></label></li>
+    <li><label><input type="checkbox" data-ptask="3"> <span>Confira as cinco respostas e cada "ok" ou "falha" contra os arquivos.</span></label></li>
     <li><label><input type="checkbox" data-ptask="4"> <span>Anote as falhas no handoff, como pendências.</span></label></li>
   </ol>
   <p class="pdone">Você fechou o módulo 5 com um piloto que qualquer assistente retoma e revisa.</p>
@@ -105,7 +115,7 @@
     <ol>
       <li><span><b>Segunda opinião</b>conversa nova, prime e pedido de falhas com trecho.</span></li>
       <li><span><b>Comando novo</b>confira no seu assistente antes de usar.</span></li>
-      <li><span><b>Ciclo diário</b>sessão, handoff, prime, conferência.</span></li>
+      <li><span><b>Ciclo diário</b>sessão, handoff, prime, conferir.</span></li>
     </ol>
   </div>
   <div class="next-action">
@@ -117,7 +127,7 @@
 </div>
 <details class="complementar">
   <summary>Material complementar · Handoff e prime nos kits<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>Nível 6 do Use Both</h3><p>O kit Use Both chama isso de "handoff e prime": o handoff grava o estado num arquivo portátil; o prime faz o próximo assistente ler e verificar esse estado antes de continuar. No kit agente-claude-codex, cada handoff vira um retrato com data em handoffs/history/, que nunca é sobrescrito, e handoffs/latest.md é a cópia do mais recente.</p><h3>O que a síntese marca como "a conferir"</h3><p>A sugestão de usar um comando /advisor no Claude para investigar gargalos apareceu na conversa que originou este curso. A síntese do INEMA registra que ela não foi verificada na página analisada: confirme no seu ambiente antes de virar procedimento.</p>
+  <section class="comp-sec"><h3>Nível 6 do Use Both</h3><p>O kit Use Both chama isso de "handoff e prime": o handoff grava o estado num arquivo portátil; o prime faz o próximo assistente ler e verificar esse estado antes de continuar. No kit agente-claude-codex, cada handoff vira um retrato com data em handoffs/history/, que nunca é sobrescrito, e handoffs/latest.md é a cópia do mais recente.</p><h3>O /advisor no Claude Code</h3><p>O comando /advisor, seguido do nome de um modelo, define um modelo conselheiro que o principal consulta durante a sessão. O conselheiro precisa ser pelo menos tão capaz quanto o modelo principal, e o uso dele é cobrado em créditos à parte. A síntese do INEMA trata o uso para investigar gargalos como orientação a conferir: teste numa tarefa sua e compare com a conversa nova com prime.</p>
     <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://eventos.inema.pro/claude-codex/">Área Claude → Codex — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
 </details>
 <nav class="lnav"><a href="#aula-24">← aula anterior</a><a class="next" href="#trilha">voltar à trilha →</a></nav>
@@ -126,7 +136,7 @@
 <script type="application/json" id="cards-25">
 [
   {"front":"Você só tem um assistente e quer uma segunda opinião sobre o relatório. Como faz?","back":"Abre uma conversa nova, faz o prime com os arquivos e pede falhas contra os critérios de aceite, com o trecho de cada uma."},
-  {"front":"Alguém indicou um comando pronto de segunda opinião. O que você confere antes de adotar?","back":"Se ele aparece ao digitar / no seu assistente e o que faz de fato. Anote o resultado com a data."},
+  {"front":"Um colega disse para ligar o /advisor em todas as sessões. O que você pesa antes?","back":"Que ele só existe no Claude Code e cobra créditos à parte. Para a maioria das revisões, a conversa nova com prime basta."},
   {"front":"A tarefa é de meia hora. Vale fazer o ciclo completo?","back":"Basta o handoff de uma linha com a próxima ação exata. O ciclo completo é para trabalho que continua outro dia."}
 ]
 </script>

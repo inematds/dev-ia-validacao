@@ -19,14 +19,14 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">1</span>O pacote do revisor tem três partes</h2>
   <p>A <span class="gterm" data-gl="revisao-cruzada" data-def="Um modelo faz o trabalho e outro modelo, ou outra conversa, examina o resultado real apontando falhas com evidência.">revisão cruzada</span> de uma etapa precisa de três coisas. O <span class="gterm" data-gl="briefing" data-def="Arquivo curto com objetivo, escopo, critérios de aceite e limites de uma tarefa. Os dois modelos leem o mesmo.">briefing</span>, para saber o que era pedido. O <span class="gterm" data-gl="diff" data-def="A lista do que mudou entre duas versões de um arquivo: linhas que saíram (com −) e linhas que entraram (com +).">diff</span>, para ver o que mudou. E o que você conferiu, com o resultado.</p>
-  <p data-ex="desenvolvedor">Rafael anota as conferências da etapa num arquivo <code>testes.txt</code>: "3 campos aparecem: sim. Telefone recusa letras: sim." Essa folha vai junto para o revisor.</p>
+  <p data-ex="desenvolvedor">Rafael anota as conferências da etapa num arquivo <code>conferencias.txt</code>: "3 campos aparecem: sim. Telefone recusa letras: sim." Essa folha vai junto para o revisor.</p>
   <figure class="largo">
     <div class="janela">
       <div class="tela-top"><i></i><i></i><i></i><span>Pasta do piloto · pacote da revisão</span></div>
       <div class="janela-body">
         <div class="item doc"><span class="pin">1</span> briefing.md · o que era pedido</div>
         <div class="item doc"><span class="pin">2</span> mudanca.diff · o que mudou, linha a linha</div>
-        <div class="item doc"><span class="pin">3</span> testes.txt · o que você conferiu e o que deu</div>
+        <div class="item doc"><span class="pin">3</span> conferencias.txt · o que você conferiu e o que deu</div>
       </div>
     </div>
     <ol class="passos">
@@ -40,7 +40,7 @@
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">2</span>Com o pacote, o revisor acha o que falta</h2>
   <p>Com o resumo, o revisor tende a concordar. Com o pacote, ele compara o pedido com a mudança e com o que foi conferido. Aí aparece o critério que ninguém testou.</p>
-  <p data-ex="desenvolvedor">Rafael mandou o pacote da etapa 1 ao Codex. A revisão notou que o critério do celular, que está no briefing, não aparecia no <code>testes.txt</code>.</p>
+  <p data-ex="desenvolvedor">Rafael mandou o pacote da etapa 1 ao Codex. A revisão notou que o <code>conferencias.txt</code> dizia "sim" para o telefone sem dizer como foi conferido.</p>
   <figure class="largo">
     <div class="tela">
       <div class="tela-top"><i></i><i></i><i></i><span>Revisão da etapa 1</span></div>
@@ -53,10 +53,10 @@
       </div>
       <div class="tela-caso" data-rotulo="Com o pacote">
         <div class="tela-body">
-          <p class="msg eu"><span class="quem">Rafael</span>Leia briefing.md, mudanca.diff e testes.txt. Aponte falhas com onde, impacto e a menor correção. Não altere arquivos.</p>
-          <p class="msg ia ok"><span class="quem">Codex</span>Achado 1. Onde: testes.txt. O briefing pede "no celular, a página não rola para os lados", e esse critério não foi conferido. Impacto: médio. Menor correção: abrir a página no celular e anotar o resultado.</p>
+          <p class="msg eu"><span class="quem">Rafael</span>Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correção. Não altere arquivos.</p>
+          <p class="msg ia ok"><span class="quem">Codex</span>Achado 1. Onde: conferencias.txt, linha "Telefone recusa letras: sim". Falha: não diz como foi conferido. Impacto: médio. Menor correção: digitar letras no telefone, tentar enviar e anotar o que apareceu.</p>
         </div>
-        <p class="tela-nota bom">O achado aponta o arquivo, o critério e a correção.</p>
+        <p class="tela-nota bom">O achado aponta o arquivo, a linha e a correção.</p>
       </div>
     </div>
     <figcaption><b>Toque ou clique nos dois botões do quadro</b> e compare as duas revisões.</figcaption>
@@ -65,21 +65,22 @@
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">3</span>Montar e enviar o pacote</h2>
-  <p>Antes de salvar a etapa, peça ao <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span> o diff num arquivo, pelo <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span>. Depois chame o outro <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> em modo só leitura, com a resposta gravada em arquivo.</p>
-  <p>Pelo app, o caminho é o mesmo em palavras. Peça a quem fez: "grave o git diff em mudanca.diff". Depois abra uma conversa nova, no outro assistente ou no mesmo, e cite os três arquivos.</p>
-  <p data-ex="analista">Carla faz tudo pelo app. O Codex fez a etapa; o chat de IA, numa conversa nova, recebe os três arquivos anexados pelo clipe.</p>
+  <p>Antes do <span class="gterm" data-gl="commit" data-def="Uma versão salva no Git, com data e uma frase dizendo o que mudou.">commit</span>, a versão salva, peça ao <span class="gterm" data-gl="git" data-def="Programa de controle de versões: guarda cada mudança dos arquivos de uma pasta, para você ver o que mudou e voltar atrás. O módulo 3 ensina o necessário.">Git</span> o diff num arquivo, pelo <span class="gterm" data-gl="terminal" data-def="Janela de texto em que você digita comandos para o computador executar e lê a resposta.">terminal</span>. Depois chame o outro <span class="gterm" data-gl="modelo" data-def="O programa de IA que lê o seu pedido e escreve a resposta, como o Claude ou o GPT. Outro modelo = outra IA; uma conversa nova do mesmo assistente também serve como segundo olhar.">modelo</span> em modo só leitura, com a resposta gravada em arquivo.</p>
+  <p>Pelo app, o caminho é o mesmo em palavras. Peça a quem fez: "rode git add -A e grave o git diff --staged em mudanca.diff". Depois abra uma conversa nova, no outro assistente ou no mesmo, e cite os três arquivos. No app, "não altere arquivos" é um pedido, não uma trava: depois, confira no <code>git status</code> que nada mudou.</p>
+  <p data-ex="analista">Carla faz tudo pelo app. O Codex fez a etapa; o chat de IA, numa conversa nova, recebe os três arquivos anexados pelo clipe. Se o chat recusar o .diff, ela renomeia para mudanca.txt.</p>
   <figure class="largo"><div class="terminal"><div class="tela-top"><i></i><i></i><i></i><span>Terminal · pasta do piloto</span></div>
-<pre><code><span class="pr">$</span> git diff &gt; mudanca.diff
-<span class="pr">$</span> codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e testes.txt. Aponte falhas com onde, impacto e a menor correção. Não altere arquivos."</code></pre>
-<p class="tela-nota">A primeira linha grava o diff. A segunda chama o Codex só para ler, e a resposta fica em review.md. No Claude: <code>claude -p "…mesmo pedido…" &gt; review-claude.md</code>.</p></div>
-  <figcaption>"read-only" quer dizer que o revisor não consegue mudar nenhum arquivo.</figcaption></figure>
+<pre><code><span class="pr">$</span> git add -A
+<span class="pr">$</span> git diff --staged --output=mudanca.diff
+<span class="pr">$</span> codex exec --sandbox read-only -o review.md "Leia briefing.md, mudanca.diff e conferencias.txt. Liste os achados. Para cada achado: onde, o que falha, impacto e a menor correção. Não altere arquivos."</code></pre>
+<p class="tela-nota">As duas primeiras linhas preparam tudo, inclusive arquivos novos, e gravam o diff. A terceira chama o Codex só para ler, e a resposta fica em review.md. No Claude: <code>claude -p --permission-mode plan "…mesmo pedido…" &gt; review-claude.md</code>. No Windows, prefira o PowerShell 7 ou o app para esse <code>&gt;</code>, que no PowerShell antigo pode estragar os acentos.</p></div>
+  <figcaption>"read-only" e "plan" são travas: o revisor não consegue mudar nenhum arquivo.</figcaption></figure>
   <div class="calma"><p><span class="k">Se travou aqui, é normal</span>O comando longo assusta? Copie, troque só os nomes de arquivo se forem outros, e cole. Ou siga o caminho pelo app, que chega no mesmo lugar.</p></div>
 </section>
 
 <section class="step" data-kind="ferramenta">
   <h2><span class="n">4</span>Achado útil tem quatro partes</h2>
   <p>"Pode melhorar" não ajuda ninguém. Peça cada achado com onde está, o que falha, o impacto e a menor correção. Assim você decide rápido o que corrigir.</p>
-  <p data-ex="analista">Carla recebeu um achado vago sobre a etapa de soma. Pediu de novo, nas quatro partes, e veio a linha exata em que uma cidade com acento aparecia duas vezes.</p>
+  <p data-ex="analista">Carla recebeu um achado vago sobre a etapa de soma. Pediu de novo, nas quatro partes, e veio o ponto exato: a linha da soma, onde a cidade com e sem acento virava duas.</p>
   <figure class="largo">
     <div class="lado">
       <div class="antes"><span class="rot">Achado vago</span><p>"A soma por cidade pode ter inconsistências."</p></div>
@@ -93,14 +94,14 @@
   <h3 class="ph">Peça a revisão da sua etapa 1</h3>
   <p class="pgoal">Pronto quando você tiver um review com pelo menos um achado nas quatro partes, ou a frase "nenhuma falha encontrada" com o que foi lido. Cerca de 10 minutos, no computador.</p>
   <p class="psafe">O revisor só lê. Só tem um assistente? Abra uma conversa nova nele para revisar. Não fez a etapa da aula 12? Revise o diff do briefing, da aula 11.</p>
-  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia briefing.md, mudanca.diff e testes.txt.
+  <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Leia briefing.md, mudanca.diff e conferencias.txt.
 Revise a etapa &lt;número&gt; contra os critérios do briefing.
 Para cada falha: onde, o que falha, impacto (alto, médio, baixo) e a menor correção.
 Se não achar falha, diga o que leu para concluir isso.
 Não altere arquivos.</pre></div>
   <ol class="psteps">
-    <li><label><input type="checkbox" data-ptask="1"> <span>Crie o arquivo <code>testes.txt</code> na pasta do piloto, do mesmo jeito que criou o briefing na aula 5, e anote uma linha por critério: o que conferiu e o resultado.</span></label></li>
-    <li><label><input type="checkbox" data-ptask="2"> <span>Gere o <code>mudanca.diff</code>, pelo terminal ou pedindo ao assistente.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="1"> <span>Crie o arquivo <code>conferencias.txt</code> na pasta do piloto, do mesmo jeito que criou o briefing na aula 5, e anote uma linha por critério: o que conferiu e o resultado.</span></label></li>
+    <li><label><input type="checkbox" data-ptask="2"> <span>Antes do commit, gere o <code>mudanca.diff</code> com <code>git add -A</code> e <code>git diff --staged --output=mudanca.diff</code>, pelo terminal ou pedindo ao assistente. Se ele vier vazio, a etapa já virou commit: peça o diff do último commit com <code>git show --output=mudanca.diff</code>.</span></label></li>
     <li><label><input type="checkbox" data-ptask="3"> <span>Envie o molde ao outro modelo (ou a uma conversa nova) e salve a resposta como <code>review.md</code>.</span></label></li>
   </ol>
   <p class="pdone">Você já pede revisão do trabalho real, com evidência em cada achado.</p>
@@ -111,21 +112,21 @@ Não altere arquivos.</pre></div>
     <p class="k">Cola da aula</p>
     <h3>Revisão do diff</h3>
     <ol>
-      <li><span><b>Pacote</b>briefing, mudanca.diff e testes.txt.</span></li>
-      <li><span><b>Só leitura</b>o revisor aponta; quem corrige é outro passo.</span></li>
+      <li><span><b>Pacote</b>briefing, mudanca.diff e conferencias.txt.</span></li>
+      <li><span><b>Só leitura</b>read-only no Codex, plan no Claude; no app, confira no git status.</span></li>
       <li><span><b>Quatro partes</b>onde, falha, impacto, menor correção.</span></li>
     </ol>
   </div>
   <div class="next-action">
     <p class="nak">Seu próximo passo</p>
     <p class="na-win">Você já monta o pacote que torna a revisão cruzada útil.</p>
-    <p class="na-action">Crie o <code>testes.txt</code> na pasta do piloto e anote, em uma linha por critério, o que conferiu hoje.</p>
+    <p class="na-action">Crie o <code>conferencias.txt</code> na pasta do piloto e anote, em uma linha por critério, o que conferiu hoje.</p>
     <p class="na-hook">Na próxima aula: e quando a mudança é uma imagem, e não uma linha de texto?</p>
   </div>
 </div>
 <details class="complementar">
   <summary>Material complementar · De onde vem esta aula<small>Aprofundamento do tópico. Não conta no tempo da aula.</small></summary>
-  <section class="comp-sec"><h3>Nível 3 do kit Use Both</h3><p>"Dividir construir e revisar": um assistente constrói numa linha de teste separada; o outro revisa o diff com o briefing e o resultado dos testes. Testes e a sua aprovação decidem o que entra. O revisor recebe o mesmo briefing e o artefato real, nunca um resumo vago do que o primeiro fez.</p><h3>Três formas de ligar Claude e Codex</h3><p>Segundo o vídeo que acompanha o kit: o complemento oficial do Codex para o Claude Code; uma linha de comando chamando a outra, com a resposta salva num arquivo; ou um pedido de mudança num site de código, que o outro modelo revisa.</p>
+  <section class="comp-sec"><h3>Nível 3 do kit Use Both</h3><p>"Dividir construir e revisar": um assistente constrói à parte da versão que funciona; o outro revisa o diff com o briefing e o resultado dos testes. Testes e a sua aprovação decidem o que entra. O revisor recebe o mesmo briefing e o artefato real, nunca um resumo vago do que o primeiro fez.</p><h3>Três formas de ligar Claude e Codex</h3><p>Segundo o vídeo que acompanha o kit: o complemento oficial do Codex para o Claude Code; uma linha de comando chamando a outra, com a resposta salva num arquivo; ou um pedido de mudança num site de código, que o outro modelo revisa.</p>
     <p class="comp-fontes">Fontes: <a href="https://eventos.inema.pro/codex-claude/">Área Codex + Claude — Eventos INEMA</a> · <a href="https://inematds.github.io/use-both-claude-codex/guia/">Guia do Use Both</a></p></section>
 </details>
 <nav class="lnav"><a href="#aula-12">← aula anterior</a><a class="next" href="#aula-14">próxima aula →</a></nav>
@@ -134,8 +135,8 @@ Não altere arquivos.</pre></div>
 <script type="application/json" id="cards-13">
 [
   {"front":"O revisor aprovou dizendo \"mudança simples\". O que provavelmente faltou no pedido?","back":"O pacote: briefing, diff e o que foi conferido. Sem ele, o revisor avalia uma descrição, não o trabalho."},
-  {"front":"Por que chamar o revisor em modo só leitura?","back":"Para ele apontar sem mexer. A correção vira um passo separado, que você decide e confere."},
-  {"front":"Veio o achado \"pode ter inconsistências\". O que você pede em seguida?","back":"O mesmo achado com onde está, o que falha, o impacto e a menor correção."}
+  {"front":"O mudanca.diff veio vazio. O que provavelmente aconteceu?","back":"A etapa já tinha virado commit, ou faltou o git add -A antes do git diff --staged. O diff sai antes do commit."},
+  {"front":"Você revisa pelo app, sem terminal. Como sabe que o revisor não mexeu em nada?","back":"Olhando o git status depois: pelo app, \"não altere arquivos\" é só um pedido, não uma trava."}
 ]
 </script>
 </section>
