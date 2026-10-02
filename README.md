@@ -18,3 +18,11 @@ revisado → testes e aceite humano → handoff. Modelo e esforço escolhidos po
 - [Ficha deste curso no INEMA.CLUB](https://www.inema.club/cursos/303-dev-com-ia-v6-2-um-faz-o-outro-confere/)
 - [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
 - [Todos os cursos](https://www.inema.club/cursos/)
+
+<!-- inema-backlink:v1 -->
+## Mais no INEMA.CLUB
+
+- [Ficha completa deste curso](https://www.inema.club/cursos/303-dev-com-ia-v6-2-um-faz-o-outro-confere/)
+- [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.inema.club/cursos/)
+<!-- /inema-backlink:v1 -->
